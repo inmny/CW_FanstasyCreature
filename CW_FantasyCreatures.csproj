@@ -52,9 +52,6 @@
         <None Include="icon.png"/>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Main.cs"/>
-    </ItemGroup>
-    <ItemGroup>
         <Folder Include="word_libraries\"/>
     </ItemGroup>
 
