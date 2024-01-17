@@ -1,0 +1,10 @@
+[
+    {
+        "id": "example_creature_name",
+        "templates": [
+            {
+                "format": "$天干地支纪年$#示例生物#"
+            }
+        ]
+    }
+]

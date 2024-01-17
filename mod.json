@@ -1,0 +1,13 @@
+{
+    "name": "奇幻生物",
+    "author": "一米&吃鱼",
+    "version": "1.0.1",
+    "description": "阿巴阿巴",
+    "Dependencies": [
+        "启源_启源核心"
+    ],
+    "OptionalDependencies": [
+        "一米_中文名"
+    ],
+    "iconPath": "icon.png"
+}

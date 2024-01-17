@@ -1,0 +1,13 @@
+### Default template
+### Example user template
+bin
+obj
+out
+gen
+build
+packages
+.*
+!.gitignore
+!.gitattributes
+!.github
+!.*.cs
