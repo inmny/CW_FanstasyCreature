@@ -7,6 +7,8 @@ using CW_FantasyCreatures.ui;
 using CW_FantasyCreatures.content;
 using NeoModLoader.api;
 using NCMS;
+using NeoModLoader.services;
+
 
 #if 一米_中文名
 using Chinese_Name;
