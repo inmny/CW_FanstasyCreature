@@ -15,13 +15,16 @@
             <HintPath>..\..\worldbox_Data\StreamingAssets\mods\NML\Assemblies\0Harmony.dll</HintPath>
         </Reference>
         <Reference Include="NeoModLoader">
-            <HintPath>..\..\worldbox_Data\StreamingAssets\mods\NeoModLoader.dll</HintPath>
+            <HintPath>..\..\worldbox_Data\StreamingAssets\mods\NeoModLoader_memload.dll</HintPath>
         </Reference>
         <Reference Include="Assembly-CSharp">
             <HintPath>..\..\worldbox_Data\StreamingAssets\mods\NML\Assembly-CSharp-Publicized.dll</HintPath>
         </Reference>
         <Reference Include="Assembly-CSharp-firstpass">
             <HintPath>..\..\worldbox_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+        </Reference>
+        <Reference Include="Newtonsoft.Json">
+            <HintPath>..\..\worldbox_Data\Managed\Newtonsoft.Json.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine">
             <HintPath>..\..\worldbox_Data\Managed\UnityEngine.dll</HintPath>

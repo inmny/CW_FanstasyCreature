@@ -24,7 +24,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
-        vanilla_t.disableJumpAnimation = false;//允许跳跃
+        vanilla_t.disableJumpAnimation = false; //允许跳跃
 
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
@@ -43,7 +43,13 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------半鹿人
 
         // 创建一个生物
-        CreateActor("half_deer_man", "Half Deer Man", "iconHalf_Deer_Man", out vanilla_t, out stats);
+        CreateActor(
+            "half_deer_man",
+            "Half Deer Man",
+            "iconHalf_Deer_Man",
+            out vanilla_t,
+            out stats
+        );
 
         t.born_spells.Add("fire_blade"); // 自带火斩法术
         t.prefer_element = new[] { 40, 40, 0, 20, 0 }; // 倾向于雷灵根
@@ -51,7 +57,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
-        vanilla_t.disableJumpAnimation = false;//允许跳跃
+        vanilla_t.disableJumpAnimation = false; //允许跳跃
 
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
@@ -66,7 +72,6 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         CreateButton("half_deer_man");
 
         #endregion
-        
     }
 
     /// <summary>
@@ -77,8 +82,13 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
     /// <param name="pIconName">生物的图标名</param>
     /// <param name="pActorAsset">返回的生物原版信息</param>
     /// <param name="pStats">返回的生物属性</param>
-    private void CreateActor(string pID, string pLocaleKey, string pIconName, out ActorAsset pActorAsset,
-        out BaseStats pStats)
+    private void CreateActor(
+        string pID,
+        string pLocaleKey,
+        string pIconName,
+        out ActorAsset pActorAsset,
+        out BaseStats pStats
+    )
     {
         t = Manager.actors.clone(pID, "wolf");
         pActorAsset = t.vanllia_asset;
@@ -102,7 +112,10 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
     /// </summary>
     /// <param name="pActorID">生物id</param>
     /// <param name="pButtonContainer">按钮容器</param>
-    private void CreateButton(string pActorID, ButtonContainerType pButtonContainer = ButtonContainerType.ACTOR)
+    private void CreateButton(
+        string pActorID,
+        ButtonContainerType pButtonContainer = ButtonContainerType.ACTOR
+    )
     {
         FormatButtons.add_actor_button(pActorID, pButtonContainer);
     }
@@ -114,11 +127,19 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
     /// <param name="pIconName">按钮图标名</param>
     /// <param name="pButtonContainerType">按钮容器</param>
     /// <param name="pActorIDs">一列生物</param>
-    private void CreateButton(string pLocaleKey, string pIconName, ButtonContainerType pButtonContainerType,
-        params string[] pActorIDs)
+    private void CreateButton(
+        string pLocaleKey,
+        string pIconName,
+        ButtonContainerType pButtonContainerType,
+        params string[] pActorIDs
+    )
     {
-        FormatButtons.add_actors_button(pActorIDs.ToList(), pLocaleKey, pIconName,
-            pButtonContainerType);
+        FormatButtons.add_actors_button(
+            pActorIDs.ToList(),
+            pLocaleKey,
+            pIconName,
+            pButtonContainerType
+        );
     }
 
     /// <summary>
