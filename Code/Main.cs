@@ -30,6 +30,7 @@ public class Main : CW_Addon<Main>, IReloadable
     {
         base.OnModLoad();
         Declaration = GetDeclaration();
+        LogInfo("Local message");
 
 #if 一米_中文名
         CN_NameGeneratorLibrary.SubmitDirectoryToLoad(
