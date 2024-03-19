@@ -7,6 +7,8 @@ using CW_FantasyCreatures.ui;
 using CW_FantasyCreatures.content;
 using NeoModLoader.api;
 using NCMS;
+using NeoModLoader.services;
+
 
 #if 一米_中文名
 using Chinese_Name;
@@ -30,7 +32,7 @@ public class Main : CW_Addon<Main>, IReloadable
     {
         base.OnModLoad();
         Declaration = GetDeclaration();
-
+        LogService.LogInfo("远程更改");
 #if 一米_中文名
         CN_NameGeneratorLibrary.SubmitDirectoryToLoad(
             Path.Combine(Declaration.FolderPath, "name_generators")
