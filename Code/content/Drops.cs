@@ -10,7 +10,7 @@ using System.Reflection;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace CW_FantasyCreatures
+namespace CW_FantasyCreatures.content
 {
     class Drops
     {

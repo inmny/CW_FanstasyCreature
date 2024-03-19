@@ -9,7 +9,7 @@ using ReflectionUtility;
 using HarmonyLib;
 using System.Reflection;
 
-namespace CW_FantasyCreatures
+namespace CW_FantasyCreatures.content
 {
     /// <summary>
     /// Code prototype from 素和晟睿寒海

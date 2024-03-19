@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using Cultivation_Way.Addon;
+using CW_FantasyCreatures.ui;
 using CW_FantasyCreatures.content;
 using NeoModLoader.api;
 using NCMS;
@@ -46,5 +47,10 @@ public class Main : CW_Addon<Main>, IReloadable
                 .Where(x => x.IsSubclassOf(typeof(BaseExtendedLibrary)) && !x.IsAbstract)
         )
             _ = (BaseExtendedLibrary)Activator.CreateInstance(type);
+        Buildings.init();
+        Biomes.init();
+        Drops.init();
+        StatusEffects.init();
+        TabManager.init();
     }
 }

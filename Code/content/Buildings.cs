@@ -14,7 +14,7 @@ using System.Text;
 using UnityEngine.UI;
 using pathfinding;
 
-namespace CW_FantasyCreatures
+namespace CW_FantasyCreatures.content
 {
     class Buildings
     {

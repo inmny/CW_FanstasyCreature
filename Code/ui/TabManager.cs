@@ -13,7 +13,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using ReflectionUtility;
 
-namespace CW_FantasyCreatures
+namespace CW_FantasyCreatures.ui
 {
     class TabManager
     {
@@ -26,8 +26,8 @@ namespace CW_FantasyCreatures
 
         private static void loadButtons()
         {
-            int index = 0;
-            int xPos = 72;
+            int index = 1;
+            int xPos = 72 + 9;
             int yPos = 18;
             int gap = 35;
             
