@@ -13,10 +13,10 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         ActorAsset vanilla_t;
         BaseStats stats;
 
-        #region 一个示例生物的创建以及按钮的放置
+        #region ------鹿
 
         // 创建一个生物
-        CreateActor("example_creature", "Example Creature", "iconExampleCreature", out vanilla_t, out stats);
+        CreateActor("deer", "Deer", "iconDeer", out vanilla_t, out stats);
 
         t.born_spells.Add("fire_blade"); // 自带火斩法术
         t.prefer_element = new[] { 40, 40, 0, 20, 0 }; // 倾向于雷灵根
@@ -24,46 +24,49 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
+        vanilla_t.disableJumpAnimation = false;//允许跳跃
 
-        vanilla_t.needFood = false; // 不需要食物,
+        vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
 
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
 
-        MarkNameTemplate("example_creature_name"); // 设置命名模板，只在中文名存在时生效
+        MarkNameTemplate("deer_name"); // 设置命名模板，只在中文名存在时生效
 
         // 创建这个生物的放置按钮
-        CreateButton("example_creature");
+        CreateButton("deer");
+
+        #endregion
+
+        #region ------半鹿人
+
+        // 创建一个生物
+        CreateActor("half_deer_man", "Half Deer Man", "iconHalf_Deer_Man", out vanilla_t, out stats);
+
+        t.born_spells.Add("fire_blade"); // 自带火斩法术
+        t.prefer_element = new[] { 40, 40, 0, 20, 0 }; // 倾向于雷灵根
+        t.prefer_element_scale = 0.9f; // 倾向程度
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.disableJumpAnimation = false;//允许跳跃
+
+        vanilla_t.needFood = false; // 不需要食物
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+
+        MarkNameTemplate("deer_name"); // 设置命名模板，只在中文名存在时生效
+
+        // 创建这个生物的放置按钮
+        CreateButton("half_deer_man");
 
         #endregion
         
-        #region 一个示例生物的创建以及按钮的放置
-
-        // 创建一个生物
-        CreateActor("example_creature", "Example Creature", "iconExampleCreature", out vanilla_t, out stats);
-
-        t.born_spells.Add("fire_blade"); // 自带火斩法术
-        t.prefer_element = new[] { 40, 40, 0, 20, 0 }; // 倾向于雷灵根
-        t.prefer_element_scale = 0.9f; // 倾向程度
-        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
-        // 武道: cw_cultisys_bushido
-        // 魂道: cw_cultisys_soul
-
-        vanilla_t.needFood = false; // 不需要食物,
-        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
-        // 作用于0.14游戏版本，大体没有发生改变
-
-        stats[S.damage] = 1000; // 伤害
-        stats[CW_S.wakan] = 100; // 灵气
-
-        MarkNameTemplate("example_creature_name"); // 设置命名模板，只在中文名存在时生效
-
-        // 创建这个生物的放置按钮
-        CreateButton("example_creature");
-
-        #endregion
     }
 
     /// <summary>

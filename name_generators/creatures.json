@@ -1,10 +1,12 @@
 [
     {
-        "id": "example_creature_name",
+        "id": "deer_name",
         "templates": [
             {
-                "format": "$天干地支纪年$#示例生物#"
+                "format": "{妖名前缀}#鹿#"
             }
         ]
+        
     }
+
 ]
