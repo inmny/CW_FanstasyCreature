@@ -53,6 +53,7 @@ public class Main : CW_Addon<Main>, IReloadable
         Biomes.init();
         Drops.init();
         StatusEffects.init();
+        _ = new Resources();
         TabManager.init();
     }
 }
