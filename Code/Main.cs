@@ -32,7 +32,8 @@ public class Main : CW_Addon<Main>, IReloadable
     {
         base.OnModLoad();
         Declaration = GetDeclaration();
-        LogService.LogInfo("远程更改");
+        LogInfo("Local message");
+
 #if 一米_中文名
         CN_NameGeneratorLibrary.SubmitDirectoryToLoad(
             Path.Combine(Declaration.FolderPath, "name_generators")
