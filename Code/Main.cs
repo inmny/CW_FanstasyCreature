@@ -56,5 +56,6 @@ public class Main : CW_Addon<Main>, IReloadable
         StatusEffects.init();
         _ = new Resources();
         TabManager.init();
+         _ = new Elements();
     }
 }

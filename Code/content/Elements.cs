@@ -19,6 +19,39 @@ internal class Elements : ExtendedLibrary<ElementAsset, Elements>
     public static readonly ElementAsset cw_time;//时间灵根
     public static readonly ElementAsset cw_space;//空间灵根
     public static readonly ElementAsset cw_rain;//雨灵根
+    public static readonly ElementAsset cw_sky;//天灵根
+    public static readonly ElementAsset cw_earth;//地灵根
+    public static readonly ElementAsset cw_rock;//岩灵根
+    public static readonly ElementAsset cw_sand;//沙灵根
+    public static readonly ElementAsset cw_grass;//草灵根
+    public static readonly ElementAsset cw_pills;//丹灵根
+    public static readonly ElementAsset cw_water;//水灵根
+    public static readonly ElementAsset cw_fire;//火灵根
+    public static readonly ElementAsset cw_wood;//木灵根
+    public static readonly ElementAsset cw_metal;//金灵根
+    public static readonly ElementAsset cw_soil;//土灵根
+    public static readonly ElementAsset cw_water_fire;//水火灵根
+    public static readonly ElementAsset cw_water_wood;//水木灵根
+    public static readonly ElementAsset cw_water_metal;//水金灵根
+    public static readonly ElementAsset cw_water_soil;//水土灵根
+    public static readonly ElementAsset cw_fire_wood;//火木灵根
+    public static readonly ElementAsset cw_fire_metal;//火金灵根
+    public static readonly ElementAsset cw_fire_soil;//火土灵根
+    public static readonly ElementAsset cw_wood_metal;//木金灵根
+    public static readonly ElementAsset cw_wood_soil;//木土灵根
+    public static readonly ElementAsset cw_metal_soil;//金土灵根
+    public static readonly ElementAsset cw_water_fire_wood;//水火木灵根
+    public static readonly ElementAsset cw_water_fire_metal;//水火金灵根
+    public static readonly ElementAsset cw_water_fire_soil;//水火土灵根
+    public static readonly ElementAsset cw_water_wood_metal;//水木金灵根
+    public static readonly ElementAsset cw_water_wood_soil;//水木土灵根
+    public static readonly ElementAsset cw_water_metal_soil;//水金土灵根
+    public static readonly ElementAsset cw_fire_wood_metal;//火木金灵根
+    public static readonly ElementAsset cw_fire_wood_soil;//火木土灵根
+    public static readonly ElementAsset cw_fire_metal_soil;//火金土灵根
+    public static readonly ElementAsset cw_wood_metal_soil;//木金土灵根
+    public static readonly ElementAsset cw_hybrid;//杂灵根
+    public static readonly ElementAsset cw_chaos;//混沌灵根
 
     internal Elements()//promot 强化系数、rarity 稀有度
     {
