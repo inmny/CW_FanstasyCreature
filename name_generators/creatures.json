@@ -7,6 +7,24 @@
             }
         ]
         
+    },
+    {
+        "id": "anubis_name",
+        "templates": [
+            {
+                "format": "#阿努比斯#"
+            }
+        ]
+        
+    },
+    {
+        "id": "bloodsucker_name",
+        "templates": [
+            {
+                "format": "{西方名字}{爵位后缀}"
+            }
+        ]
+        
     }
 
 ]
