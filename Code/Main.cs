@@ -20,6 +20,7 @@ namespace CW_FantasyCreatures;
 public class Main : CW_Addon<Main>, IReloadable
 {
     private Creatures _creatures;
+    public static Camps Camps { get; private set; }
     public static ModDeclare Declaration { get; private set; }
 
     public void Reload()
@@ -42,7 +43,8 @@ public class Main : CW_Addon<Main>, IReloadable
             Path.Combine(Declaration.FolderPath, "word_libraries")
         );
 #endif
-
+        
+        Camps = new Camps();
         foreach (
             var type in Assembly
                 .GetExecutingAssembly()
@@ -56,6 +58,6 @@ public class Main : CW_Addon<Main>, IReloadable
         StatusEffects.init();
         _ = new Resources();
         TabManager.init();
-         _ = new Elements();
+        _ = new Elements();
     }
 }

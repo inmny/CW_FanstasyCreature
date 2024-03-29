@@ -177,6 +177,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 魂道: cw_cultisys_soul
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.vampire.id;
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -196,6 +197,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 魂道: cw_cultisys_soul
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.anti_vampire.id;
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -352,7 +354,14 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
 #endif
         AssetManager.actor_library.loadShadow(pActorAsset);
     }
-
+    private void WithCamp(string pCampID)
+    {
+        t.vanllia_asset.kingdom = pCampID;
+        if (!AssetManager.kingdoms.dict.ContainsKey(pCampID))
+        {
+            Main.Camps.CreateCamp(pCampID);
+        }
+    }
     /// <summary>
     ///     为一个生物创建一个放置按钮
     /// </summary>
