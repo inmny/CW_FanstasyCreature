@@ -30,6 +30,7 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
         {
             id = pID
         });
+        World.world.kingdoms.newHiddenKingdom(t);
     }
     /// <summary>
     /// 为拥有所有<paramref name="pIfHasTags"/>标签的阵营对<paramref name="pTag"/>标签友好
