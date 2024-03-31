@@ -18,10 +18,82 @@
         
     },
     {
+        "id": "sphinx_name",
+        "templates": [
+            {
+                "format": "#斯芬克斯#"
+            }
+        ]
+        
+    },
+    {
+        "id": "skeleton_knight_name",
+        "templates": [
+            {
+                "format": "{西方名字}#骑士#"
+            }
+        ]
+        
+    },
+    {
         "id": "bloodsucker_name",
         "templates": [
             {
                 "format": "{西方名字}{爵位后缀}"
+            }
+        ]
+        
+    },
+    {
+        "id": "western_name",
+        "templates": [
+            {
+                "format": "{西方名字}"
+            }
+        ]
+        
+    },
+    {
+        "id": "suzaku_name",
+        "templates": [
+            {
+                "format": "#朱雀#"
+            }
+        ]
+        
+    },
+    {
+        "id": "qilin_name",
+        "templates": [
+            {
+                "format": "#麒麟#"
+            }
+        ]
+        
+    },
+    {
+        "id": "xuanwu_name",
+        "templates": [
+            {
+                "format": "#玄武#"
+            }
+        ]
+        
+    },
+    {
+        "id": "white_tiger_name",
+        "templates": [
+            {
+                "format": "#白虎#"
+            }
+        ]
+        
+    },
+    {
+        "id": "loong_name",
+        "templates": [
+            {
+                "format": "#青龙#"
             }
         ]
         

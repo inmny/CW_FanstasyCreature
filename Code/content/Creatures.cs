@@ -22,6 +22,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
@@ -42,13 +44,15 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
-        MarkNameTemplate("deer_name"); // 设置命名模板，只在中文名存在时生效
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("half_deer_man");
         #endregion
@@ -61,13 +65,15 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
-        MarkNameTemplate("Centaur_name"); // 设置命名模板，只在中文名存在时生效
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("centaur");
         #endregion
@@ -84,6 +90,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale]=0.2f;//大小
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
         MarkNameTemplate("anubis_name"); // 设置命名模板，只在中文名存在时生效
@@ -99,13 +106,16 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale]=0.3f;//大小
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
-        MarkNameTemplate("deer_name"); // 设置命名模板，只在中文名存在时生效
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("ossaurus");
         #endregion
@@ -119,15 +129,16 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
         vanilla_t.animation_walk = "walk_0,walk_1,walk_2,walk_3,walk_4,walk_5,walk_6,walk_7";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.scale]=0.2f;
+        stats[S.scale]=0.2f;//大小
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
-        MarkNameTemplate("deer_name"); // 设置命名模板，只在中文名存在时生效
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("pharaoh");
         #endregion
@@ -140,13 +151,15 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
-        MarkNameTemplate("deer_name"); // 设置命名模板，只在中文名存在时生效
+        MarkNameTemplate("skeleton_knight_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("skeleton_knight");
         #endregion
@@ -159,13 +172,16 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale]=0.2f;//大小
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
-        MarkNameTemplate("deer_name"); // 设置命名模板，只在中文名存在时生效
+        MarkNameTemplate("sphinx_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("sphinx");
         #endregion
@@ -178,9 +194,11 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
-        vanilla_t.kingdom = Camps.vampire.id;
+        //vanilla_t.kingdom = Camps.vampire.id;
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -198,14 +216,16 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
-        vanilla_t.disableJumpAnimation = false; //允许跳跃
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
-        vanilla_t.kingdom = Camps.anti_vampire.id;
+        //vanilla_t.kingdom = Camps.anti_vampire.id;
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
-        MarkNameTemplate("deer_name"); // 设置命名模板，只在中文名存在时生效
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("vampire_hunter");
         #endregion
@@ -218,13 +238,15 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
-        MarkNameTemplate("deer_name"); // 设置命名模板，只在中文名存在时生效
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("werewolf");
         #endregion
@@ -243,9 +265,10 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale]=0.2f;//大小
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
-        MarkNameTemplate("deer_name"); // 设置命名模板，只在中文名存在时生效
+        MarkNameTemplate("suzaku_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("suzaku");
         #endregion
@@ -258,13 +281,16 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale]=0.2f;//大小
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
-        MarkNameTemplate("deer_name"); // 设置命名模板，只在中文名存在时生效
+        MarkNameTemplate("qilin_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("qilin");
         #endregion
@@ -277,13 +303,16 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale]=0.2f;//大小
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
-        MarkNameTemplate("deer_name"); // 设置命名模板，只在中文名存在时生效
+        MarkNameTemplate("white_tiger_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("white_tiger");
         #endregion
@@ -296,13 +325,16 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_0,walk_1,walk_2,walk_3";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale]=0.2f;//大小
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
-        MarkNameTemplate("deer_name"); // 设置命名模板，只在中文名存在时生效
+        MarkNameTemplate("xuanwu_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("xuanwu");
         #endregion
@@ -315,13 +347,16 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4,walk_5,walk_6";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale]=0.2f;//大小
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
-        MarkNameTemplate("deer_name"); // 设置命名模板，只在中文名存在时生效
+        MarkNameTemplate("loong_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("loong");
         #endregion

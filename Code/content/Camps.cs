@@ -7,22 +7,22 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
     /// </summary>
     public static readonly KingdomAsset vampire;
     /// <summary>
-    /// 反血族
+    /// 猎魔人
     /// </summary>
     public static readonly KingdomAsset anti_vampire;
     internal Camps()
     {
-        CreateCamp(nameof(vampire));
-        t.mobs = true;
-        t.addTag(nameof(vampire));
-        t.addFriendlyTag(nameof(vampire));
-        AllEnemyWith(nameof(vampire), SK.civ);  // 所有文明阵营都会主动攻击吸血鬼
+        CreateCamp(nameof(vampire));//血族阵营
+        t.mobs = true;//nature(完全友善)，mobs(怪物)，mad（疯狂），attack_each_other（互相攻击）
+        t.addTag(nameof(vampire));//血族标签
+        t.addFriendlyTag(nameof(vampire));//对血族标签友好
+        AllEnemyWith(nameof(vampire), SK.civ);  // 所有文明阵营都会主动攻击吸血鬼，civ（公民）
 
-        CreateCamp(nameof(anti_vampire));
+        CreateCamp(nameof(anti_vampire));//猎魔人
         t.addTag(nameof(anti_vampire));
-        t.addTag(SK.neutral);
-        t.addFriendlyTag(SK.neutral);
-        t.addEnemyTag(nameof(vampire));
+        t.addTag(SK.neutral);//中立
+        t.addFriendlyTag(SK.neutral);//对中立标签友好
+        t.addEnemyTag(nameof(vampire));//对吸血鬼敌对
     }
     internal void CreateCamp(string pID)
     {
