@@ -9,6 +9,69 @@
         
     },
     {
+        "id": "horse_name",
+        "templates": [
+            {
+                "format": "{妖名前缀}#马#"
+            }
+        ]
+        
+    },
+    {
+        "id": "fairy_fox_name",
+        "templates": [
+            {
+                "format": "#九尾狐#"
+            }
+        ]
+        
+    },
+    {
+        "id": "lion_name",
+        "templates": [
+            {
+                "format": "{妖名前缀}#狮#"
+            }
+        ]
+        
+    },
+    {
+        "id": "pig_name",
+        "templates": [
+            {
+                "format": "{妖名前缀}#猪#"
+            }
+        ]
+        
+    },
+    {
+        "id": "rooster_name",
+        "templates": [
+            {
+                "format": "{妖名前缀}#鸡#"
+            }
+        ]
+        
+    },
+    {
+        "id": "tiger_name",
+        "templates": [
+            {
+                "format": "{妖名前缀}#虎#"
+            }
+        ]
+        
+    },
+    {
+        "id": "panda_name",
+        "templates": [
+            {
+                "format": "#熊猫#"
+            }
+        ]
+        
+    },
+    {
         "id": "pharaoh_name",
         "templates": [
             {

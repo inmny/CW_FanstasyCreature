@@ -39,7 +39,6 @@ namespace CW_FantasyCreatures.content
             );
             Coral.addUnit(SA.crab, 5); //加入生物,前面是生物id，后面是生成占比
             Coral.addUnit(SA.turtle, 3);
-            Coral.addUnit("half_deer_man", 1);
             Coral.addMineral(SB.mineral_stone, 5); //加入矿物,前面是建筑id，后面是生成占比
             Coral.addMineral(SB.mineral_metals, 3);
             Coral.addTree("Coral_tree", 1); //加入树,前面是建筑id，后面是生成占比
@@ -93,6 +92,7 @@ namespace CW_FantasyCreatures.content
                 TileActionLibrary.getGrowTypeRandomPlants
             );
             Bamboo.addUnit(SA.bear, 2); //加入生物,前面是生物id，后面是生成占比
+            Bamboo.addUnit("panda", 1);//添加熊猫
             Bamboo.addMineral(SB.mineral_stone, 5); //加入矿物,前面是建筑id，后面是生成占比
             Bamboo.addMineral(SB.mineral_metals, 3);
             Bamboo.addTree("Bamboo_tree", 1); //加入树,前面是建筑id，后面是生成占比

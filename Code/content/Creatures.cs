@@ -13,10 +13,152 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         ActorAsset vanilla_t;
         BaseStats stats;
 
+        #region ------九尾狐
+        // 创建一个生物
+        CreateActor("fairy_fox", "Fairy Fox", "iconFairy_Fox", out vanilla_t, out stats);
+        t.born_spells.Add("fire_blade"); // 自带火斩法术
+        t.prefer_element = new[] { 5, 80, 5, 5, 5 }; // 倾向于火灵根
+        t.prefer_element_scale = 2f; // 倾向程度
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = false; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("fairy_fox_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("fairy_fox");
+        #endregion
+
+        #region ------狮子
+        // 创建一个生物
+        CreateActor("lion", "Lion", "iconLion", out vanilla_t, out stats);
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = false; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("lion_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("lion");
+        #endregion
+
+        #region ------家猪
+        // 创建一个生物
+        CreateActor("pig", "Pig", "iconPig", out vanilla_t, out stats);
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = false; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("pig_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("pig");
+        #endregion
+
+        #region ------野猪
+        // 创建一个生物
+        CreateActor("wild_boar", "Wild Boar", "iconWild_Boar", out vanilla_t, out stats);
+        t.prefer_element = new[] { 25, 20, 10, 15, 30 }; // 倾向于地灵根
+        t.prefer_element_scale = 1f; // 倾向程度
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = false; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("pig_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("wild_boar");
+        #endregion
+
+
+        #region ------公鸡
+        // 创建一个生物
+        CreateActor("rooster", "Rooster", "iconRooster", out vanilla_t, out stats);
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = false; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("rooster_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("rooster");
+        #endregion
+
+        #region ------老虎
+        // 创建一个生物
+        CreateActor("tiger", "Tiger", "iconTiger", out vanilla_t, out stats);
+        t.prefer_element = new[] { 20, 20, 40, 10, 10 }; // 倾向于风灵根
+        t.prefer_element_scale = 1f; // 倾向程度
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = false; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("tiger_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("tiger");
+        #endregion
+
+        #region ------熊猫
+        // 创建一个生物
+        CreateActor("panda", "Panda", "iconPanda", out vanilla_t, out stats);
+        t.prefer_element = new[] { 30, 10, 30, 10, 20 }; // 倾向于草灵根
+        t.prefer_element_scale = 1f; // 倾向程度
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = true; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("panda_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("panda");
+        #endregion
+
         #region ------鹿
         // 创建一个生物
         CreateActor("deer", "Deer", "iconDeer", out vanilla_t, out stats);
-        t.born_spells.Add("fire_blade"); // 自带火斩法术
         t.prefer_element = new[] { 40, 40, 0, 20, 0 }; // 倾向于雷灵根
         t.prefer_element_scale = 0.9f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
@@ -38,9 +180,6 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------半鹿人
         // 创建一个生物
         CreateActor("half_deer_man","Half Deer Man","iconHalf_Deer_Man",out vanilla_t,out stats);
-        t.born_spells.Add("fire_blade"); // 自带火斩法术
-        t.prefer_element = new[] { 40, 40, 0, 20, 0 }; // 倾向于雷灵根
-        t.prefer_element_scale = 0.9f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
@@ -62,9 +201,6 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------马
         // 创建一个生物
         CreateActor("horse", "Horse", "iconHorse", out vanilla_t, out stats);
-        t.born_spells.Add("fire_blade"); // 自带火斩法术
-        t.prefer_element = new[] { 40, 40, 0, 20, 0 }; // 倾向于雷灵根
-        t.prefer_element_scale = 0.9f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
@@ -84,8 +220,6 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------半人马
         // 创建一个生物半人马
         CreateActor("centaur","Centaur","iconCentaur",out vanilla_t,out stats);
-        t.prefer_element = new[] { 25, 20, 10, 15, 30 }; // 倾向于地灵根
-        t.prefer_element_scale = 0.9f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
@@ -105,8 +239,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------阿努比斯
         // 创建一个生物阿努比斯
         CreateActor("anubis","Anubis","iconAnubis",out vanilla_t,out stats);
-        t.prefer_element = new[] { 25, 20, 10, 15, 30 }; // 倾向于地灵根
-        t.prefer_element_scale = 0.9f; // 倾向程度
+        t.prefer_element = new[] { 40, 5, 10, 5, 40 }; // 倾向于暗灵根
+        t.prefer_element_scale = 2f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
@@ -127,8 +261,6 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------骨龙
         // 创建一个生物骨龙
         CreateActor("ossaurus","Ossaurus","iconOssaurus",out vanilla_t,out stats);
-        t.prefer_element = new[] { 25, 20, 10, 15, 30 }; // 倾向于地灵根
-        t.prefer_element_scale = 0.9f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
@@ -149,9 +281,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------法老
         // 创建一个生物法老
         CreateActor("pharaoh","Pharaoh","iconPharaoh",out vanilla_t,out stats);
-        t.prefer_element = new[] { 25, 20, 10, 15, 30 }; // 倾向于地灵根
-        t.prefer_element_scale = 0.9f; // 倾向程度
-        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        t.add_allowed_cultisys("cw_cultisys_soul"); // 允许魂道
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
         vanilla_t.animation_walk = "walk_0,walk_1,walk_2,walk_3,walk_4,walk_5,walk_6,walk_7";//移动贴图设置
@@ -173,9 +303,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------骷髅骑士
         // 创建一个生物骷髅骑士
         CreateActor("skeleton_knight","Skeleton Knight","iconSkeleton_Knight",out vanilla_t,out stats);
-        t.prefer_element = new[] { 25, 20, 10, 15, 30 }; // 倾向于地灵根
-        t.prefer_element_scale = 0.9f; // 倾向程度
-        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        t.add_allowed_cultisys("cw_cultisys_bushido"); // 允许武道
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
         vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
@@ -216,7 +344,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------吸血鬼
         // 创建一个生物吸血鬼
         CreateActor("bloodsucker","Bloodsucker","iconBloodsucker",out vanilla_t,out stats);
-        t.prefer_element = new[] { 25, 20, 10, 15, 30 }; // 倾向于地灵根
+        t.prefer_element = new[] { 40, 10, 40, 5, 5 }; // 倾向于血灵根
         t.prefer_element_scale = 0.9f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
@@ -225,7 +353,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
-        //vanilla_t.kingdom = Camps.vampire.id;
+        vanilla_t.kingdom = Camps.vampire.id;
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -238,16 +366,15 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------吸血鬼猎人
         // 创建一个生物吸血鬼猎人
         CreateActor("vampire_hunter","Vampire Hunter","iconVampire_Hunter",out vanilla_t,out stats);
-        t.prefer_element = new[] { 25, 20, 10, 15, 30 }; // 倾向于地灵根
-        t.prefer_element_scale = 0.9f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        t.add_allowed_cultisys("cw_cultisys_bushido"); // 允许武道
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
         vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
-        //vanilla_t.kingdom = Camps.anti_vampire.id;
+        vanilla_t.kingdom = Camps.anti_vampire.id;
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -260,9 +387,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------狼人
         // 创建一个生物狼人
         CreateActor("werewolf","Werewolf","iconWerewolf",out vanilla_t,out stats);
-        t.prefer_element = new[] { 25, 20, 10, 15, 30 }; // 倾向于地灵根
-        t.prefer_element_scale = 0.9f; // 倾向程度
-        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        t.add_allowed_cultisys("cw_cultisys_bushido"); // 允许武道
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
         vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
@@ -281,8 +406,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------朱雀
         // 创建一个生物朱雀
         CreateActor("suzaku","Suzaku","iconSuzaku",out vanilla_t,out stats);
-        t.prefer_element = new[] { 25, 20, 10, 15, 30 }; // 倾向于地灵根
-        t.prefer_element_scale = 0.9f; // 倾向程度
+        t.prefer_element = new[] { 5, 80, 5, 5, 5 }; // 倾向于火灵根
+        t.prefer_element_scale = 2f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
@@ -303,8 +428,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------麒麟
         // 创建一个生物麒麟
         CreateActor("qilin","Qilin","iconQilin",out vanilla_t,out stats);
-        t.prefer_element = new[] { 25, 20, 10, 15, 30 }; // 倾向于地灵根
-        t.prefer_element_scale = 0.9f; // 倾向程度
+        t.prefer_element = new[] { 5, 5, 5, 5, 80 }; // 倾向于土灵根
+        t.prefer_element_scale = 2f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
@@ -325,8 +450,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------白虎
         // 创建一个生物白虎
         CreateActor("white_tiger","White Tiger","iconWhite_Tiger",out vanilla_t,out stats);
-        t.prefer_element = new[] { 25, 20, 10, 15, 30 }; // 倾向于地灵根
-        t.prefer_element_scale = 0.9f; // 倾向程度
+        t.prefer_element = new[] { 5, 5, 5, 80, 5 }; // 倾向于金灵根
+        t.prefer_element_scale = 2f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
@@ -347,8 +472,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------玄武
         // 创建一个生物玄武
         CreateActor("xuanwu","Xuanwu","iconXuanwu",out vanilla_t,out stats);
-        t.prefer_element = new[] { 25, 20, 10, 15, 30 }; // 倾向于地灵根
-        t.prefer_element_scale = 0.9f; // 倾向程度
+        t.prefer_element = new[] { 80, 5, 5, 5, 5 }; // 倾向于水灵根
+        t.prefer_element_scale = 2f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
@@ -369,8 +494,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------中国龙
         // 创建一个生物中国龙
         CreateActor("loong","Loong","iconLoong",out vanilla_t,out stats);
-        t.prefer_element = new[] { 25, 20, 10, 15, 30 }; // 倾向于地灵根
-        t.prefer_element_scale = 0.9f; // 倾向程度
+        t.prefer_element = new[] { 5, 5, 80, 5, 5 }; // 倾向于木灵根
+        t.prefer_element_scale = 2f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
