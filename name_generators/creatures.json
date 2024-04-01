@@ -9,6 +9,15 @@
         
     },
     {
+        "id": "pharaoh_name",
+        "templates": [
+            {
+                "format": "{埃及名字}{名称后缀}"
+            }
+        ]
+        
+    },
+    {
         "id": "anubis_name",
         "templates": [
             {
