@@ -48,6 +48,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.defaultWeapons = List.Of<string>(new string[] {"spear"});//添加矛
+        vanilla_t.defaultWeaponsMaterial = List.Of<string>(new string[] {"bronze"});//青铜
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -86,6 +88,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_0,walk_1,walk_2,walk_3,walk_4,walk_5,walk_6,walk_7";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
@@ -106,8 +110,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
-        vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
-        vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4,walk_5,walk_6";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
@@ -132,13 +136,14 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
-        
+        vanilla_t.defaultWeapons = List.Of<string>(new string[] {"spear"});//添加矛
+        vanilla_t.defaultWeaponsMaterial = List.Of<string>(new string[] {"bronze"});//青铜
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
-        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        MarkNameTemplate("pharaoh_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("pharaoh");
         #endregion
@@ -172,9 +177,9 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
-        vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
+        vanilla_t.animation_walk = "walk_0,walk_1,walk_2,walk_3";//移动贴图设置
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
-        vanilla_t.disableJumpAnimation = false; //允许跳跃
+        vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
