@@ -188,47 +188,47 @@ internal class Elements : ExtendedLibrary<ElementAsset, Elements>
         t.base_stats[S.mod_damage] = 1f;//攻击100%
         t.base_stats[CW_S.mod_cultivelo] = 0.5f;//修炼速度50%
                                                                                         
-        CreateElement("cw_water_fire_wood", 30, 30, 30, 5, 5, 1f, 0.1f);//水火木灵根
+        CreateElement("cw_water_fire_wood", 30, 30, 30, 5, 5, 1f, 1);//水火木灵根
         t.base_stats[S.mod_damage] = 1f;//攻击100%
         t.base_stats[CW_S.mod_cultivelo] = 0.5f;//修炼速度50%
                                                                                                 
-        CreateElement("cw_water_fire_metal", 30, 30, 5, 30, 5, 1f, 0.1f);//水火金灵根
+        CreateElement("cw_water_fire_metal", 30, 30, 5, 30, 5, 1f, 1);//水火金灵根
         t.base_stats[S.mod_damage] = 1f;//攻击100%
         t.base_stats[CW_S.mod_cultivelo] = 0.5f;//修炼速度50%
                                                                                                 
-        CreateElement("cw_water_fire_soil", 30, 30, 5, 5, 30, 1f, 0.1f);//水火土灵根
+        CreateElement("cw_water_fire_soil", 30, 30, 5, 5, 30, 1f, 1);//水火土灵根
         t.base_stats[S.mod_damage] = 1f;//攻击100%
         t.base_stats[CW_S.mod_cultivelo] = 0.5f;//修炼速度50%
                                                                                                 
-        CreateElement("cw_water_wood_metal", 30, 5, 30, 30, 5, 1f, 0.1f);//水木金灵根
+        CreateElement("cw_water_wood_metal", 30, 5, 30, 30, 5, 1f, 1);//水木金灵根
         t.base_stats[S.mod_damage] = 1f;//攻击100%
         t.base_stats[CW_S.mod_cultivelo] = 0.5f;//修炼速度50%
                                                                                                         
-        CreateElement("cw_water_wood_soil", 30, 5, 30, 5, 30, 1f, 0.1f);//水木土灵根
+        CreateElement("cw_water_wood_soil", 30, 5, 30, 5, 30, 1f, 1);//水木土灵根
         t.base_stats[S.mod_damage] = 1f;//攻击100%
         t.base_stats[CW_S.mod_cultivelo] = 0.5f;//修炼速度50%
                                                                                                         
-        CreateElement("cw_water_metal_soil", 30, 5, 5, 30, 30, 1f, 0.1f);//水金土灵根
+        CreateElement("cw_water_metal_soil", 30, 5, 5, 30, 30, 1f, 1);//水金土灵根
         t.base_stats[S.mod_damage] = 1f;//攻击100%
         t.base_stats[CW_S.mod_cultivelo] = 0.5f;//修炼速度50%
                                                                                                         
-        CreateElement("cw_fire_wood_metal", 5, 30, 30, 30, 5, 1f, 0.1f);//火木金灵根
+        CreateElement("cw_fire_wood_metal", 5, 30, 30, 30, 5, 1f, 1);//火木金灵根
         t.base_stats[S.mod_damage] = 1f;//攻击100%
         t.base_stats[CW_S.mod_cultivelo] = 0.5f;//修炼速度50%
                                                                                                                 
-        CreateElement("cw_fire_wood_soil", 5, 30, 30, 5, 30, 1f, 0.1f);//火木土灵根
+        CreateElement("cw_fire_wood_soil", 5, 30, 30, 5, 30, 1f, 1);//火木土灵根
         t.base_stats[S.mod_damage] = 1f;//攻击100%
         t.base_stats[CW_S.mod_cultivelo] = 0.5f;//修炼速度50%
                                                                                                                 
-        CreateElement("cw_fire_metal_soil", 5, 30, 5, 30, 30, 1f, 0.1f);//火金土灵根
+        CreateElement("cw_fire_metal_soil", 5, 30, 5, 30, 30, 1f, 1);//火金土灵根
         t.base_stats[S.mod_damage] = 1f;//攻击100%
         t.base_stats[CW_S.mod_cultivelo] = 0.5f;//修炼速度50%
                                                                                                                 
-        CreateElement("cw_wood_metal_soil", 5, 5, 30, 30, 30, 1f, 0.1f);//木金土灵根
+        CreateElement("cw_wood_metal_soil", 5, 5, 30, 30, 30, 1f, 1);//木金土灵根
         t.base_stats[S.mod_damage] = 1f;//攻击100%
         t.base_stats[CW_S.mod_cultivelo] = 0.5f;//修炼速度50%
                                                                                                                 
-        CreateElement("cw_hybrid", 20, 20, 20, 20, 20, 1f, 0.1f);//杂灵根
+        CreateElement("cw_hybrid", 20, 20, 20, 20, 20, 1f, 1);//杂灵根
         t.base_stats[S.mod_damage] = 1f;//攻击100%
         t.base_stats[CW_S.mod_cultivelo] = 0.5f;//修炼速度50%
                                                                                                                 
