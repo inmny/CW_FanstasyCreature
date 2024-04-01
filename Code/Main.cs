@@ -8,6 +8,12 @@ using CW_FantasyCreatures.content;
 using NeoModLoader.api;
 using NCMS;
 using NeoModLoader.services;
+using NeoModLoader.utils;
+using ReflectionUtility;
+using NeoModLoader.api.attributes;
+
+
+
 
 
 #if 一米_中文名
@@ -22,18 +28,27 @@ public class Main : CW_Addon<Main>, IReloadable
     private Creatures _creatures;
     public static Camps Camps { get; private set; }
     public static ModDeclare Declaration { get; private set; }
-
+    [Hotfixable]
     public void Reload()
     {
-        foreach (var library in BaseExtendedLibrary.libraries)
-            library.Reload();
+        typeof(SpriteLoadUtils).GetField("dirNCMSSettings", BindingFlags.Static | BindingFlags.NonPublic).GetValue(null)?.CallMethod("Clear", new object[0]);
+        typeof(ResourcesPatch).GetMethod("LoadResourceFromFolder", BindingFlags.Static | BindingFlags.NonPublic).Invoke(null, new object[] { Path.Combine(Declaration.FolderPath, "GameResources") });
+        ActorAnimationLoader.dict_units.Clear();
+
+        foreach (var unit in World.world.units)
+        {
+            if (unit != null && unit.isAlive()) 
+            {
+                unit.clearSprites();
+            }
+        }
     }
 
     protected override void OnModLoad()
     {
         base.OnModLoad();
         Declaration = GetDeclaration();
-        LogInfo("Local message");
+        Config.isEditor = true;
 
 #if 一米_中文名
         CN_NameGeneratorLibrary.SubmitDirectoryToLoad(
