@@ -417,7 +417,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.kingdom = Camps.Divine.id;
-        vanilla_t.traits = new(){"fire_blood","fire_proof"};
+        vanilla_t.traits = new(){"fire_blood","fire_proof","burning_feet"};
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -441,6 +441,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.kingdom = Camps.Divine.id;
+        vanilla_t.traits = new(){"agile","pacifist","strong","shiny"};
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -464,6 +465,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.kingdom = Camps.Divine.id;
+        vanilla_t.traits = new(){"bloodlust","fast","strong"};
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -487,6 +489,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.kingdom = Camps.Divine.id;
+        vanilla_t.traits = new(){"tough","freeze_proof","cold_aura"};
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -510,6 +513,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.kingdom = Camps.Divine.id;
+        vanilla_t.traits = new(){"wise","attractive","flower_prints","healing_aura","energized"};
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
