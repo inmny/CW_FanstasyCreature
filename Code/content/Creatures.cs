@@ -206,7 +206,6 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
-        AddColorSet(S_SkinColor.polar);
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -226,7 +225,6 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
-        AddColorSet(S_SkinColor.polar);
         vanilla_t.defaultWeapons = List.Of<string>(new string[] {"spear"});//添加矛
         vanilla_t.defaultWeaponsMaterial = List.Of<string>(new string[] {"stone"});//石头
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
@@ -418,6 +416,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_1,swim_2";//移动贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Divine.id;
+        vanilla_t.traits = new(){"fire_blood","fire_proof"};
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -440,6 +440,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Divine.id;
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -462,6 +463,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Divine.id;
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -484,6 +486,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Divine.id;
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -506,6 +509,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Divine.id;
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小

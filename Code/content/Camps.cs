@@ -10,6 +10,10 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
     /// 猎魔人
     /// </summary>
     public static readonly KingdomAsset anti_vampire;
+    /// <summary>
+    /// 神圣
+    /// </summary>
+    public static readonly KingdomAsset Divine;
     internal Camps()
     {
         CreateCamp(nameof(vampire));//血族阵营
@@ -23,6 +27,13 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
         t.addTag(SK.neutral);//中立
         t.addFriendlyTag(SK.neutral);//对中立标签友好
         t.addEnemyTag(nameof(vampire));//对吸血鬼敌对
+
+        CreateCamp(nameof(Divine));//神兽阵营
+        t.addTag(nameof(Divine));//神兽标签
+        t.addTag(SK.neutral);//中立
+        t.addFriendlyTag(nameof(Divine));//对神兽标签友好
+        t.addFriendlyTag("yao");//对妖族标签敌对
+        t.addFriendlyTag("eastern_human");//对东人标签友好
     }
     internal void CreateCamp(string pID)
     {
