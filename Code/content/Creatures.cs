@@ -506,6 +506,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.prefer_element = new[] { 5, 5, 80, 5, 5 }; // 倾向于木灵根
         t.prefer_element_scale = 1f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        t.force_cultisys_initial_level("cw_cultisys_immortal", 10); // 强制初始仙路等级为地仙
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
         vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4,walk_5,walk_6";//移动贴图设置
