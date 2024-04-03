@@ -32,7 +32,7 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
         t.addTag(nameof(Divine));//神兽标签
         t.addTag(SK.neutral);//中立
         t.addFriendlyTag(nameof(Divine));//对神兽标签友好
-        t.addFriendlyTag("yao");//对妖族标签敌对
+        t.addEnemyTag("yao");//对妖族标签敌对
         t.addFriendlyTag("eastern_human");//对东人标签友好
     }
     internal void CreateCamp(string pID)
