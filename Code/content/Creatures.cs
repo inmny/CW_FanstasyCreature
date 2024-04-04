@@ -12,14 +12,96 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
     {
         ActorAsset vanilla_t;
         BaseStats stats;
+                                                        
+        #region ------梧桐树人
+        // 创建一个生物树人
+        CreateActor("sycamore_treants","Sycamore Treants","iconSycamore_Treants",out vanilla_t,out stats);
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许仙道
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4,walk_5,walk_6,walk_7,walk_8";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = true; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.traits = new(){"wise","attractive","flower_prints","healing_aura"};
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale]=0.2f;//大小
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("sycamore_treants");
+        #endregion
+                                                        
+        #region ------榕树人
+        // 创建一个生物树人
+        CreateActor("banyan_treants","Banyan Treants","iconBanyan_Treants",out vanilla_t,out stats);
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许仙道
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4,walk_5,walk_6,walk_7,walk_8";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = true; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.traits = new(){"wise","attractive","flower_prints","healing_aura"};
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale]=0.2f;//大小
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("banyan_treants");
+        #endregion
+                                                        
+        #region ------椰树人
+        // 创建一个生物树人
+        CreateActor("coconut_treants","Coconut Treants","iconCoconut_Treants",out vanilla_t,out stats);
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许仙道
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4,walk_5,walk_6,walk_7,walk_8";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = true; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.traits = new(){"wise","attractive","flower_prints","healing_aura"};
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale]=0.2f;//大小
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("coconut_treants");
+        #endregion
+                                                        
+        #region ------桉树人
+        // 创建一个生物树人
+        CreateActor("eucalyptus_treants","Eucalyptus Treants","iconEucalyptus_Treants",out vanilla_t,out stats);
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许仙道
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4,walk_5,walk_6,walk_7,walk_8";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = true; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.traits = new(){"wise","attractive","flower_prints","healing_aura"};
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale]=0.2f;//大小
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("eucalyptus_treants");
+        #endregion
 
         #region ------九尾狐
         // 创建一个生物
         CreateActor("fairy_fox", "Fairy Fox", "iconFairy_Fox", out vanilla_t, out stats);
-        t.born_spells.Add("fire_blade"); // 自带火斩法术
-        t.prefer_element = new[] { 5, 80, 5, 5, 5 }; // 倾向于火灵根
-        t.prefer_element_scale = 1f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        t.force_cultisys_initial_level("cw_cultisys_immortal", 1); // 强制初始仙路等级为筑基
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
         vanilla_t.animation_walk = "walk_1,walk_2";//移动贴图设置
@@ -347,6 +429,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.prefer_element = new[] { 40, 10, 40, 5, 5 }; // 倾向于血灵根
         t.prefer_element_scale = 1f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
         vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
@@ -410,6 +493,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.prefer_element = new[] { 5, 80, 5, 5, 5 }; // 倾向于火灵根
         t.prefer_element_scale = 1f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        t.born_spells.Add("fire_blade");//添加火斩
+        t.force_cultisys_initial_level("cw_cultisys_immortal", 2); // 强制初始仙路等级为金丹
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
         vanilla_t.animation_walk = "walk_1,walk_2";//移动贴图设置
@@ -434,6 +519,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.prefer_element = new[] { 5, 5, 5, 5, 80 }; // 倾向于土灵根
         t.prefer_element_scale = 1f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        t.force_cultisys_initial_level("cw_cultisys_immortal", 2); // 强制初始仙路等级为金丹
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
         vanilla_t.animation_walk = "walk_1,walk_2";//移动贴图设置
@@ -458,6 +544,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.prefer_element = new[] { 5, 5, 5, 80, 5 }; // 倾向于金灵根
         t.prefer_element_scale = 1f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        t.force_cultisys_initial_level("cw_cultisys_immortal", 2); // 强制初始仙路等级为金丹
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
         vanilla_t.animation_walk = "walk_1,walk_2";//移动贴图设置
@@ -482,6 +569,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.prefer_element = new[] { 80, 5, 5, 5, 5 }; // 倾向于水灵根
         t.prefer_element_scale = 1f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        t.force_cultisys_initial_level("cw_cultisys_immortal", 2); // 强制初始仙路等级为金丹
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
         vanilla_t.animation_walk = "walk_0,walk_1,walk_2,walk_3";//移动贴图设置
@@ -506,7 +594,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.prefer_element = new[] { 5, 5, 80, 5, 5 }; // 倾向于木灵根
         t.prefer_element_scale = 1f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
-        t.force_cultisys_initial_level("cw_cultisys_immortal", 10); // 强制初始仙路等级为地仙
+        t.force_cultisys_initial_level("cw_cultisys_immortal", 2); // 强制初始仙路等级为金丹
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
         vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4,walk_5,walk_6";//移动贴图设置
