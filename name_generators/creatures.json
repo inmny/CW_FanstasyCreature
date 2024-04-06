@@ -27,6 +27,15 @@
         
     },
     {
+        "id": "nine_colored_deer_name",
+        "templates": [
+            {
+                "format": "#九色神鹿#"
+            }
+        ]
+        
+    },
+    {
         "id": "lion_name",
         "templates": [
             {
