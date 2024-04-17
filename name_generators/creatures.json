@@ -57,7 +57,7 @@
         "id": "rooster_name",
         "templates": [
             {
-                "format": "{妖名前缀}#鸡#"
+                "format": "{东方姓氏}{东方名字}#坤#"
             }
         ]
         
@@ -130,6 +130,15 @@
         "templates": [
             {
                 "format": "{西方名字}"
+            }
+        ]
+        
+    },
+    {
+        "id": "feng_huang_name",
+        "templates": [
+            {
+                "format": "{凤凰名}"
             }
         ]
         

@@ -2,7 +2,7 @@ key,cz,en
 Deer,鹿,Deer
 Deer Description,呦呦鹿鸣，食野之苹,Yo yo deer chirping，eating wild apples
 Half Deer Man,半鹿人,Half deer man
-Half Deer Man Description,纯鹿人,Half deer man
+Half Deer Man Description,纯路人,Half deer man
 Anubis,阿努比斯,Anubis
 Anubis Description,冥界引路人,Anubis
 Bloodsucker,吸血鬼,Bloodsucker
@@ -19,10 +19,14 @@ Banyan Treants,巨榕树人,Banyan Treants
 Banyan Treants Description,古老的榕树，自然之灵。,Banyan Treants
 Coconut Treants,巨椰树人,Coconut Treants
 Coconut Treants Description,古老的椰树，自然之灵。,Coconut Treants
-Eucalyptus Treants,巨桉树人,Eucalyptus Treants
-Eucalyptus Treants Description,古老的桉树，自然之灵。,Eucalyptus Treants
+Acacia Treants,巨金合欢树人,Acacia Treants
+Acacia Treants Description,古老的金合欢树，自然之灵。,Acacia Treants
+Oak Treants,巨橡树人,Oak Treants
+Oak Treants Description,古老的金合欢树，自然之灵。,Oak Treants
 Nine Colored Deer,九色鹿,Nine Colored Deer
 Nine Colored Deer Description,西山之林，有兽焉，身九彩。,Nine Colored Deer
+Knowledge Genie,知识之灵,Knowledge Genie
+Knowledge Genie Description,知识渊博的精灵。,Knowledge Genie
 Lion,狮子,Lion
 Lion Description,草原上的王者。,Lion
 Pig,家猪,Pig
@@ -45,6 +49,8 @@ Skeleton Knight,骷髅骑士,Skeleton Knight
 Skeleton Knight Description,勇猛的骑士，死亡的荣光！,Skeleton Knight
 Sphinx,斯芬克斯,Sphinx
 Sphinx Description,守护者，迷语大师。,Sphinx
+Feng Huang,凤凰,Feng Huang
+Feng Huang Description,百鸟之王，羽虫之长。,Feng Huang
 Suzaku,朱雀,Suzaku
 Suzaku Description,司掌毁灭，离火之主，火之属也。,Suzaku
 Qilin,麒麟,Qilin

@@ -23,7 +23,7 @@ namespace CW_FantasyCreatures.content
             Coral.id = "biome_Coral";
             Coral.tile_low = "Coral_low"; //低块
             Coral.tile_high = "Coral_high"; //高块
-            Coral.grow_strength = 10; //群系的扩张强度
+            Coral.grow_strength = 2; //群系的扩张强度
             Coral.spread_biome = true;
             Coral.generator_pool_amount = 4; //对地图生成的影响，这个值越大该群系生成概率越高
             Coral.force_unit_skin_set = "mushroom";
@@ -47,7 +47,7 @@ namespace CW_FantasyCreatures.content
             AssetManager.biome_library.addBiomeToPool(Coral);
 
             TopTileType Coral_low = AssetManager.topTiles.clone("Coral_low", ST.mushroom_low); //地块代码
-            Coral_low.color = Toolbox.makeColor("#8bc9f7", -1f); //颜色代码
+            Coral_low.color = Toolbox.makeColor("#82d9d3", -1f); //颜色代码
             Coral_low.setBiome("biome_Coral");
             Coral_low.force_unit_skin_set = "enchanted";
             Coral_low.rank_type = TileRank.Low;
@@ -61,7 +61,7 @@ namespace CW_FantasyCreatures.content
             AssetManager.topTiles.loadSpritesForTile(Coral_low);
 
             TopTileType Coral_high = AssetManager.topTiles.clone("Coral_high", ST.mushroom_high);
-            Coral_high.color = Toolbox.makeColor("#f7e898", -1f); //颜色代码
+            Coral_high.color = Toolbox.makeColor("#f7dda3", -1f); //颜色代码
             Coral_high.setBiome("biome_Coral");
             Coral_high.rank_type = TileRank.High;
             Coral_high.force_unit_skin_set = "enchanted";
@@ -77,7 +77,7 @@ namespace CW_FantasyCreatures.content
             Bamboo.id = "biome_Bamboo";
             Bamboo.tile_low = "Bamboo_low"; //低块
             Bamboo.tile_high = "Bamboo_high"; //高块
-            Bamboo.grow_strength = 10; //群系的扩张强度
+            Bamboo.grow_strength = 2; //群系的扩张强度
             Bamboo.spread_biome = true;
             Bamboo.generator_pool_amount = 4; //对地图生成的影响，这个值越大该群系生成概率越高
             Bamboo.force_unit_skin_set = "mushroom";
@@ -91,8 +91,8 @@ namespace CW_FantasyCreatures.content
             Bamboo.grow_type_selector_plants = new GrowTypeSelector(
                 TileActionLibrary.getGrowTypeRandomPlants
             );
-            Bamboo.addUnit(SA.bear, 2); //加入生物,前面是生物id，后面是生成占比
-            Bamboo.addUnit("panda", 1);//添加熊猫
+            //Bamboo.addUnit(SA.bear, 2); //加入生物熊,前面是生物id，后面是生成占比
+            Bamboo.addUnit("panda", 2);//添加熊猫
             Bamboo.addMineral(SB.mineral_stone, 5); //加入矿物,前面是建筑id，后面是生成占比
             Bamboo.addMineral(SB.mineral_metals, 3);
             Bamboo.addTree("Bamboo_tree", 1); //加入树,前面是建筑id，后面是生成占比
@@ -192,7 +192,7 @@ namespace CW_FantasyCreatures.content
             Oak.id = "biome_Oak";
             Oak.tile_low = "Oak_low"; //低块
             Oak.tile_high = "Oak_high"; //高块
-            Oak.grow_strength = 10; //群系的扩张强度
+            Oak.grow_strength = 2; //群系的扩张强度
             Oak.spread_biome = true;
             Oak.generator_pool_amount = 4; //对地图生成的影响，这个值越大该群系生成概率越高
             Oak.force_unit_skin_set = "mushroom";
@@ -206,7 +206,8 @@ namespace CW_FantasyCreatures.content
             Oak.grow_type_selector_plants = new GrowTypeSelector(
                 TileActionLibrary.getGrowTypeRandomPlants
             );
-            Oak.addUnit(SA.wolf, 6); //加入生物,前面是生物id，后面是生成占比
+            //Oak.addUnit(SA.wolf, 6); //加入生物,前面是生物id，后面是生成占比
+            Oak.addUnit("oak_treants", 1);//添加巨橡树人
             Oak.addMineral(SB.mineral_stone, 5); //加入矿物,前面是建筑id，后面是生成占比
             Oak.addMineral(SB.mineral_metals, 3);
             Oak.addTree("Oak_tree", 1); //加入树,前面是建筑id，后面是生成占比
@@ -298,7 +299,7 @@ namespace CW_FantasyCreatures.content
             Knowledge.id = "biome_Knowledge";
             Knowledge.tile_low = "Knowledge_low"; //低块
             Knowledge.tile_high = "Knowledge_high"; //高块
-            Knowledge.grow_strength = 10; //群系的扩张强度
+            Knowledge.grow_strength = 2; //群系的扩张强度
             Knowledge.spread_biome = true;
             Knowledge.generator_pool_amount = 4; //对地图生成的影响，这个值越大该群系生成概率越高
             Knowledge.force_unit_skin_set = "mushroom";
@@ -312,7 +313,8 @@ namespace CW_FantasyCreatures.content
             Knowledge.grow_type_selector_plants = new GrowTypeSelector(
                 TileActionLibrary.getGrowTypeRandomPlants
             );
-            Knowledge.addUnit(SA.fox, 2); //加入生物,前面是生物id，后面是生成占比
+            //Knowledge.addUnit(SA.fox, 2); //加入生物,前面是生物id，后面是生成占比
+            Knowledge.addUnit("knowledge_genie", 4);//添加知识之灵
             Knowledge.addMineral(SB.mineral_stone, 5); //加入矿物,前面是建筑id，后面是生成占比
             Knowledge.addMineral(SB.mineral_metals, 3);
             Knowledge.addTree("Knowledge_tree", 1); //加入树,前面是建筑id，后面是生成占比

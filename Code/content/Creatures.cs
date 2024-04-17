@@ -27,6 +27,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
+        stats[S.speed]=45;//移速
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
@@ -48,6 +49,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
+        stats[S.speed]=45;//移速
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
@@ -69,6 +71,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
+        stats[S.speed]=45;//移速
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
@@ -78,7 +81,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
                                                         
         #region ------桉树人
         // 创建一个生物树人
-        CreateActor("eucalyptus_treants","Eucalyptus Treants","iconEucalyptus_Treants",out vanilla_t,out stats);
+        CreateActor("acacia_treants","Acacia Treants","iconAcacia_Treants",out vanilla_t,out stats);
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许仙道
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
@@ -94,7 +97,29 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[CW_S.wakan] = 100; // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
-        CreateButton("eucalyptus_treants");
+        CreateButton("acacia_treants");
+        #endregion
+                                                                
+        #region ------橡树人
+        // 创建一个生物树人
+        CreateActor("oak_treants","Oak Treants","iconOak_Treants",out vanilla_t,out stats);
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许仙道
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4,walk_5,walk_6,walk_7,walk_8";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = true; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.traits = new(){"wise","attractive","flower_prints","healing_aura"};
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale]=0.2f;//大小
+        stats[S.speed]=45;//移速
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("oak_treants");
         #endregion
 
         #region ------九尾狐
@@ -252,6 +277,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
+        stats[S.speed]=40;//移速
         stats[CW_S.wakan] = 100; // 灵气
         MarkNameTemplate("panda_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -488,6 +514,25 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         CreateButton("vampire_hunter");
         #endregion
 
+        #region ------知识之灵
+        // 创建一个生物知识之灵
+        CreateActor("knowledge_genie","Knowledge Genie","iconKnowledge_Genie",out vanilla_t,out stats);
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_0,walk_1,walk_2,walk_3";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = false; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("knowledge_genie");
+        #endregion
+
         #region ------狼人
         // 创建一个生物狼人
         CreateActor("werewolf","Werewolf","iconWerewolf",out vanilla_t,out stats);
@@ -505,6 +550,28 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("werewolf");
+        #endregion
+        
+        #region ------凤凰
+        // 创建一个生物凤凰
+        CreateActor("feng_huang","Feng Huang","iconFeng_Huang",out vanilla_t,out stats);
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        t.force_cultisys_initial_level("cw_cultisys_immortal", 10); // 强制初始仙路等级为地仙
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2";//移动贴图设置
+        vanilla_t.animation_swim = "swim_1,swim_2";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = true; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Divine.id;//
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale]=0.2f;//大小
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("feng_huang_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("feng_huang");
         #endregion
 
         #region ------朱雀
@@ -601,6 +668,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
+        stats[S.speed]=50;//移速
         stats[S.damage] = 1000; // 伤害
         stats[CW_S.wakan] = 100; // 灵气
         MarkNameTemplate("xuanwu_name"); // 设置命名模板，只在中文名存在时生效
