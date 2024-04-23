@@ -10,7 +10,7 @@ class Traits : ExtendedLibrary<ActorTrait, Traits>
     {
         CreateTrait(nameof(huge_light));
         t.birth = 0;
-        t.path_icon = "ui/Icons/iconGenius";
+        t.path_icon = "ui/Icons/iconRi";
         t.group_id = "special";
         t.special_effect_interval = 1;
         t.action_special_effect = (o, t) =>{

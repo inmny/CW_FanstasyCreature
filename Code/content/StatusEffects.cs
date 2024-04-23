@@ -26,7 +26,7 @@ namespace CW_FantasyCreatures.content
             t.description = "status_description_huge_light";
             t.duration = 86400;
             t.animated = false;
-            t.path_icon = "ui/Icons/iconGenius";
+            t.path_icon = "ui/Icons/iconRi";
             t.allow_timer_reset = true;
             t.draw_light_area = true; // 绘制光照区域
             t.draw_light_size = 10; // 光照区域大小

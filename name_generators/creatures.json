@@ -45,6 +45,24 @@
         
     },
     {
+        "id": "yu_chan_name",
+        "templates": [
+            {
+                "format": "#玉蟾#"
+            }
+        ]
+        
+    },
+    {
+        "id": "jin_wu_name",
+        "templates": [
+            {
+                "format": "#金乌#"
+            }
+        ]
+        
+    },
+    {
         "id": "lion_name",
         "templates": [
             {

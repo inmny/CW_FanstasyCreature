@@ -121,7 +121,50 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 创建这个生物的放置按钮
         CreateButton("oak_treants");
         #endregion
-
+                                                                        
+        #region ------燃火树人
+        // 创建一个生物树人
+        CreateActor("fire_treants","Fire Treants","iconFire_Treants",out vanilla_t,out stats);
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许仙道
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4,walk_5,walk_6,walk_7,walk_8";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = true; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.traits = new(){"wise","attractive","flower_prints","healing_aura"};
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale]=0.2f;//大小
+        stats[S.speed]=45;//移速
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("fire_treants");
+        #endregion
+                                                                
+        #region ------腐朽树人
+        // 创建一个生物树人
+        CreateActor("death_treants","Death Treants","iconDeath_Treants",out vanilla_t,out stats);
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许仙道
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4,walk_5,walk_6,walk_7,walk_8";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = true; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.traits = new(){"wise","attractive","flower_prints","healing_aura"};
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale]=0.2f;//大小
+        stats[S.speed]=45;//移速
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("death_treants");
+        #endregion
         #region ------九尾狐
         // 创建一个生物
         CreateActor("fairy_fox", "Fairy Fox", "iconFairy_Fox", out vanilla_t, out stats);
@@ -161,7 +204,47 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 创建这个生物的放置按钮
         CreateButton("yu_tu");
         #endregion
-
+                
+        #region ------玉蟾
+        // 创建一个生物
+        CreateActor("yu_chan", "Yu Chan", "iconYu_Chan", out vanilla_t, out stats);
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        t.force_cultisys_initial_level("cw_cultisys_immortal", 1); // 强制初始仙路等级为筑基
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2";//移动贴图设置
+        vanilla_t.animation_swim = "swim_1,swim_2";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = true; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("yu_chan_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("yu_chan");
+        #endregion
+        
+        #region ------金乌
+        // 创建一个生物
+        CreateActor("jin_wu", "Jin Wu", "iconJin_Wu", out vanilla_t, out stats);
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        t.force_cultisys_initial_level("cw_cultisys_immortal", 1); // 强制初始仙路等级为筑基
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2";//移动贴图设置
+        vanilla_t.animation_swim = "swim_1,swim_2";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = true; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.traits = new(){"fire_blood","fire_proof","burning_feet",nameof(Traits.huge_light)};
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("jin_wu_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("jin_wu");
+        #endregion
 
         #region ------九色神鹿
         // 创建一个生物
@@ -660,7 +743,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.kingdom = Camps.Divine.id;
-        vanilla_t.traits = new(){"bloodlust","fast","strong",nameof(Traits.huge_light)};
+        vanilla_t.traits = new(){"bloodlust","fast","strong"};
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
