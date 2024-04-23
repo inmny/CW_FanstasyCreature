@@ -36,6 +36,15 @@
         
     },
     {
+        "id": "yu_tu_name",
+        "templates": [
+            {
+                "format": "#玉兔#"
+            }
+        ]
+        
+    },
+    {
         "id": "lion_name",
         "templates": [
             {
