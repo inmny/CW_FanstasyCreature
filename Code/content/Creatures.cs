@@ -660,7 +660,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.kingdom = Camps.Divine.id;
-        vanilla_t.traits = new(){"bloodlust","fast","strong"};
+        vanilla_t.traits = new(){"bloodlust","fast","strong",nameof(Traits.huge_light)};
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小

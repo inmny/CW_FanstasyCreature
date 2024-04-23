@@ -60,6 +60,7 @@ public class Main : CW_Addon<Main>, IReloadable
 #endif
         
         Camps = new Camps();
+        _ = new Traits();
         foreach (
             var type in Assembly
                 .GetExecutingAssembly()
@@ -70,7 +71,7 @@ public class Main : CW_Addon<Main>, IReloadable
         Buildings.init();
         Biomes.init();
         Drops.init();
-        StatusEffects.init();
+        _ = new StatusEffects();
         _ = new Resources();
         TabManager.init();
         _ = new Elements();
