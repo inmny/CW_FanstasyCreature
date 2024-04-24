@@ -188,6 +188,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------月兔
         // 创建一个生物
         CreateActor("yu_tu", "Yu Tu", "iconYu_Tu", out vanilla_t, out stats);
+        t.prefer_element = new[] {40, 15, 15, 15, 15}; // 倾向于月灵根
+        t.prefer_element_scale = 1f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         t.force_cultisys_initial_level("cw_cultisys_immortal", 1); // 强制初始仙路等级为筑基
         // 武道: cw_cultisys_bushido
@@ -208,6 +210,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------玉蟾
         // 创建一个生物
         CreateActor("yu_chan", "Yu Chan", "iconYu_Chan", out vanilla_t, out stats);
+        t.prefer_element = new[] {40, 15, 15, 15, 15}; // 倾向于月灵根
+        t.prefer_element_scale = 1f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         t.force_cultisys_initial_level("cw_cultisys_immortal", 1); // 强制初始仙路等级为筑基
         // 武道: cw_cultisys_bushido
@@ -228,6 +232,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------金乌
         // 创建一个生物
         CreateActor("jin_wu", "Jin Wu", "iconJin_Wu", out vanilla_t, out stats);
+        t.prefer_element = new[] {15, 40, 15, 15, 15}; // 倾向于日灵根
+        t.prefer_element_scale = 1f; // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
         t.force_cultisys_initial_level("cw_cultisys_immortal", 1); // 强制初始仙路等级为筑基
         // 武道: cw_cultisys_bushido
