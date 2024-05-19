@@ -125,6 +125,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------燃火树人
         // 创建一个生物树人
         CreateActor("fire_treants","Fire Treants","iconFire_Treants",out vanilla_t,out stats);
+        
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许仙道
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
@@ -133,6 +134,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.traits = new(){"wise","attractive","flower_prints","healing_aura"};
+        vanilla_t.traits = new(){"fire_blood","fire_proof","burning_feet","evil"};
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -154,7 +156,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
-        vanilla_t.traits = new(){"wise","attractive","flower_prints","healing_aura"};
+        vanilla_t.traits = new(){"evil","poisonous","venomous","poison_immune"};
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
