@@ -75,12 +75,12 @@ namespace CW_FantasyCreatures.content
             );
             FleshBlood_tree.spread_ids = List.Of<string>(new string[] { "FleshBlood_tree" });
             FleshBlood_tree.setShadow(0.5f, 0.03f, 0.12f); //设置阴影
-            FleshBlood_tree.material = "building";
+            FleshBlood_tree.material = "building";//设置树木为建筑，禁止晃动
             AssetManager.buildings.addResource("worms", 5, false); //添加蠕虫
             AssetManager.buildings.addResource("bones", 5, false); //添加骨头
             AssetManager.buildings.addResource("meat", 5, false); //添加肉
             AssetManager.buildings.loadSprites(FleshBlood_tree);
-            FleshBlood_tree.affected_by_drought = false;
+            FleshBlood_tree.affected_by_drought = false;//禁止建筑晃动
 
             BuildingAsset FleshBlood = AssetManager.buildings.clone("FleshBlood", "mushroom");
             FleshBlood.limit_per_zone = 1;
@@ -111,7 +111,7 @@ namespace CW_FantasyCreatures.content
             Oak.spread_ids = List.Of<string>(new string[] { "Oak" });
             AssetManager.buildings.addResource("stone", 1, false); //添加石头
             AssetManager.buildings.loadSprites(Oak);
-            //------泰坦遗迹群系Titans
+            //------泰坦群系Titans
             BuildingAsset Titans_tree = AssetManager.buildings.clone("Titans_tree", "tree");
             Titans_tree.limit_per_zone = 1;
             Titans_tree.canBePlacedOnlyOn = List.Of<string>(
@@ -119,7 +119,7 @@ namespace CW_FantasyCreatures.content
             );
             Titans_tree.spread_ids = List.Of<string>(new string[] { "Titans_tree" });
             Titans_tree.setShadow(0.5f, 0.03f, 0.12f); //设置阴影
-            Titans_tree.material = "building";
+            Titans_tree.material = "building";//设置树木为建筑，禁止晃动
             AssetManager.buildings.addResource("wood", 20, false); //添加木材
             AssetManager.buildings.loadSprites(Titans_tree);
             Titans_tree.affected_by_drought = false;
@@ -138,6 +138,31 @@ namespace CW_FantasyCreatures.content
             AssetManager.buildings.addResource("common_metals", 8, false); //添加金属
             AssetManager.buildings.addResource("stone", 1, false); //添加石头
             AssetManager.buildings.loadSprites(Titans);
+            //------黑暗群系Dark
+            BuildingAsset Dark_tree = AssetManager.buildings.clone("Dark_tree", "tree");
+            Dark_tree.limit_per_zone = 7;
+            Dark_tree.canBePlacedOnlyOn = List.Of<string>(
+                new string[] { "Dark_high", "Dark_low" }
+            );
+            Dark_tree.spread_ids = List.Of<string>(new string[] { "Dark_tree" });
+            Dark_tree.setShadow(0.5f, 0.03f, 0.12f); //设置阴影
+            AssetManager.buildings.addResource("wood", 20, false); //添加木材
+            AssetManager.buildings.loadSprites(Dark_tree);
+
+            BuildingAsset Dark = AssetManager.buildings.clone("Dark", "mushroom");
+            Dark.limit_per_zone = 4;
+            Dark.wheat = true;
+            Dark.canBeHarvested = true;
+            Dark.setShadow(0.5f, 0.03f, 0.12f);
+            Dark.canBePlacedOnlyOn = List.Of<string>(
+                new string[] { "Dark_high", "Dark_low" }
+            );
+            Dark.spread_ids = List.Of<string>(new string[] { "Dark" });
+            AssetManager.buildings.addResource("bones", 6, false); //添加骨头
+            AssetManager.buildings.addResource("gold", 8, false); //添加金
+            AssetManager.buildings.addResource("common_metals", 8, false); //添加金属
+            AssetManager.buildings.addResource("stone", 1, false); //添加石头
+            AssetManager.buildings.loadSprites(Dark);
             //------知识群系Knowledge
             BuildingAsset Knowledge_tree = AssetManager.buildings.clone("Knowledge_tree", "tree");
             Knowledge_tree.limit_per_zone = 2;

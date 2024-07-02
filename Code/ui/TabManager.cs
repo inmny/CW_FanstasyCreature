@@ -97,6 +97,17 @@ namespace CW_FantasyCreatures.ui
                 null
             );
             index++;
+            PowerButtons.CreateButton(
+                "spawnDark_drops",
+                Mod.EmbededResources.LoadSprite($"{Mod.Info.Name}.Resources.tile_6.png"),
+                "黑暗种子",
+                "充斥着阴谋与杀戮的森林！黑暗！",
+                new Vector2(xPos + (index * gap), yPos),
+                ButtonType.GodPower,
+                tab.transform,
+                null
+            );
+            index++;
         }
     }
 }

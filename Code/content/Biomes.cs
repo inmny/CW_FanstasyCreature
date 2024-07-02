@@ -294,6 +294,63 @@ namespace CW_FantasyCreatures.content
             Titans_high.biome_asset = Titans;
             AssetManager.topTiles.add(Titans_high);
             AssetManager.topTiles.loadSpritesForTile(Titans_high);
+            //------黑暗群系Dark
+            BiomeAsset Dark = new BiomeAsset(); //新版本群系的代码独立了出来，不过总体功能没啥变化
+            Dark.id = "biome_Dark";
+            Dark.tile_low = "Dark_low"; //低块
+            Dark.tile_high = "Dark_high"; //高块
+            Dark.grow_strength = 10; //群系的扩张强度
+            Dark.spread_biome = true;
+            Dark.generator_pool_amount = 4; //对地图生成的影响，这个值越大该群系生成概率越高
+            Dark.force_unit_skin_set = "mushroom";
+            Dark.grow_vegetation_auto = true;
+            Dark.grow_type_selector_minerals = new GrowTypeSelector(
+                TileActionLibrary.getGrowTypeRandomMineral
+            );
+            Dark.grow_type_selector_trees = new GrowTypeSelector(
+                TileActionLibrary.getGrowTypeRandomTrees
+            );
+            Dark.grow_type_selector_plants = new GrowTypeSelector(
+                TileActionLibrary.getGrowTypeRandomPlants
+            );
+            //加入生物,前面是生物id，后面是生成占比
+            Dark.addUnit(SA.skeleton, 6); //添加骷髅
+            Dark.addUnit("bloodsucker", 2);//添加吸血鬼
+            Dark.addUnit("werewolf", 4);//添加狼人
+            Dark.addUnit("vampire_hunter", 1);//添加吸血鬼猎人
+            Dark.addMineral(SB.mineral_stone, 5); //加入铜矿物,前面是建筑id，后面是生成占比
+            Dark.addMineral(SB.mineral_metals, 3);
+            Dark.addTree("Dark_tree", 1); //加入树,前面是建筑id，后面是生成占比
+            Dark.addPlant("Dark", 1); //加入植物,前面是建筑id，后面是生成占比
+            AssetManager.biome_library.add(Dark);
+            AssetManager.biome_library.addBiomeToPool(Dark);
+
+            TopTileType Dark_low = AssetManager.topTiles.clone("Dark_low", ST.mushroom_low); //地块代码
+            Dark_low.color = Toolbox.makeColor("#4d5762", -1f); //颜色代码
+            Dark_low.setBiome("biome_Dark");
+            Dark_low.force_unit_skin_set = "enchanted";
+            Dark_low.rank_type = TileRank.Low;
+            Dark_low.setDrawLayer(TileZIndexes.mushroom_low, null);
+            Dark_low.stepAction = new TileStepAction(Dark_1); //该群系的特殊事件
+            Dark_low.stepActionChance = 1437f; //事件发生概率， 这里是指概率143700%
+            Dark_low.fireChance = 0.02f; //燃烧概率
+            Dark_low.food_resource = SR.mushrooms;
+            Dark_low.biome_asset = Dark;
+            AssetManager.topTiles.add(Dark_low);
+            AssetManager.topTiles.loadSpritesForTile(Dark_low);
+
+            TopTileType Dark_high = AssetManager.topTiles.clone("Dark_high", ST.mushroom_high);
+            Dark_high.color = Toolbox.makeColor("#757a81", -1f); //颜色代码
+            Dark_high.setBiome("biome_Dark");
+            Dark_high.rank_type = TileRank.High;
+            Dark_high.force_unit_skin_set = "enchanted";
+            Dark_high.setDrawLayer(TileZIndexes.mushroom_high, null);
+            Dark_high.stepActionChance = 1437f;
+            Dark_high.fireChance = 0.02f;
+            Dark_high.food_resource = SR.mushrooms;
+            Dark_high.biome_asset = Dark;
+            AssetManager.topTiles.add(Dark_high);
+            AssetManager.topTiles.loadSpritesForTile(Dark_high);
             //------知识群系
             BiomeAsset Knowledge = new BiomeAsset(); //新版本群系的代码独立了出来，不过总体功能没啥变化
             Knowledge.id = "biome_Knowledge";
@@ -386,6 +443,10 @@ namespace CW_FantasyCreatures.content
         }
 
         public static bool Titans_1(WorldTile pTile, ActorBase pActor) //事件代码,我这里全删了
+        {
+            return true;
+        }
+        public static bool Dark_1(WorldTile pTile, ActorBase pActor) //事件代码,我这里全删了
         {
             return true;
         }

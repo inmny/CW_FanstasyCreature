@@ -26,6 +26,7 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
         t.addTag(nameof(anti_vampire));
         t.addTag(SK.neutral);//中立
         t.addFriendlyTag(SK.neutral);//对中立标签友好
+        t.addFriendlyTag(SK.civ);//对中立标签友好
         t.addEnemyTag(nameof(vampire));//对吸血鬼敌对
 
         CreateCamp(nameof(Divine));//神兽阵营
