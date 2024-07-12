@@ -159,10 +159,32 @@ namespace CW_FantasyCreatures.content
             );
             Dark.spread_ids = List.Of<string>(new string[] { "Dark" });
             AssetManager.buildings.addResource("bones", 6, false); //添加骨头
-            AssetManager.buildings.addResource("gold", 8, false); //添加金
-            AssetManager.buildings.addResource("common_metals", 8, false); //添加金属
             AssetManager.buildings.addResource("stone", 1, false); //添加石头
             AssetManager.buildings.loadSprites(Dark);
+            //------巨稻群系Rice
+            BuildingAsset Rice_tree = AssetManager.buildings.clone("Rice_tree", "tree");
+            Rice_tree.limit_per_zone = 7;
+            Rice_tree.canBePlacedOnlyOn = List.Of<string>(
+                new string[] { "Rice_high", "Rice_low" }
+            );
+            Rice_tree.spread_ids = List.Of<string>(new string[] { "Rice_tree" });
+            Rice_tree.setShadow(0.5f, 0.03f, 0.12f); //设置阴影
+            AssetManager.buildings.addResource("wheat", 5, false); //添加小麦
+            AssetManager.buildings.addResource("wood", 20, false); //添加木材
+            AssetManager.buildings.loadSprites(Rice_tree);
+
+            BuildingAsset Rice = AssetManager.buildings.clone("Rice", "mushroom");
+            Rice.limit_per_zone = 4;
+            Rice.wheat = true;
+            Rice.canBeHarvested = true;
+            Rice.setShadow(0.5f, 0.03f, 0.12f);
+            Rice.canBePlacedOnlyOn = List.Of<string>(
+                new string[] { "Rice_high", "Rice_low" }
+            );
+            Rice.spread_ids = List.Of<string>(new string[] { "Rice" });
+            AssetManager.buildings.addResource("fish", 5, false); //添加鱼肉
+            AssetManager.buildings.addResource("stone", 1, false); //添加石头
+            AssetManager.buildings.loadSprites(Rice);
             //------知识群系Knowledge
             BuildingAsset Knowledge_tree = AssetManager.buildings.clone("Knowledge_tree", "tree");
             Knowledge_tree.limit_per_zone = 2;

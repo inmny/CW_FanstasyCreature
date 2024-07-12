@@ -108,6 +108,17 @@ namespace CW_FantasyCreatures.ui
                 null
             );
             index++;
+                PowerButtons.CreateButton(
+                "spawnRice_drops",
+                Mod.EmbededResources.LoadSprite($"{Mod.Info.Name}.Resources.tile_7.png"),
+                "巨稻种子",
+                "高大的稻谷，禾下乘凉！富足！",
+                new Vector2(xPos + (index * gap), yPos),
+                ButtonType.GodPower,
+                tab.transform,
+                null
+            );
+            index++;
         }
     }
 }

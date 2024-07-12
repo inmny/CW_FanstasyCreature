@@ -94,6 +94,17 @@ namespace CW_FantasyCreatures.content
                 new PowerAction(callSpawnDrops),
                 new PowerAction(callLoopBrush)
             );
+            //生成群系的Drop----巨稻群系
+            CreateDropAndPower(
+                "spawnRiceDrop",
+                "drops/Rice_drop",
+                3f,
+                new DropsAction(action_seeds_Rice),
+                "spawnRice_drops",
+                0.01f,
+                new PowerAction(callSpawnDrops),
+                new PowerAction(callLoopBrush)
+            );
             //生成群系的Drop----知识群系
             CreateDropAndPower(
                 "spawnKnowledgeDrop",
@@ -199,6 +210,17 @@ namespace CW_FantasyCreatures.content
         {
             TopTileType WL2 = AssetManager.topTiles.get("Dark_low"); //这个群系的两个tile作为参数
             TopTileType WT2 = AssetManager.topTiles.get("Dark_high");
+            DropsLibrary.useDropSeedOn(pTile, WL2, WT2);
+            for (int i = 0; i < pTile.neighbours.Length; i++) //后面这段是扩大种子的效果范围的，删了其实也没什么影响，只是生成群系有些不方便
+            {
+                DropsLibrary.useDropSeedOn(pTile.neighbours[i], WL2, WT2);
+            }
+        }
+        //-----
+        public static void action_seeds_Rice(WorldTile pTile = null, string pDropID = null)
+        {
+            TopTileType WL2 = AssetManager.topTiles.get("Rice_low"); //这个群系的两个tile作为参数
+            TopTileType WT2 = AssetManager.topTiles.get("Rice_high");
             DropsLibrary.useDropSeedOn(pTile, WL2, WT2);
             for (int i = 0; i < pTile.neighbours.Length; i++) //后面这段是扩大种子的效果范围的，删了其实也没什么影响，只是生成群系有些不方便
             {

@@ -351,6 +351,60 @@ namespace CW_FantasyCreatures.content
             Dark_high.biome_asset = Dark;
             AssetManager.topTiles.add(Dark_high);
             AssetManager.topTiles.loadSpritesForTile(Dark_high);
+//------巨稻群系Rice
+            BiomeAsset Rice = new BiomeAsset(); //新版本群系的代码独立了出来，不过总体功能没啥变化
+            Rice.id = "biome_Rice";
+            Rice.tile_low = "Rice_low"; //低块
+            Rice.tile_high = "Rice_high"; //高块
+            Rice.grow_strength = 10; //群系的扩张强度
+            Rice.spread_biome = true;
+            Rice.generator_pool_amount = 4; //对地图生成的影响，这个值越大该群系生成概率越高
+            Rice.force_unit_skin_set = "mushroom";
+            Rice.grow_vegetation_auto = true;
+            Rice.grow_type_selector_minerals = new GrowTypeSelector(
+                TileActionLibrary.getGrowTypeRandomMineral
+            );
+            Rice.grow_type_selector_trees = new GrowTypeSelector(
+                TileActionLibrary.getGrowTypeRandomTrees
+            );
+            Rice.grow_type_selector_plants = new GrowTypeSelector(
+                TileActionLibrary.getGrowTypeRandomPlants
+            );
+            //加入生物,前面是生物id，后面是生成占比
+            Coral.addUnit(SA.crab, 5); 
+            Rice.addMineral(SB.mineral_stone, 5); //加入铜矿物,前面是建筑id，后面是生成占比
+            Rice.addMineral(SB.mineral_metals, 3);
+            Rice.addTree("Rice_tree", 1); //加入树,前面是建筑id，后面是生成占比
+            Rice.addPlant("Rice", 1); //加入植物,前面是建筑id，后面是生成占比
+            AssetManager.biome_library.add(Rice);
+            AssetManager.biome_library.addBiomeToPool(Rice);
+
+            TopTileType Rice_low = AssetManager.topTiles.clone("Rice_low", ST.mushroom_low); //地块代码
+            Rice_low.color = Toolbox.makeColor("#4e836f", -1f); //颜色代码
+            Rice_low.setBiome("biome_Rice");
+            Rice_low.force_unit_skin_set = "enchanted";
+            Rice_low.rank_type = TileRank.Low;
+            Rice_low.setDrawLayer(TileZIndexes.mushroom_low, null);
+            Rice_low.stepAction = new TileStepAction(Rice_1); //该群系的特殊事件
+            Rice_low.stepActionChance = 1437f; //事件发生概率， 这里是指概率143700%
+            Rice_low.fireChance = 0.02f; //燃烧概率
+            Rice_low.food_resource = SR.mushrooms;
+            Rice_low.biome_asset = Rice;
+            AssetManager.topTiles.add(Rice_low);
+            AssetManager.topTiles.loadSpritesForTile(Rice_low);
+
+            TopTileType Rice_high = AssetManager.topTiles.clone("Rice_high", ST.mushroom_high);
+            Rice_high.color = Toolbox.makeColor("#7ac4a9", -1f); //颜色代码
+            Rice_high.setBiome("biome_Rice");
+            Rice_high.rank_type = TileRank.High;
+            Rice_high.force_unit_skin_set = "enchanted";
+            Rice_high.setDrawLayer(TileZIndexes.mushroom_high, null);
+            Rice_high.stepActionChance = 1437f;
+            Rice_high.fireChance = 0.02f;
+            Rice_high.food_resource = SR.mushrooms;
+            Rice_high.biome_asset = Rice;
+            AssetManager.topTiles.add(Rice_high);
+            AssetManager.topTiles.loadSpritesForTile(Rice_high);
             //------知识群系
             BiomeAsset Knowledge = new BiomeAsset(); //新版本群系的代码独立了出来，不过总体功能没啥变化
             Knowledge.id = "biome_Knowledge";
@@ -447,6 +501,10 @@ namespace CW_FantasyCreatures.content
             return true;
         }
         public static bool Dark_1(WorldTile pTile, ActorBase pActor) //事件代码,我这里全删了
+        {
+            return true;
+        }
+        public static bool Rice_1(WorldTile pTile, ActorBase pActor) //事件代码,我这里全删了
         {
             return true;
         }
