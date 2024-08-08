@@ -12,6 +12,8 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using ReflectionUtility;
+using Cultivation_Way.UI;
+using NeoModLoader.General;
 
 namespace CW_FantasyCreatures.ui
 {
@@ -22,6 +24,23 @@ namespace CW_FantasyCreatures.ui
         {
             tab = NeoModLoader.General.UI.Tab.TabManager.CreateTab("Biome", "Biome Title", "Biome Description", Sprites.LoadSprite($"{Mod.Info.Path}/icon.png"));
             loadButtons();
+        }
+        public static void AddBuildingDropButton(string power_id, string power_name, string building_id){
+            GodPower power = null;
+            DropAsset drop = null;
+            power = AssetManager.powers.clone(power_id, "_dropBuilding");
+            power.dropID = power.id;
+            power.name = power_name;
+            power.click_power_action = AssetManager.powers.spawnDrops;
+            drop = AssetManager.drops.clone(power.id, "_spawn_building");
+            drop.building_asset = building_id;
+            drop.action_landed = DropsLibrary.action_spawn_building;
+
+            CWTab.add_button(
+                PowerButtonCreator.CreateGodPowerButton(power.id, 
+                    SpriteTextureLoader.getSprite($"ui/icons/icon{building_id}")), 
+                Cultivation_Way.Constants.ButtonContainerType.BUILDING
+            );
         }
 
         private static void loadButtons()

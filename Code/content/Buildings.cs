@@ -13,6 +13,7 @@ using System.Threading;
 using System.Text;
 using UnityEngine.UI;
 using pathfinding;
+using CW_FantasyCreatures.ui;
 
 namespace CW_FantasyCreatures.content
 {
@@ -207,6 +208,14 @@ namespace CW_FantasyCreatures.content
             Knowledge.spread_ids = List.Of<string>(new string[] { "Knowledge" });
             AssetManager.buildings.addResource("stone", 1, false); //添加石头
             AssetManager.buildings.loadSprites(Knowledge);
+
+            BuildingAsset GoblinTower = AssetManager.buildings.clone(nameof(GoblinTower), SB.flame_tower);
+            GoblinTower.race = "Goblin"; // 自己改哥布林相关的种族
+            GoblinTower.kingdom = "Goblin"; // 自己改
+            GoblinTower.tower = false; // 禁用原有的火球发射
+            GoblinTower.spawnUnits_asset = "goblin_warrior:6,goblin_shaman:1,goblin_knight:2"; // 改哥布林的生物id
+            AssetManager.buildings.loadSprites(GoblinTower);
+            TabManager.AddBuildingDropButton(GoblinTower.id, GoblinTower.id, GoblinTower.id);
         }
     }
 }

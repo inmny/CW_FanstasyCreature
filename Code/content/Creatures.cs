@@ -24,6 +24,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.traits = new(){"wise","attractive","flower_prints","healing_aura"};
+        vanilla_t.kingdom = Camps.Good_treants.id;//善树族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -46,6 +47,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.traits = new(){"wise","attractive","flower_prints","healing_aura"};
+        vanilla_t.kingdom = Camps.Good_treants.id;//善树族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -68,6 +70,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.traits = new(){"wise","attractive","flower_prints","healing_aura"};
+        vanilla_t.kingdom = Camps.Good_treants.id;//善树族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -90,6 +93,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.traits = new(){"wise","attractive","flower_prints","healing_aura"};
+        vanilla_t.kingdom = Camps.Good_treants.id;//善树族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -111,6 +115,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.traits = new(){"wise","attractive","flower_prints","healing_aura"};
+        vanilla_t.kingdom = Camps.Good_treants.id;//善树族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -135,6 +140,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.traits = new(){"wise","attractive","flower_prints","healing_aura"};
         vanilla_t.traits = new(){"fire_blood","fire_proof","burning_feet","evil"};
+        vanilla_t.kingdom = Camps.Evil_treants.id;//恶树族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -157,6 +163,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.traits = new(){"evil","poisonous","venomous","poison_immune"};
+        vanilla_t.kingdom = Camps.Evil_treants.id;//恶树族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -178,6 +185,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Divine.id;//神圣族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -200,6 +208,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_1,swim_2";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Divine.id;//神圣族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -222,6 +231,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_1,swim_2";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Divine.id;//神圣族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -245,6 +255,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.traits = new(){"fire_blood","fire_proof","burning_feet",nameof(Traits.huge_light)};
+        vanilla_t.kingdom = Camps.Divine.id;//神圣族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -265,6 +276,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Divine.id;//神圣族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -284,6 +296,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Carnivore.id;//食肉族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -303,6 +316,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Omnivorous.id;//杂食族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -324,6 +338,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Omnivorous.id;//杂食族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -332,7 +347,6 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 创建这个生物的放置按钮
         CreateButton("wild_boar");
         #endregion
-
 
         #region ------公鸡
         // 创建一个生物
@@ -344,6 +358,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Omnivorous.id;//杂食族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -365,6 +380,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Carnivore.id;//食肉族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -386,6 +402,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Omnivorous.id;//杂食族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -406,6 +423,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Herbivore.id;//食草族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -427,6 +445,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.defaultWeapons = List.Of<string>(new string[] {"bow"});//添加弓
         vanilla_t.defaultWeaponsMaterial = List.Of<string>(new string[] {"wood"});//木
+        vanilla_t.kingdom = Camps.Subhumans.id;//亚人族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -446,6 +465,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Herbivore.id;//食草族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -467,6 +487,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.defaultWeapons = List.Of<string>(new string[] {"spear"});//添加矛
         vanilla_t.defaultWeaponsMaterial = List.Of<string>(new string[] {"stone"});//石头
+        vanilla_t.kingdom = Camps.Subhumans.id;//亚人族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -474,6 +495,28 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("centaur");
+        #endregion
+        
+        #region ------狮鹫骑士
+        // 创建一个生物狮鹫骑士
+        CreateActor("griffin_knight","Griffin Knight","iconGriffin_Knight",out vanilla_t,out stats);
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2";//移动贴图设置
+        vanilla_t.animation_swim = "swim_1,swim_2";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = true; //禁止跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.defaultWeapons = List.Of<string>(new string[] {"spear"});//添加矛
+        vanilla_t.defaultWeaponsMaterial = List.Of<string>(new string[] {"stone"});//石头
+        vanilla_t.kingdom = Camps.Extraordinary.id;//非凡之族
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 1000; // 伤害
+        stats[CW_S.wakan] = 100; // 灵气
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("griffin_knight");
         #endregion
         
         #region ------阿努比斯
@@ -489,6 +532,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.defaultWeapons = List.Of<string>(new string[] {"evil_staff"});//添加邪恶法杖
+        vanilla_t.kingdom = Camps.Undead.id;//不死族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -509,6 +553,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Undead.id;//不死族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.3f;//大小
@@ -530,6 +575,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.defaultWeapons = List.Of<string>(new string[] {"necromancer_staff"});//添加亡灵法杖
+        vanilla_t.kingdom = Camps.Undead.id;//不死族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -546,10 +592,14 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.add_allowed_cultisys("cw_cultisys_soul"); // 允许魂道
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
+        vanilla_t.animation_idle = "walk_0_0,walk_0_1,walk_0_2,walk_0_3";//移动贴图设置
         vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.defaultWeapons = List.Of<string>(new string[] {"spear"});//添加矛
+        vanilla_t.defaultWeaponsMaterial = List.Of<string>(new string[] {"stone"});//石头
+        vanilla_t.kingdom = Camps.Undead.id;//不死族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -571,6 +621,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Undead.id;//不死族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -594,7 +645,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
-        vanilla_t.kingdom = Camps.vampire.id;
+        vanilla_t.kingdom = Camps.Vampire.id;//血族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -616,7 +667,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.defaultWeapons = List.Of<string>(new string[] {"shotgun"});//添加霰弹
-        vanilla_t.kingdom = Camps.anti_vampire.id;
+        vanilla_t.kingdom = Camps.Anti_vampire.id;//猎魔人
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -636,6 +687,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Spirit.id;//灵族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -655,6 +707,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.kingdom = Camps.Werewolf.id;//狼人族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 1000; // 伤害
@@ -675,7 +728,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_1,swim_2";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
-        vanilla_t.kingdom = Camps.Divine.id;//
+        vanilla_t.kingdom = Camps.Divine.id;//神圣
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale]=0.2f;//大小
@@ -700,7 +753,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_1,swim_2";//移动贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
-        vanilla_t.kingdom = Camps.Divine.id;//
+        vanilla_t.kingdom = Camps.Divine.id;//神圣
         vanilla_t.traits = new(){"fire_blood","fire_proof","burning_feet"};
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
@@ -725,7 +778,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
-        vanilla_t.kingdom = Camps.Divine.id;
+        vanilla_t.kingdom = Camps.Divine.id;//神圣
         vanilla_t.traits = new(){"agile","pacifist","strong","shiny"};
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
@@ -750,7 +803,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2";//游泳贴图设置
         vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
-        vanilla_t.kingdom = Camps.Divine.id;
+        vanilla_t.kingdom = Camps.Divine.id;//神圣
         vanilla_t.traits = new(){"bloodlust","fast","strong"};
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
@@ -775,7 +828,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
-        vanilla_t.kingdom = Camps.Divine.id;
+        vanilla_t.kingdom = Camps.Divine.id;//神圣
         vanilla_t.traits = new(){"tough","freeze_proof","cold_aura"};
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
@@ -801,7 +854,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5";//游泳贴图设置
         vanilla_t.disableJumpAnimation = true; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
-        vanilla_t.kingdom = Camps.Divine.id;
+        vanilla_t.kingdom = Camps.Divine.id;//神圣
         vanilla_t.traits = new(){"wise","attractive","flower_prints","healing_aura","energized"};
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
@@ -811,6 +864,53 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         MarkNameTemplate("loong_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("loong");
+        #endregion
+        
+        #region ------哥布林士兵
+        // 创建一个生物吸血鬼猎人
+        CreateActor("goblin_warrior","Goblin Warrior","iconGoblin_Warrior",out vanilla_t,out stats);
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = true; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.defaultWeapons = List.Of<string>(new string[] {"sword"});//添加剑
+        vanilla_t.defaultWeaponsMaterial = List.Of<string>(new string[] {"stone"});//石头
+        vanilla_t.kingdom = Camps.Goblin.id;//哥布林
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 1000; // 伤害
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        #endregion
+                
+        #region ------哥布林萨满
+        // 创建一个生物吸血鬼猎人
+        CreateActor("goblin_shaman","Goblin Shaman","iconGoblin_Shaman",out vanilla_t,out stats);
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = true; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.defaultWeapons = List.Of<string>(new string[] {"evil_staff"});//添加邪恶法杖
+        vanilla_t.kingdom = Camps.Goblin.id;//哥布林
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 1000; // 伤害
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        #endregion
+                
+        #region ------哥布林骑士
+        // 创建一个生物吸血鬼猎人
+        CreateActor("goblin_knight","Goblin Knight","iconGoblin_Knight",out vanilla_t,out stats);
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
+        vanilla_t.disableJumpAnimation = true; //允许跳跃
+        vanilla_t.needFood = false; // 不需要食物
+        vanilla_t.defaultWeapons = List.Of<string>(new string[] {"spear"});//添加矛
+        vanilla_t.defaultWeaponsMaterial = List.Of<string>(new string[] {"stone"});//石头
+        vanilla_t.kingdom = Camps.Goblin.id;//哥布林
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 1000; // 伤害
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         #endregion
     }
 

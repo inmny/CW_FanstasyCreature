@@ -11,6 +11,8 @@ using NeoModLoader.services;
 using NeoModLoader.utils;
 using ReflectionUtility;
 using NeoModLoader.api.attributes;
+using HarmonyLib;
+
 
 
 
@@ -49,6 +51,12 @@ public class Main : CW_Addon<Main>, IReloadable
         base.OnModLoad();
         Declaration = GetDeclaration();
         Config.isEditor = true;
+
+        foreach(var t in Assembly.GetExecutingAssembly().GetTypes()){
+            if (t.Name.StartsWith("Patch")){
+                Harmony.CreateAndPatchAll(t);
+            }
+        }
 
 #if 一米_中文名
         CN_NameGeneratorLibrary.SubmitDirectoryToLoad(
