@@ -95,6 +95,7 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
         t.addTag(nameof(Extraordinary));//非凡之人标签
         t.addTag(SK.neutral);//中立
         t.addFriendlyTag(nameof(Extraordinary));//对非凡之人标签友好
+        t.addFriendlyTag("human");//对人类标签友好
         t.addEnemyTag("Orcs");//对兽人标签敌对
         
         CreateCamp(nameof(Subhumans));//亚人阵营

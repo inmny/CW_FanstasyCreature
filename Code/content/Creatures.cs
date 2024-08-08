@@ -871,14 +871,16 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         CreateActor("goblin_warrior","Goblin Warrior","iconGoblin_Warrior",out vanilla_t,out stats);
         vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
-        vanilla_t.disableJumpAnimation = true; //允许跳跃
+        vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.defaultWeapons = List.Of<string>(new string[] {"sword"});//添加剑
         vanilla_t.defaultWeaponsMaterial = List.Of<string>(new string[] {"stone"});//石头
         vanilla_t.kingdom = Camps.Goblin.id;//哥布林
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 1000; // 伤害
+        stats[S.damage] = 5; // 伤害
+        stats[S.speed] = 20; // 速度
+        stats[S.health] = 30; // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         #endregion
                 
@@ -887,13 +889,15 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         CreateActor("goblin_shaman","Goblin Shaman","iconGoblin_Shaman",out vanilla_t,out stats);
         vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
-        vanilla_t.disableJumpAnimation = true; //允许跳跃
+        vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
-        vanilla_t.defaultWeapons = List.Of<string>(new string[] {"evil_staff"});//添加邪恶法杖
+        vanilla_t.defaultWeapons = List.Of<string>(new string[] {"necromancer_staff"});//添加邪恶法杖
         vanilla_t.kingdom = Camps.Goblin.id;//哥布林
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 1000; // 伤害
+        stats[S.damage] = 20; // 伤害
+        stats[S.speed] = 20; // 速度
+        stats[S.health] = 30; // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         #endregion
                 
@@ -902,14 +906,16 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         CreateActor("goblin_knight","Goblin Knight","iconGoblin_Knight",out vanilla_t,out stats);
         vanilla_t.animation_walk = "walk_1,walk_2,walk_3";//移动贴图设置
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";//游泳贴图设置
-        vanilla_t.disableJumpAnimation = true; //允许跳跃
+        vanilla_t.disableJumpAnimation = false; //允许跳跃
         vanilla_t.needFood = false; // 不需要食物
         vanilla_t.defaultWeapons = List.Of<string>(new string[] {"spear"});//添加矛
         vanilla_t.defaultWeaponsMaterial = List.Of<string>(new string[] {"stone"});//石头
         vanilla_t.kingdom = Camps.Goblin.id;//哥布林
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 1000; // 伤害
+        stats[S.damage] = 10; // 伤害
+        stats[S.speed] = 60; // 速度
+        stats[S.health] = 30; // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         #endregion
     }
