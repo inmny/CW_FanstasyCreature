@@ -6,6 +6,11 @@ namespace CW_FantasyCreatures.ai.beh;
 
 public class BehGoblinFindAttackCity : BehaviourActionActor
 {
+    public override bool errorsFound(Actor pObject)
+    {
+        return base.errorsFound(pObject) || pObject.homeBuilding == null;
+    }
+
     public override BehResult execute(Actor pObject)
     {
         var attack_city_id = FindAttackCity(pObject);
@@ -39,6 +44,7 @@ public class BehGoblinFindAttackCity : BehaviourActionActor
         City safest_city = null;
         foreach (City city in cities)
         {
+            if (!city.kingdom.isEnemy(actor.kingdom)) continue;
             var danger = computeDanger(city, actor, null);
             if (danger < min_danger)
             {

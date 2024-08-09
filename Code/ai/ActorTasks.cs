@@ -14,6 +14,8 @@ class ActorTasks : ExtendedLibrary<BehaviourTaskActor>
     public static readonly BehaviourTaskActor goblin_warrior_goto_attack_target;
     public static readonly BehaviourTaskActor goblin_warrior_walk_around_tower;
 
+    public static readonly BehaviourTaskActor random_move;
+
     protected override void Init()
     {
         add(new() { id = nameof(goblin_shaman_goback_tower) });

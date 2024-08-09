@@ -20,6 +20,8 @@ class ActorJobs : ExtendedLibrary<ActorJob>
         t.addCondition(new CondGoblinGroupFull(), false);
         t.addTask(nameof(ActorTasks.goblin_shaman_walk_around_tower));
         t.addCondition(new CondGoblinGotoAttack(), false);
+        t.addTask(nameof(ActorTasks.random_move));
+        t.addCondition(new CondGoblinHasHome(), false);
 
         add(new() { id = nameof(goblin_warrior) });
         t.addTask(nameof(ActorTasks.goblin_warrior_follow_behind));
@@ -29,5 +31,7 @@ class ActorJobs : ExtendedLibrary<ActorJob>
         t.addCondition(new CondGoblinGroupFull(), false);
         t.addTask(nameof(ActorTasks.goblin_warrior_walk_around_tower));
         t.addCondition(new CondGoblinGotoAttack(), false);
+        t.addTask(nameof(ActorTasks.random_move));
+        t.addCondition(new CondGoblinHasHome(), false);
     }
 }
