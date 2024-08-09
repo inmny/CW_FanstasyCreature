@@ -155,9 +155,13 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
         t.addFriendlyTag(nameof(Undead));//对不死族标签友好
                                                                 
         CreateCamp(nameof(Goblin));//哥布林族阵营
-        t.mobs = true;//nature(完全友善)，mobs(怪物)，mad（疯狂），attack_each_other（互相攻击）
+        t.addTag(SK.neutral);//中立
         t.addTag(nameof(Goblin));//哥布林标签
         t.addFriendlyTag(nameof(Goblin));//对哥布林族标签友好
+        t.addFriendlyTag("Orcs");//对兽人标签友好
+        t.addEnemyTag("human");//对人类标签敌对
+        t.addEnemyTag("elf");//对兽人标签敌对
+        t.addEnemyTag("dwarf");//对矮人标签敌对
 
 
 
