@@ -1048,6 +1048,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
             pTarget.base_data.save();
 
             var new_data = GeneralHelper.from_json<ActorData>(GeneralHelper.to_json(pTarget.a.data));
+            new_data.id = World.world.mapStats.getNextId(World.world.units.type_id);
             new_data.asset_id = "lava_giant";
             new_data.health = (int)pTarget.stats[S.health];
             World.world.units.loadObject(new_data);
