@@ -104,13 +104,13 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
         t.addTag(SK.neutral);//中立
         t.addFriendlyTag(nameof(Extraordinary));//对非凡之人标签友好
         t.addFriendlyTag("human");//对人类标签友好
-        t.addEnemyTag("Orcs");//对兽人标签敌对
+        t.addEnemyTag("Orc");//对兽人标签敌对
         
         CreateCamp(nameof(Subhumans));//亚人阵营
         t.addTag(nameof(Subhumans));//亚人标签
         t.addTag(SK.neutral);//中立
         t.addFriendlyTag(nameof(Subhumans));//对亚人标签友好
-        t.addEnemyTag("Orcs");//对兽人标签敌对
+        t.addEnemyTag("Orc");//对兽人标签敌对
         t.addFriendlyTag("elf");//对精灵标签友好
         t.addFriendlyTag("Herbivore");//对食草标签友好
                 
@@ -149,7 +149,7 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
         t.addFriendlyTag(nameof(Good_treants));//对善树族标签友好
         t.addFriendlyTag("elf");//对精灵标签友好
         t.addEnemyTag("human");//对人类标签敌对
-        t.addEnemyTag("Orcs");//对兽人标签敌对
+        t.addEnemyTag("Orc");//对兽人标签敌对
         t.addEnemyTag("dwarf");//对矮人标签敌对
                                                 
         CreateCamp(nameof(Evil_treants));//恶树族阵营
@@ -164,7 +164,7 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
         t.addFriendlyTag("dwarf");//对矮人标签友好
         t.addEnemyTag("elf");//对精灵标签敌对
         t.addEnemyTag("human");//对人类标签敌对
-        t.addEnemyTag("Orcs");//对兽人标签敌对
+        t.addEnemyTag("Orc");//对兽人标签敌对
                                                 
         CreateCamp(nameof(Evil_giant));//恶巨人族阵营
         t.mobs = true;//nature(完全友善)，mobs(怪物)，mad（疯狂），attack_each_other（互相攻击）
@@ -180,7 +180,7 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
         t.addTag(SK.neutral);//中立
         t.addTag(nameof(Goblin));//哥布林标签
         t.addFriendlyTag(nameof(Goblin));//对哥布林族标签友好
-        t.addFriendlyTag("Orcs");//对兽人标签友好
+        t.addFriendlyTag("Orc");//对兽人标签友好
         t.addEnemyTag("human");//对人类标签敌对
         t.addEnemyTag("elf");//对兽人标签敌对
         t.addEnemyTag("dwarf");//对矮人标签敌对
