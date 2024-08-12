@@ -58,6 +58,14 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
     /// 哥布林族
     /// </summary>
     public static readonly KingdomAsset Goblin;
+    /// <summary>
+    /// 善巨人族
+    /// </summary>
+    public static readonly KingdomAsset Good_giant;
+    /// <summary>
+    /// 恶巨人族
+    /// </summary>
+    public static readonly KingdomAsset Evil_giant;
     internal Camps()
     {
         CreateCamp(nameof(Vampire));//血族阵营
@@ -137,8 +145,8 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
                                         
         CreateCamp(nameof(Good_treants));//善树族阵营
         t.addTag(SK.neutral);//中立
-        t.addTag(nameof(Omnivorous));//善树族标签
-        t.addFriendlyTag(nameof(Omnivorous));//对善树族标签友好
+        t.addTag(nameof(Good_treants));//善树族标签
+        t.addFriendlyTag(nameof(Good_treants));//对善树族标签友好
         t.addFriendlyTag("elf");//对精灵标签友好
         t.addEnemyTag("human");//对人类标签敌对
         t.addEnemyTag("Orcs");//对兽人标签敌对
@@ -148,6 +156,20 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
         t.mobs = true;//nature(完全友善)，mobs(怪物)，mad（疯狂），attack_each_other（互相攻击）
         t.addTag(nameof(Evil_treants));//恶树族标签
         t.addFriendlyTag(nameof(Evil_treants));//对恶树族标签友好
+                                                
+        CreateCamp(nameof(Good_giant));//善巨人族阵营
+        t.addTag(SK.neutral);//中立
+        t.addTag(nameof(Good_giant));//善巨人族标签
+        t.addFriendlyTag(nameof(Good_giant));//对善巨人族标签友好
+        t.addFriendlyTag("dwarf");//对矮人标签友好
+        t.addEnemyTag("elf");//对精灵标签敌对
+        t.addEnemyTag("human");//对人类标签敌对
+        t.addEnemyTag("Orcs");//对兽人标签敌对
+                                                
+        CreateCamp(nameof(Evil_giant));//恶巨人族阵营
+        t.mobs = true;//nature(完全友善)，mobs(怪物)，mad（疯狂），attack_each_other（互相攻击）
+        t.addTag(nameof(Evil_giant));//恶巨人族标签
+        t.addFriendlyTag(nameof(Evil_giant));//对恶巨人族标签友好
                                                         
         CreateCamp(nameof(Undead));//不死族阵营
         t.mobs = true;//nature(完全友善)，mobs(怪物)，mad（疯狂），attack_each_other（互相攻击）

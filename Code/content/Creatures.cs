@@ -1018,8 +1018,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7,swim_8"; //游泳贴图设置
         vanilla_t.disableJumpAnimation = true;                                                //允许跳跃
         vanilla_t.needFood = false;                                                           // 不需要食物
-        vanilla_t.traits = new() { "wise", "attractive", "flower_prints", "healing_aura" };
-        vanilla_t.kingdom = Camps.Good_treants.id; //善树族
+        vanilla_t.traits = new() { "agile", "pacifist", "strong", "shiny" };
+        vanilla_t.kingdom = Camps.Good_giant.id; //善树族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale] = 0.2f;            //大小
@@ -1029,6 +1029,50 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("rock_giant");
+
+        #endregion
+                
+        #region ------火山巨人
+
+        // 创建一个生物火山巨人
+        CreateActor("volcanic_giant", "Volcanic Giant", "iconVolcanic_Giant", out vanilla_t, out stats);
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4,walk_5,walk_6,walk_7,walk_8"; //移动贴图设置
+        vanilla_t.animation_swim = "swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7,swim_8"; //游泳贴图设置
+        vanilla_t.disableJumpAnimation = true;                                                //允许跳跃
+        vanilla_t.needFood = false;                                                           // 不需要食物
+        vanilla_t.traits = new() { "fire_blood", "fire_proof" };
+        vanilla_t.kingdom = Camps.Evil_giant.id; //恶巨人族
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale] = 0.2f;            //大小
+        stats[S.speed] = 20;              //移速
+        stats[S.damage] = 100;           // 伤害
+        stats[S.health] = 2000;             // 血量
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("volcanic_giant");
+
+        #endregion
+                        
+        #region ------熔岩巨人
+
+        // 创建一个生物熔岩巨人
+        CreateActor("lava_giant", "Lava Giant", "iconLava_Giant", out vanilla_t, out stats);
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4,walk_5,walk_6,walk_7,walk_8"; //移动贴图设置
+        vanilla_t.animation_swim = "swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7,swim_8"; //游泳贴图设置
+        vanilla_t.disableJumpAnimation = true;                                                //允许跳跃
+        vanilla_t.needFood = false;                                                           // 不需要食物
+        vanilla_t.traits = new() { "fire_blood", "fire_proof", "burning_feet" };
+        vanilla_t.kingdom = Camps.Evil_giant.id; //恶巨人族
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale] = 0.2f;            //大小
+        stats[S.speed] = 20;              //移速
+        stats[S.damage] = 100;           // 伤害
+        stats[S.health] = 2000;             // 血量
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("lava_giant");
 
         #endregion
     }
