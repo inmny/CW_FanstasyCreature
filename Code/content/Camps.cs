@@ -200,7 +200,7 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
         t.addEnemyTag("human");           //对人类标签敌对
         t.addEnemyTag("elf");             //对兽人标签敌对
         t.addEnemyTag("dwarf");           //对矮人标签敌对
-        AllFriendWith(SK.orc, nameof(Goblin));
+        AllFriendWith(nameof(Goblin), SK.orc);
     }
 
     internal void CreateCamp(string pID)

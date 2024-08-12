@@ -5,6 +5,7 @@ using Cultivation_Way.General.AboutUI;
 using Cultivation_Way.Library;
 using Cultivation_Way.Utils;
 using CW_FantasyCreatures.ai;
+using NeoModLoader.api.attributes;
 
 namespace CW_FantasyCreatures.content;
 
@@ -1043,9 +1044,9 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.needFood = false;                                                           // 不需要食物
         vanilla_t.traits = new() { "tough", "strong", "fire_blood", "fire_proof" };
         vanilla_t.kingdom = Camps.Evil_giant.id; //恶巨人族
-        vanilla_t.action_death += (pTarget, pTile) =>
+        vanilla_t.action_death += [Hotfixable] (pTarget, pTile) =>
         {
-            pTarget.base_data.save();
+            pTarget.a.prepareForSave();
 
             var new_data = GeneralHelper.from_json<ActorData>(GeneralHelper.to_json(pTarget.a.data));
             new_data.id = World.world.mapStats.getNextId(World.world.units.type_id);
