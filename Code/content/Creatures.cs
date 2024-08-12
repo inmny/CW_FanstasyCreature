@@ -3,6 +3,7 @@ using System.Linq;
 using Cultivation_Way.Constants;
 using Cultivation_Way.General.AboutUI;
 using Cultivation_Way.Library;
+using Cultivation_Way.Utils;
 using CW_FantasyCreatures.ai;
 
 namespace CW_FantasyCreatures.content;
@@ -35,7 +36,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale] = 0.2f;            //大小
         stats[S.speed] = 45;              //移速
-        stats[S.damage] = 100;           // 伤害
+        stats[S.damage] = 100;            // 伤害
         stats[CW_S.wakan] = 100;          // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -60,7 +61,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale] = 0.2f;            //大小
         stats[S.speed] = 45;              //移速
-        stats[S.damage] = 100;           // 伤害
+        stats[S.damage] = 100;            // 伤害
         stats[CW_S.wakan] = 100;          // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -85,7 +86,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale] = 0.2f;            //大小
         stats[S.speed] = 45;              //移速
-        stats[S.damage] = 100;           // 伤害
+        stats[S.damage] = 100;            // 伤害
         stats[CW_S.wakan] = 100;          // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -109,7 +110,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale] = 0.2f;            //大小
-        stats[S.damage] = 100;           // 伤害
+        stats[S.damage] = 100;            // 伤害
         stats[CW_S.wakan] = 100;          // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -134,7 +135,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale] = 0.2f;            //大小
         stats[S.speed] = 45;              //移速
-        stats[S.damage] = 100;           // 伤害
+        stats[S.damage] = 100;            // 伤害
         stats[CW_S.wakan] = 100;          // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -161,7 +162,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale] = 0.2f;            //大小
         stats[S.speed] = 45;              //移速
-        stats[S.damage] = 100;           // 伤害
+        stats[S.damage] = 100;            // 伤害
         stats[CW_S.wakan] = 100;          // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -186,7 +187,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale] = 0.2f;            //大小
         stats[S.speed] = 45;              //移速
-        stats[S.damage] = 100;           // 伤害
+        stats[S.damage] = 100;            // 伤害
         stats[CW_S.wakan] = 100;          // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -330,7 +331,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.kingdom = Camps.Carnivore.id;            //食肉族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 40;        // 伤害
+        stats[S.damage] = 40;          // 伤害
         stats[CW_S.wakan] = 100;       // 灵气
         MarkNameTemplate("lion_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -352,7 +353,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.kingdom = Camps.Omnivorous.id;           //杂食族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 10;       // 伤害
+        stats[S.damage] = 10;         // 伤害
         stats[CW_S.wakan] = 100;      // 灵气
         MarkNameTemplate("pig_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -376,7 +377,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.kingdom = Camps.Omnivorous.id;           //杂食族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 20;       // 伤害
+        stats[S.damage] = 20;         // 伤害
         stats[CW_S.wakan] = 100;      // 灵气
         MarkNameTemplate("pig_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -398,7 +399,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.kingdom = Camps.Omnivorous.id;           //杂食族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 10;           // 伤害
+        stats[S.damage] = 10;             // 伤害
         stats[CW_S.wakan] = 100;          // 灵气
         MarkNameTemplate("rooster_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -422,7 +423,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.kingdom = Camps.Carnivore.id;            //食肉族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 30;         // 伤害
+        stats[S.damage] = 30;           // 伤害
         stats[CW_S.wakan] = 100;        // 灵气
         MarkNameTemplate("tiger_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -446,7 +447,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.kingdom = Camps.Omnivorous.id;           //杂食族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 50;         // 伤害
+        stats[S.damage] = 50;           // 伤害
         stats[S.speed] = 40;            //移速
         stats[CW_S.wakan] = 100;        // 灵气
         MarkNameTemplate("panda_name"); // 设置命名模板，只在中文名存在时生效
@@ -469,7 +470,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.kingdom = Camps.Herbivore.id;                   //食草族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 10;        // 伤害
+        stats[S.damage] = 10;          // 伤害
         stats[CW_S.wakan] = 100;       // 灵气
         MarkNameTemplate("deer_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -493,7 +494,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.kingdom = Camps.Subhumans.id;                                      //亚人族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 20;           // 伤害
+        stats[S.damage] = 20;             // 伤害
         stats[CW_S.wakan] = 100;          // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -515,7 +516,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.kingdom = Camps.Herbivore.id;                   //食草族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 10;         // 伤害
+        stats[S.damage] = 10;           // 伤害
         stats[CW_S.wakan] = 100;        // 灵气
         MarkNameTemplate("horse_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -539,7 +540,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.kingdom = Camps.Subhumans.id;                                       //亚人族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 30;           // 伤害
+        stats[S.damage] = 30;             // 伤害
         stats[CW_S.wakan] = 100;          // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -563,7 +564,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.kingdom = Camps.Extraordinary.id;                                   //非凡之族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 60;           // 伤害
+        stats[S.damage] = 60;             // 伤害
         stats[CW_S.wakan] = 100;          // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -589,7 +590,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale] = 0.2f;           //大小
-        stats[S.damage] = 100;          // 伤害
+        stats[S.damage] = 100;           // 伤害
         stats[CW_S.wakan] = 100;         // 灵气
         MarkNameTemplate("anubis_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -612,7 +613,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale] = 0.3f;            //大小
-        stats[S.damage] = 80;           // 伤害
+        stats[S.damage] = 80;             // 伤害
         stats[CW_S.wakan] = 100;          // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -636,7 +637,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale] = 0.2f;            //大小
-        stats[S.damage] = 100;           // 伤害
+        stats[S.damage] = 100;            // 伤害
         stats[CW_S.wakan] = 100;          // 灵气
         MarkNameTemplate("pharaoh_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -661,7 +662,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.kingdom = Camps.Undead.id;                                          //不死族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 50;                   // 伤害
+        stats[S.damage] = 50;                     // 伤害
         stats[CW_S.wakan] = 100;                  // 灵气
         MarkNameTemplate("skeleton_knight_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -686,7 +687,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale] = 0.2f;           //大小
-        stats[S.damage] = 100;          // 伤害
+        stats[S.damage] = 100;           // 伤害
         stats[CW_S.wakan] = 100;         // 灵气
         MarkNameTemplate("sphinx_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -711,7 +712,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.kingdom = Camps.Vampire.id;                     //血族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 50;               // 伤害
+        stats[S.damage] = 50;                 // 伤害
         stats[CW_S.wakan] = 100;              // 灵气
         MarkNameTemplate("bloodsucker_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -735,7 +736,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.kingdom = Camps.Anti_vampire.id;                              //猎魔人
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 40;           // 伤害
+        stats[S.damage] = 40;             // 伤害
         stats[CW_S.wakan] = 100;          // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -757,7 +758,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.kingdom = Camps.Spirit.id;                      //灵族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 10;           // 伤害
+        stats[S.damage] = 10;             // 伤害
         stats[CW_S.wakan] = 100;          // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -779,7 +780,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.kingdom = Camps.Werewolf.id;                    //狼人族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 60;           // 伤害
+        stats[S.damage] = 60;             // 伤害
         stats[CW_S.wakan] = 100;          // 灵气
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -1009,7 +1010,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
 
         #endregion
-        
+
         #region ------岩石巨人
 
         // 创建一个生物岩石巨人
@@ -1018,20 +1019,20 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7,swim_8"; //游泳贴图设置
         vanilla_t.disableJumpAnimation = true;                                                //允许跳跃
         vanilla_t.needFood = false;                                                           // 不需要食物
-        vanilla_t.traits = new() { "tough","pacifist","strong","shiny" };
+        vanilla_t.traits = new() { "tough", "pacifist", "strong", "shiny" };
         vanilla_t.kingdom = Camps.Good_giant.id; //善树族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale] = 0.2f;            //大小
         stats[S.speed] = 20;              //移速
-        stats[S.damage] = 100;           // 伤害
-        stats[S.health] = 2000;             // 血量
+        stats[S.damage] = 100;            // 伤害
+        stats[S.health] = 2000;           // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("rock_giant");
 
         #endregion
-                
+
         #region ------火山巨人
 
         // 创建一个生物火山巨人
@@ -1040,20 +1041,30 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7,swim_8"; //游泳贴图设置
         vanilla_t.disableJumpAnimation = true;                                                //允许跳跃
         vanilla_t.needFood = false;                                                           // 不需要食物
-        vanilla_t.traits = new() { "tough","strong","fire_blood","fire_proof" };
+        vanilla_t.traits = new() { "tough", "strong", "fire_blood", "fire_proof" };
         vanilla_t.kingdom = Camps.Evil_giant.id; //恶巨人族
+        vanilla_t.action_death += (pTarget, pTile) =>
+        {
+            pTarget.base_data.save();
+
+            var new_data = GeneralHelper.from_json<ActorData>(GeneralHelper.to_json(pTarget.a.data));
+            new_data.asset_id = "lava_giant";
+            new_data.health = (int)pTarget.stats[S.health];
+            World.world.units.loadObject(new_data);
+            return true;
+        };
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale] = 0.2f;            //大小
         stats[S.speed] = 20;              //移速
-        stats[S.damage] = 100;           // 伤害
-        stats[S.health] = 2000;             // 血量
+        stats[S.damage] = 100;            // 伤害
+        stats[S.health] = 2000;           // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("volcanic_giant");
 
         #endregion
-                        
+
         #region ------熔岩巨人
 
         // 创建一个生物熔岩巨人
@@ -1062,20 +1073,20 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7,swim_8"; //游泳贴图设置
         vanilla_t.disableJumpAnimation = true;                                                //允许跳跃
         vanilla_t.needFood = false;                                                           // 不需要食物
-        vanilla_t.traits = new() { "tough","strong","fire_blood","fire_proof","burning_feet" };
+        vanilla_t.traits = new() { "tough", "strong", "fire_blood", "fire_proof", "burning_feet" };
         vanilla_t.kingdom = Camps.Evil_giant.id; //恶巨人族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale] = 0.2f;            //大小
         stats[S.speed] = 20;              //移速
-        stats[S.damage] = 100;           // 伤害
-        stats[S.health] = 2000;             // 血量
+        stats[S.damage] = 100;            // 伤害
+        stats[S.health] = 2000;           // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("lava_giant");
 
         #endregion
-                        
+
         #region ------寒冰巨人
 
         // 创建一个生物寒冰巨人
@@ -1084,14 +1095,14 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_1,swim_2,swim_3,swim_4,swim_5,swim_6,swim_7,swim_8"; //游泳贴图设置
         vanilla_t.disableJumpAnimation = true;                                                //允许跳跃
         vanilla_t.needFood = false;                                                           // 不需要食物
-        vanilla_t.traits = new() { "tough","strong","freeze_proof","cold_aura" };
+        vanilla_t.traits = new() { "tough", "strong", "freeze_proof", "cold_aura" };
         vanilla_t.kingdom = Camps.Good_giant.id; //恶巨人族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.scale] = 0.2f;            //大小
         stats[S.speed] = 20;              //移速
-        stats[S.damage] = 100;           // 伤害
-        stats[S.health] = 2000;             // 血量
+        stats[S.damage] = 100;            // 伤害
+        stats[S.health] = 2000;           // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("ice_giant");
