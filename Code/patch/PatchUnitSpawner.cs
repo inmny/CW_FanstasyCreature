@@ -10,7 +10,7 @@ namespace CW_FantasyCreatures.patch
         [HarmonyPrefix, HarmonyPatch(typeof(UnitSpawner), nameof(UnitSpawner.spawnUnit))]
         private static bool Prefix_spawnUnit(UnitSpawner __instance)
         {
-            if (__instance.building.asset.id == "GoblinTower")
+            if (__instance.building.asset.spawnUnits_asset.Contains(","))
             {
                 var building = __instance.building;
                 var asset = __instance.building.asset;
