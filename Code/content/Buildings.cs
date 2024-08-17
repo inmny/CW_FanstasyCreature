@@ -208,7 +208,7 @@ namespace CW_FantasyCreatures.content
             Knowledge.spread_ids = List.Of<string>(new string[] { "Knowledge" });
             AssetManager.buildings.addResource("stone", 1, false); //添加石头
             AssetManager.buildings.loadSprites(Knowledge);
-
+            //------哥布林地穴
             BuildingAsset GoblinTower = AssetManager.buildings.clone(nameof(GoblinTower), SB.flame_tower);
             GoblinTower.race = "Goblin"; // 自己改哥布林相关的种族
             GoblinTower.kingdom = "Goblin"; // 自己改
@@ -216,6 +216,34 @@ namespace CW_FantasyCreatures.content
             GoblinTower.spawnUnits_asset = "goblin_warrior:6,goblin_shaman:1,goblin_knight:2"; // 改哥布林的生物id
             AssetManager.buildings.loadSprites(GoblinTower);
             TabManager.AddBuildingDropButton(GoblinTower.id, GoblinTower.id, GoblinTower.id);
+
+            //------烛火群系Candle
+            BuildingAsset Candle_tree = AssetManager.buildings.clone("Candle_tree", "tree");
+            Candle_tree.limit_per_zone = 2;
+            Candle_tree.canBePlacedOnlyOn = List.Of<string>(
+                new string[] { "Candle_high", "Candle_low" }
+            );
+            Candle_tree.spread_ids = List.Of<string>(new string[] { "Candle_tree" });
+            Candle_tree.setShadow(0.5f, 0.03f, 0.12f); //设置阴影
+            Candle_tree.material = "building";//设置树木为建筑，禁止晃动
+            Candle_tree.draw_light_area = true;//允许树发光
+            Candle_tree.draw_light_size = 0.4f; //亮度
+            AssetManager.buildings.addResource("wood", 5, false); //添加木材
+            AssetManager.buildings.loadSprites(Candle_tree);
+
+            BuildingAsset Candle = AssetManager.buildings.clone("Candle", "mushroom");
+            Candle.limit_per_zone = 4;
+            Candle.wheat = true;
+            Candle.material = "building";//设置草为建筑，禁止晃动
+            Candle.canBeHarvested = true;
+            Candle.setShadow(0.5f, 0.03f, 0.12f);
+            Candle.canBePlacedOnlyOn = List.Of<string>(
+                new string[] { "Candle_high", "Candle_low" }
+            );
+            Candle.spread_ids = List.Of<string>(new string[] { "Candle" });
+            AssetManager.buildings.addResource("stone", 1, false); //添加石头
+            AssetManager.buildings.loadSprites(Candle);
+
         }
     }
 }

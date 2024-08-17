@@ -138,6 +138,18 @@ namespace CW_FantasyCreatures.ui
                 null
             );
             index++;
+            
+                PowerButtons.CreateButton(
+                "spawnCandle_drops",
+                Mod.EmbededResources.LoadSprite($"{Mod.Info.Name}.Resources.tile_8.png"),
+                "烛火种子",
+                "驱散黑暗，带来光明！希望！",
+                new Vector2(xPos + (index * gap), yPos),
+                ButtonType.GodPower,
+                tab.transform,
+                null
+            );
+            index++;
         }
     }
 }

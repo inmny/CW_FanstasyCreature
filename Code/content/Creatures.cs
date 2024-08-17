@@ -766,6 +766,28 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         CreateButton("knowledge_genie");
 
         #endregion
+                
+        #region ------烛火之灵
+
+        // 创建一个生物烛灵
+        CreateActor("candle_genie", "Candle Genie", "iconCandle_Genie", out vanilla_t, out stats);
+        vanilla_t.animation_idle = "walk_0_0,walk_0_1,walk_0_2,walk_0_3";//移动贴图设置
+        vanilla_t.animation_walk = "walk_0_0,walk_1,walk_2,walk_3"; //移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3"; //游泳贴图设置
+        vanilla_t.disableJumpAnimation = true;                                                //允许跳跃
+        vanilla_t.needFood = false;                                                           // 不需要食物
+        vanilla_t.traits = new() { "light_lamp"};
+        vanilla_t.kingdom = Camps.Spirit.id;//灵族
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.speed] = 20;              //移速
+        stats[S.damage] = 100;            // 伤害
+        stats[S.health] = 2000;           // 血量
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("candle_genie");
+
+        #endregion
 
         #region ------狼人
 
@@ -1110,6 +1132,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         CreateButton("ice_giant");
 
         #endregion
+
     }
 
     /// <summary>

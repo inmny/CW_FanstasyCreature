@@ -405,7 +405,7 @@ namespace CW_FantasyCreatures.content
             Rice_high.biome_asset = Rice;
             AssetManager.topTiles.add(Rice_high);
             AssetManager.topTiles.loadSpritesForTile(Rice_high);
-            //------知识群系
+//------知识群系
             BiomeAsset Knowledge = new BiomeAsset(); //新版本群系的代码独立了出来，不过总体功能没啥变化
             Knowledge.id = "biome_Knowledge";
             Knowledge.tile_low = "Knowledge_low"; //低块
@@ -467,6 +467,68 @@ namespace CW_FantasyCreatures.content
             Knowledge_high.stepAction = tempHighIntelligence; //智慧BUFF
             AssetManager.topTiles.add(Knowledge_high);
             AssetManager.topTiles.loadSpritesForTile(Knowledge_high);
+//------烛火群系
+            BiomeAsset Candle = new BiomeAsset(); //新版本群系的代码独立了出来，不过总体功能没啥变化
+            Candle.id = "biome_Candle";
+            Candle.tile_low = "Candle_low"; //低块
+            Candle.tile_high = "Candle_high"; //高块
+            Candle.grow_strength = 2; //群系的扩张强度
+            Candle.spread_biome = true;
+            Candle.generator_pool_amount = 4; //对地图生成的影响，这个值越大该群系生成概率越高
+            Candle.force_unit_skin_set = "mushroom";
+            Candle.grow_vegetation_auto = true;
+            Candle.grow_type_selector_minerals = new GrowTypeSelector(
+                TileActionLibrary.getGrowTypeRandomMineral
+            );
+            Candle.grow_type_selector_trees = new GrowTypeSelector(
+                TileActionLibrary.getGrowTypeRandomTrees
+            );
+            Candle.grow_type_selector_plants = new GrowTypeSelector(
+                TileActionLibrary.getGrowTypeRandomPlants
+            );
+            //Candle.addUnit(SA.fox, 2); //加入生物,前面是生物id，后面是生成占比
+            Candle.addUnit("candle_genie", 4);//添加烛火之灵
+            Candle.addMineral(SB.mineral_stone, 5); //加入矿物,前面是建筑id，后面是生成占比
+            Candle.addMineral(SB.mineral_metals, 3);
+            Candle.addTree("Candle_tree", 1); //加入树,前面是建筑id，后面是生成占比
+            Candle.addPlant("Candle", 1); //加入植物,前面是建筑id，后面是生成占比
+            AssetManager.biome_library.add(Candle);
+            AssetManager.biome_library.addBiomeToPool(Candle);
+
+            TopTileType Candle_low = AssetManager.topTiles.clone(
+                "Candle_low",
+                ST.mushroom_low
+            ); //地块代码
+            Candle_low.color = Toolbox.makeColor("#fbda8e", -1f); //颜色代码
+            Candle_low.setBiome("biome_Candle");
+            Candle_low.force_unit_skin_set = "enchanted";
+            Candle_low.rank_type = TileRank.Low;
+            Candle_low.setDrawLayer(TileZIndexes.mushroom_low, null);
+            Candle_low.stepAction = new TileStepAction(Candle_1); //该群系的特殊事件
+            Candle_low.stepActionChance = 1437f; //事件发生概率， 这里是指概率143700%
+            Candle_low.fireChance = 0.02f; //燃烧概率
+            Candle_low.food_resource = SR.mushrooms;
+            Candle_low.biome_asset = Candle;
+            Candle_low.stepAction = tempHighIntelligence; //智慧BUFF
+            AssetManager.topTiles.add(Candle_low);
+            AssetManager.topTiles.loadSpritesForTile(Candle_low);
+
+            TopTileType Candle_high = AssetManager.topTiles.clone(
+                "Candle_high",
+                ST.mushroom_high
+            );
+            Candle_high.color = Toolbox.makeColor("#fac959", -1f); //颜色代码
+            Candle_high.setBiome("biome_Candle");
+            Candle_high.rank_type = TileRank.High;
+            Candle_high.force_unit_skin_set = "enchanted";
+            Candle_high.setDrawLayer(TileZIndexes.mushroom_high, null);
+            Candle_high.stepActionChance = 1437f;
+            Candle_high.fireChance = 0.02f;
+            Candle_high.food_resource = SR.mushrooms;
+            Candle_high.biome_asset = Candle;
+            Candle_high.stepAction = tempHighIntelligence; //智慧BUFF
+            AssetManager.topTiles.add(Candle_high);
+            AssetManager.topTiles.loadSpritesForTile(Candle_high);
             //------
         }
 
@@ -510,6 +572,11 @@ namespace CW_FantasyCreatures.content
         }
 
         public static bool Knowledge_1(WorldTile pTile, ActorBase pActor) //事件代码,我这里全删了
+        {
+            return true;
+        }
+        
+        public static bool Candle_1(WorldTile pTile, ActorBase pActor) //事件代码,我这里全删了
         {
             return true;
         }
