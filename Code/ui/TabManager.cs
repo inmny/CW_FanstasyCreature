@@ -150,6 +150,18 @@ namespace CW_FantasyCreatures.ui
                 null
             );
             index++;
+                        
+                PowerButtons.CreateButton(
+                "spawnCemetery_drops",
+                Mod.EmbededResources.LoadSprite($"{Mod.Info.Name}.Resources.tile_9.png"),
+                "墓地种子",
+                "亡者之地，永恒的宁静！安息！",
+                new Vector2(xPos + (index * gap), yPos),
+                ButtonType.GodPower,
+                tab.transform,
+                null
+            );
+            index++;
         }
     }
 }

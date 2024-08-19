@@ -243,6 +243,31 @@ namespace CW_FantasyCreatures.content
             Candle.spread_ids = List.Of<string>(new string[] { "Candle" });
             AssetManager.buildings.addResource("stone", 1, false); //添加石头
             AssetManager.buildings.loadSprites(Candle);
+            
+            //------墓地群系Cemetery
+            BuildingAsset Cemetery_tree = AssetManager.buildings.clone("Cemetery_tree", "tree");
+            Cemetery_tree.limit_per_zone = 2;
+            Cemetery_tree.canBePlacedOnlyOn = List.Of<string>(
+                new string[] { "Cemetery_high", "Cemetery_low" }
+            );
+            Cemetery_tree.spread_ids = List.Of<string>(new string[] { "Cemetery_tree" });
+            Cemetery_tree.setShadow(0.5f, 0.03f, 0.12f); //设置阴影
+            Cemetery_tree.material = "building";//设置树木为建筑，禁止晃动
+            AssetManager.buildings.addResource("wood", 5, false); //添加木材
+            AssetManager.buildings.loadSprites(Cemetery_tree);
+
+            BuildingAsset Cemetery = AssetManager.buildings.clone("Cemetery", "mushroom");
+            Cemetery.limit_per_zone = 4;
+            Cemetery.wheat = true;
+            Cemetery.material = "building";//设置草为建筑，禁止晃动
+            Cemetery.canBeHarvested = true;
+            Cemetery.setShadow(0.5f, 0.03f, 0.12f);
+            Cemetery.canBePlacedOnlyOn = List.Of<string>(
+                new string[] { "Cemetery_high", "Cemetery_low" }
+            );
+            Cemetery.spread_ids = List.Of<string>(new string[] { "Cemetery" });
+            AssetManager.buildings.addResource("stone", 1, false); //添加石头
+            AssetManager.buildings.loadSprites(Cemetery);
 
         }
     }

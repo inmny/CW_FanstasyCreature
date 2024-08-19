@@ -18,7 +18,7 @@ namespace CW_FantasyCreatures.content
     {
         public static void init()
         {
-            //------珊瑚群系
+//------珊瑚群系
             BiomeAsset Coral = new BiomeAsset(); //新版本群系的代码独立了出来，不过总体功能没啥变化
             Coral.id = "biome_Coral";
             Coral.tile_low = "Coral_low"; //低块
@@ -72,7 +72,7 @@ namespace CW_FantasyCreatures.content
             Coral_high.biome_asset = Coral;
             AssetManager.topTiles.add(Coral_high);
             AssetManager.topTiles.loadSpritesForTile(Coral_high);
-            //------竹林群系
+//------竹林群系
             BiomeAsset Bamboo = new BiomeAsset(); //新版本群系的代码独立了出来，不过总体功能没啥变化
             Bamboo.id = "biome_Bamboo";
             Bamboo.tile_low = "Bamboo_low"; //低块
@@ -126,7 +126,7 @@ namespace CW_FantasyCreatures.content
             Bamboo_high.biome_asset = Bamboo;
             AssetManager.topTiles.add(Bamboo_high);
             AssetManager.topTiles.loadSpritesForTile(Bamboo_high);
-            //------血肉群系
+//------血肉群系
             BiomeAsset FleshBlood = new BiomeAsset(); //新版本群系的代码独立了出来，不过总体功能没啥变化
             FleshBlood.id = "biome_FleshBlood";
             FleshBlood.tile_low = "FleshBlood_low"; //低块
@@ -187,7 +187,7 @@ namespace CW_FantasyCreatures.content
             FleshBlood_high.biome_asset = FleshBlood;
             AssetManager.topTiles.add(FleshBlood_high);
             AssetManager.topTiles.loadSpritesForTile(FleshBlood_high);
-            //------巨橡群系Oak
+//------巨橡群系Oak
             BiomeAsset Oak = new BiomeAsset(); //新版本群系的代码独立了出来，不过总体功能没啥变化
             Oak.id = "biome_Oak";
             Oak.tile_low = "Oak_low"; //低块
@@ -241,7 +241,7 @@ namespace CW_FantasyCreatures.content
             Oak_high.biome_asset = Oak;
             AssetManager.topTiles.add(Oak_high);
             AssetManager.topTiles.loadSpritesForTile(Oak_high);
-            //------泰坦群系Titans
+//------泰坦群系Titans
             BiomeAsset Titans = new BiomeAsset(); //新版本群系的代码独立了出来，不过总体功能没啥变化
             Titans.id = "biome_Titans";
             Titans.tile_low = "Titans_low"; //低块
@@ -294,7 +294,7 @@ namespace CW_FantasyCreatures.content
             Titans_high.biome_asset = Titans;
             AssetManager.topTiles.add(Titans_high);
             AssetManager.topTiles.loadSpritesForTile(Titans_high);
-            //------黑暗群系Dark
+//------黑暗群系Dark
             BiomeAsset Dark = new BiomeAsset(); //新版本群系的代码独立了出来，不过总体功能没啥变化
             Dark.id = "biome_Dark";
             Dark.tile_low = "Dark_low"; //低块
@@ -529,6 +529,68 @@ namespace CW_FantasyCreatures.content
             Candle_high.stepAction = tempHighIntelligence; //智慧BUFF
             AssetManager.topTiles.add(Candle_high);
             AssetManager.topTiles.loadSpritesForTile(Candle_high);
+//------墓地群系
+            BiomeAsset Cemetery = new BiomeAsset(); //新版本群系的代码独立了出来，不过总体功能没啥变化
+            Cemetery.id = "biome_Cemetery";
+            Cemetery.tile_low = "Cemetery_low"; //低块
+            Cemetery.tile_high = "Cemetery_high"; //高块
+            Cemetery.grow_strength = 2; //群系的扩张强度
+            Cemetery.spread_biome = true;
+            Cemetery.generator_pool_amount = 4; //对地图生成的影响，这个值越大该群系生成概率越高
+            Cemetery.force_unit_skin_set = "mushroom";
+            Cemetery.grow_vegetation_auto = true;
+            Cemetery.grow_type_selector_minerals = new GrowTypeSelector(
+                TileActionLibrary.getGrowTypeRandomMineral
+            );
+            Cemetery.grow_type_selector_trees = new GrowTypeSelector(
+                TileActionLibrary.getGrowTypeRandomTrees
+            );
+            Cemetery.grow_type_selector_plants = new GrowTypeSelector(
+                TileActionLibrary.getGrowTypeRandomPlants
+            );
+            //Cemetery.addUnit(SA.fox, 2); //加入生物,前面是生物id，后面是生成占比
+            Cemetery.addUnit("ghost_fire", 4);//添加鬼火之灵
+            Cemetery.addMineral(SB.mineral_stone, 5); //加入矿物,前面是建筑id，后面是生成占比
+            Cemetery.addMineral(SB.mineral_metals, 3);
+            Cemetery.addTree("Cemetery_tree", 1); //加入树,前面是建筑id，后面是生成占比
+            Cemetery.addPlant("Cemetery", 1); //加入植物,前面是建筑id，后面是生成占比
+            AssetManager.biome_library.add(Cemetery);
+            AssetManager.biome_library.addBiomeToPool(Cemetery);
+
+            TopTileType Cemetery_low = AssetManager.topTiles.clone(
+                "Cemetery_low",
+                ST.mushroom_low
+            ); //地块代码
+            Cemetery_low.color = Toolbox.makeColor("#757a81", -1f); //颜色代码
+            Cemetery_low.setBiome("biome_Cemetery");
+            Cemetery_low.force_unit_skin_set = "enchanted";
+            Cemetery_low.rank_type = TileRank.Low;
+            Cemetery_low.setDrawLayer(TileZIndexes.mushroom_low, null);
+            Cemetery_low.stepAction = new TileStepAction(Cemetery_1); //该群系的特殊事件
+            Cemetery_low.stepActionChance = 1437f; //事件发生概率， 这里是指概率143700%
+            Cemetery_low.fireChance = 0.02f; //燃烧概率
+            Cemetery_low.food_resource = SR.mushrooms;
+            Cemetery_low.biome_asset = Cemetery;
+            Cemetery_low.stepAction = tempHighIntelligence; //智慧BUFF
+            AssetManager.topTiles.add(Cemetery_low);
+            AssetManager.topTiles.loadSpritesForTile(Cemetery_low);
+
+            TopTileType Cemetery_high = AssetManager.topTiles.clone(
+                "Cemetery_high",
+                ST.mushroom_high
+            );
+            Cemetery_high.color = Toolbox.makeColor("#4d5762", -1f); //颜色代码
+            Cemetery_high.setBiome("biome_Cemetery");
+            Cemetery_high.rank_type = TileRank.High;
+            Cemetery_high.force_unit_skin_set = "enchanted";
+            Cemetery_high.setDrawLayer(TileZIndexes.mushroom_high, null);
+            Cemetery_high.stepActionChance = 1437f;
+            Cemetery_high.fireChance = 0.02f;
+            Cemetery_high.food_resource = SR.mushrooms;
+            Cemetery_high.biome_asset = Cemetery;
+            Cemetery_high.stepAction = tempHighIntelligence; //智慧BUFF
+            AssetManager.topTiles.add(Cemetery_high);
+            AssetManager.topTiles.loadSpritesForTile(Cemetery_high);
             //------
         }
 
@@ -577,6 +639,11 @@ namespace CW_FantasyCreatures.content
         }
         
         public static bool Candle_1(WorldTile pTile, ActorBase pActor) //事件代码,我这里全删了
+        {
+            return true;
+        }
+                
+        public static bool Cemetery_1(WorldTile pTile, ActorBase pActor) //事件代码,我这里全删了
         {
             return true;
         }
