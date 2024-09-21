@@ -15,6 +15,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
     public static readonly CW_ActorAsset goblin_shaman;
     public static readonly CW_ActorAsset goblin_knight;
     public static readonly CW_ActorAsset king_slime;
+    public static readonly CW_ActorAsset bloodsucker;
 
     protected override void Init()
     {
@@ -700,7 +701,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         #region ------吸血鬼
 
         // 创建一个生物吸血鬼
-        CreateActor("bloodsucker", "Bloodsucker", "iconBloodsucker", out vanilla_t, out stats);
+        CreateActor(nameof(bloodsucker), "Bloodsucker", "iconBloodsucker", out vanilla_t, out stats);
         t.prefer_element = new[] { 40, 10, 40, 5, 5 };  // 倾向于血灵根
         t.prefer_element_scale = 1f;                    // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
@@ -712,6 +713,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = false;                   //允许跳跃
         vanilla_t.needFood = false;                               // 不需要食物
         vanilla_t.kingdom = Camps.Vampire.id;                     //血族
+        vanilla_t.defaultAttack = nameof(VanillaItems.bloodsucker_jaws);
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 50;                 // 伤害
