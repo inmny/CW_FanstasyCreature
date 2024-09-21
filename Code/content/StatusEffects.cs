@@ -37,7 +37,7 @@ namespace CW_FantasyCreatures.content
 
             blood_mark = FormatStatusEffect.create_simple_status_effect(nameof(blood_mark), new BaseStats(),
                                                                         15f,
-                                                                        path_icon: "ui/icons/iconDamage");
+                                                                        path_icon: "ui/icons/iconBlood_Mars");
             blood_mark.action_on_end += [Hotfixable](pEffect, pSource, pTarget) =>
             {
                 var a = pTarget as CW_Actor;
