@@ -9,6 +9,7 @@ using HarmonyLib;
 using NCMS;
 using NeoModLoader.api;
 using NeoModLoader.api.attributes;
+using NeoModLoader.General;
 using NeoModLoader.utils;
 using ReflectionUtility;
 #if 一米_中文名
@@ -31,6 +32,26 @@ public class Main : CW_Addon<Main>, IReloadable
                                ?.CallMethod("Clear");
         typeof(ResourcesPatch).GetMethod("LoadResourceFromFolder", BindingFlags.Static | BindingFlags.NonPublic)
                               .Invoke(null, new object[] { Path.Combine(Declaration.FolderPath, "GameResources") });
+
+        var locales_dir = GetLocaleFilesDirectory(Declaration);
+        if (Directory.Exists(locales_dir))
+        {
+            var files = Directory.GetFiles(locales_dir);
+            foreach (var locale_file in files)
+                try
+                {
+                    if (locale_file.EndsWith(".json"))
+                        LM.LoadLocale(Path.GetFileNameWithoutExtension(locale_file), locale_file);
+                    else if (locale_file.EndsWith(".csv")) LM.LoadLocales(locale_file);
+                }
+                catch (FormatException e)
+                {
+                    LogWarning(e.Message);
+                }
+
+            LM.ApplyLocale();
+        }
+
         ActorAnimationLoader.dict_units.Clear();
 
         foreach (var unit in World.world.units)
@@ -45,11 +66,13 @@ public class Main : CW_Addon<Main>, IReloadable
     protected override void OnModLoad()
     {
         base.OnModLoad();
+        PrefabLibrary.gameObject.SetActive(false);
         Declaration = GetDeclaration();
         Config.isEditor = true;
 
         foreach (Type t in Assembly.GetExecutingAssembly().GetTypes())
-            if (t.Name.StartsWith("Patch")) Harmony.CreateAndPatchAll(t);
+            if (t.Name.StartsWith("Patch"))
+                Harmony.CreateAndPatchAll(t);
 
         foreach (Type type in Assembly.GetExecutingAssembly().GetTypes()
                                       .Where(x => x.IsSubclassOf(typeof(StringLibrary))))
@@ -66,6 +89,8 @@ public class Main : CW_Addon<Main>, IReloadable
 
         Camps = new Camps();
         _ = new Traits();
+        _ = new VanillaItems();
+        _ = new VanillaEffects();
         foreach (
             var type in Assembly
                         .GetExecutingAssembly()
