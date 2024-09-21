@@ -29,7 +29,7 @@ namespace CW_FantasyCreatures.content
             t.path_icon = "ui/Icons/iconRi";
             t.allow_timer_reset = true;
             t.draw_light_area = true; // 绘制光照区域
-            t.draw_light_size = 10; // 光照区域大小
+            t.draw_light_size = 20; // 光照区域大小
         }
         private void CreateStatusEffect(string pID)
         {

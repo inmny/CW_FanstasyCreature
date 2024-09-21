@@ -1159,6 +1159,13 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
 
         // 创建一个生物飞龙骑士
         CreateActor("wyvern_knight", "Wyvern Knight", "iconWyvern_Knight", out vanilla_t, out stats);
+        t.prefer_element = new[] { 5, 80, 5, 5, 5 };               // 倾向于火灵根
+        t.prefer_element_scale = 1f;                               // 倾向程度
+        t.add_allowed_cultisys("cw_cultisys_immortal");            // 允许修仙
+        t.born_spells.Add("fire_ball");                           //添加火球
+        t.force_cultisys_initial_level("cw_cultisys_immortal", 2); // 强制初始仙路等级为金丹
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
         vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4";                     //移动贴图设置
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";                     //游泳贴图设置
         vanilla_t.disableJumpAnimation = true;                                        //禁止跳跃
@@ -1173,6 +1180,26 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
                 // 创建这个生物的放置按钮
         CreateButton("wyvern_knight");
+
+        #endregion
+            
+        #region ------史莱姆王
+
+        // 创建一个生物史莱姆王
+        CreateActor("king_slime", "King Slime", "iconKing_Slime", out vanilla_t, out stats);
+        vanilla_t.animation_idle = "walk_0_0,walk_0_1,walk_0_2,walk_0_3";                     //等待贴图设置
+        vanilla_t.animation_walk = "walk_0_0,walk_1,walk_2,walk_3,walk_4,walk_5,walk_6";      //移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5,swim_6";        //游泳贴图设置
+        vanilla_t.disableJumpAnimation = true;                                        //禁止跳跃
+        vanilla_t.needFood = false;                                                   // 不需要食物
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 80;             // 伤害
+        stats[S.speed] = 40;              // 速度
+        stats[S.health] = 5000;             // 血量
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+                // 创建这个生物的放置按钮
+        CreateButton("king_slime");
 
         #endregion
 
