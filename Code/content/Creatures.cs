@@ -1170,8 +1170,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";                     //游泳贴图设置
         vanilla_t.disableJumpAnimation = true;                                        //禁止跳跃
         vanilla_t.needFood = false;                                                   // 不需要食物
-        vanilla_t.defaultWeapons = List.Of<string>(new string[] { "spear" });         //添加矛
-        vanilla_t.defaultWeaponsMaterial = List.Of<string>(new string[] { "mythril" }); //silver银、mythril秘银
+        vanilla_t.traits = new() { "fire_blood", "fire_proof"};
+        vanilla_t.defaultWeapons = List.Of<string>(new string[] { "evil_staff" });            //添加邪恶法杖
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 80;             // 伤害
@@ -1194,6 +1194,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.needFood = false;                                                   // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.scale] = 0.2f;          //大小
         stats[S.damage] = 80;             // 伤害
         stats[S.speed] = 40;              // 速度
         stats[S.health] = 5000;             // 血量
