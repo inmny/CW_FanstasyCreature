@@ -14,6 +14,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
     public static readonly CW_ActorAsset goblin_warrior;
     public static readonly CW_ActorAsset goblin_shaman;
     public static readonly CW_ActorAsset goblin_knight;
+    public static readonly CW_ActorAsset king_slime;
 
     protected override void Init()
     {
@@ -766,18 +767,18 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         CreateButton("knowledge_genie");
 
         #endregion
-                
+
         #region ------烛火之灵
 
         // 创建一个生物烛灵
         CreateActor("candle_genie", "Candle Genie", "iconCandle_Genie", out vanilla_t, out stats);
-        vanilla_t.animation_idle = "walk_0_0,walk_0_1,walk_0_2,walk_0_3";//站立贴图设置
-        vanilla_t.animation_walk = "walk_0_0,walk_1,walk_2,walk_3"; //移动贴图设置
-        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3"; //游泳贴图设置
-        vanilla_t.disableJumpAnimation = true;                                                //允许跳跃
-        vanilla_t.needFood = false;                                                           // 不需要食物
-        vanilla_t.traits = new() { "light_lamp"};
-        vanilla_t.kingdom = Camps.Spirit.id;//灵族
+        vanilla_t.animation_idle = "walk_0_0,walk_0_1,walk_0_2,walk_0_3"; //站立贴图设置
+        vanilla_t.animation_walk = "walk_0_0,walk_1,walk_2,walk_3";       //移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";         //游泳贴图设置
+        vanilla_t.disableJumpAnimation = true;                            //允许跳跃
+        vanilla_t.needFood = false;                                       // 不需要食物
+        vanilla_t.traits = new List<string> { "light_lamp" };
+        vanilla_t.kingdom = Camps.Spirit.id; //灵族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.speed] = 20;              //移速
@@ -793,13 +794,13 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
 
         // 创建一个生物鬼火
         CreateActor("ghost_fire", "Ghost Fire", "iconGhost_Fire", out vanilla_t, out stats);
-        vanilla_t.animation_idle = "walk_0_0,walk_0_1,walk_0_2,walk_0_3";//移动贴图设置
-        vanilla_t.animation_walk = "walk_0_0,walk_1,walk_2,walk_3"; //移动贴图设置
-        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3"; //游泳贴图设置
-        vanilla_t.disableJumpAnimation = true;                                                //允许跳跃
-        vanilla_t.needFood = false;                                                           // 不需要食物
-        vanilla_t.traits = new() { "light_lamp"};
-        vanilla_t.kingdom = Camps.Spirit.id;//灵族
+        vanilla_t.animation_idle = "walk_0_0,walk_0_1,walk_0_2,walk_0_3"; //移动贴图设置
+        vanilla_t.animation_walk = "walk_0_0,walk_1,walk_2,walk_3";       //移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";         //游泳贴图设置
+        vanilla_t.disableJumpAnimation = true;                            //允许跳跃
+        vanilla_t.needFood = false;                                       // 不需要食物
+        vanilla_t.traits = new List<string> { "light_lamp" };
+        vanilla_t.kingdom = Camps.Spirit.id; //灵族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.speed] = 20;              //移速
@@ -1088,7 +1089,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.needFood = false;                                                           // 不需要食物
         vanilla_t.traits = new() { "tough", "strong", "fire_blood", "fire_proof" };
         vanilla_t.kingdom = Camps.Evil_giant.id; //恶巨人族
-        vanilla_t.action_death += [Hotfixable] (pTarget, pTile) =>
+        vanilla_t.action_death += [Hotfixable](pTarget, pTile) =>
         {
             pTarget.a.prepareForSave();
 
@@ -1154,7 +1155,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         CreateButton("ice_giant");
 
         #endregion
-        
+
         #region ------飞龙骑士
 
         // 创建一个生物飞龙骑士
@@ -1162,47 +1163,46 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.prefer_element = new[] { 5, 80, 5, 5, 5 };               // 倾向于火灵根
         t.prefer_element_scale = 1f;                               // 倾向程度
         t.add_allowed_cultisys("cw_cultisys_immortal");            // 允许修仙
-        t.born_spells.Add("fire_ball");                           //添加火球
+        t.born_spells.Add("fire_ball"); //添加火球
         t.force_cultisys_initial_level("cw_cultisys_immortal", 2); // 强制初始仙路等级为金丹
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
-        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4";                     //移动贴图设置
-        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";                     //游泳贴图设置
-        vanilla_t.disableJumpAnimation = true;                                        //禁止跳跃
-        vanilla_t.needFood = false;                                                   // 不需要食物
-        vanilla_t.defaultWeapons = List.Of<string>(new string[] { "spear" });         //添加矛
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4"; //移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3"; //游泳贴图设置
+        vanilla_t.disableJumpAnimation = true;                    //禁止跳跃
+        vanilla_t.needFood = false;                               // 不需要食物
+        vanilla_t.defaultWeapons = List.Of("spear");              //添加矛
         vanilla_t.defaultWeaponsMaterial = List.Of<string>(new string[] { "mythril" }); //silver银、mythril秘银
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 80;             // 伤害
         stats[S.speed] = 60;              // 速度
-        stats[S.health] = 500;             // 血量
+        stats[S.health] = 500; // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
-                // 创建这个生物的放置按钮
+        // 创建这个生物的放置按钮
         CreateButton("wyvern_knight");
 
         #endregion
-            
+
         #region ------史莱姆王
 
         // 创建一个生物史莱姆王
-        CreateActor("king_slime", "King Slime", "iconKing_Slime", out vanilla_t, out stats);
-        vanilla_t.animation_idle = "walk_0_0,walk_0_1,walk_0_2,walk_0_3";                     //等待贴图设置
-        vanilla_t.animation_walk = "walk_0_0,walk_1,walk_2,walk_3,walk_4,walk_5,walk_6";      //移动贴图设置
-        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5,swim_6";        //游泳贴图设置
-        vanilla_t.disableJumpAnimation = true;                                        //禁止跳跃
-        vanilla_t.needFood = false;                                                   // 不需要食物
+        CreateActor(nameof(king_slime), "King Slime", "iconKing_Slime", out vanilla_t, out stats);
+        vanilla_t.animation_idle = "walk_0_0,walk_0_1,walk_0_2,walk_0_3";                //等待贴图设置
+        vanilla_t.animation_walk = "walk_0_0,walk_1,walk_2,walk_3,walk_4,walk_5,walk_6"; //移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5,swim_6";   //游泳贴图设置
+        vanilla_t.disableJumpAnimation = true;                                           //禁止跳跃
+        vanilla_t.needFood = false;                                                      // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 80;             // 伤害
         stats[S.speed] = 40;              // 速度
-        stats[S.health] = 5000;             // 血量
+        stats[S.health] = 5000; // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
-                // 创建这个生物的放置按钮
+        // 创建这个生物的放置按钮
         CreateButton("king_slime");
 
         #endregion
-
     }
 
     /// <summary>
