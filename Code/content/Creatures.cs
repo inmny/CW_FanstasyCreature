@@ -714,6 +714,10 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.needFood = false;                               // 不需要食物
         vanilla_t.kingdom = Camps.Vampire.id;                     //血族
         vanilla_t.defaultAttack = nameof(VanillaItems.bloodsucker_jaws);
+        vanilla_t.traits = new List<string>
+        {
+            nameof(Traits.bloodsucker)
+        };
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 50;                 // 伤害
@@ -1169,12 +1173,12 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         t.force_cultisys_initial_level("cw_cultisys_immortal", 2); // 强制初始仙路等级为金丹
         // 武道: cw_cultisys_bushido
         // 魂道: cw_cultisys_soul
-        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4";                     //移动贴图设置
-        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";                     //游泳贴图设置
-        vanilla_t.disableJumpAnimation = true;                                        //禁止跳跃
-        vanilla_t.needFood = false;                                                   // 不需要食物
-        vanilla_t.traits = new() { "fire_blood", "fire_proof"};
-        vanilla_t.defaultWeapons = List.Of<string>(new string[] { "evil_staff" });            //添加邪恶法杖
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4"; //移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3"; //游泳贴图设置
+        vanilla_t.disableJumpAnimation = true;                    //禁止跳跃
+        vanilla_t.needFood = false;                               // 不需要食物
+        vanilla_t.traits = new List<string> { "fire_blood", "fire_proof" };
+        vanilla_t.defaultWeapons = List.Of("evil_staff"); //添加邪恶法杖
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
         stats[S.damage] = 80;             // 伤害
@@ -1197,7 +1201,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.needFood = false;                                                      // 不需要食物
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.scale] = 0.2f;          //大小
+        stats[S.scale] = 0.2f; //大小
         stats[S.damage] = 80;             // 伤害
         stats[S.speed] = 40;              // 速度
         stats[S.health] = 5000; // 血量
