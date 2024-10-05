@@ -235,8 +235,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_swim = "swim_1,swim_2"; //游泳贴图设置
         vanilla_t.disableJumpAnimation = true;      //允许跳跃
         vanilla_t.flying = true;                    //允许飞行
-        vanilla_t.dieOnBlocks = false;//免疫高山伤害
-        vanilla_t.ignoreBlocks = true;//寻路无视地形限制
+        vanilla_t.dieOnBlocks = false;              //免疫高山伤害
+        vanilla_t.ignoreBlocks = true;              //寻路无视地形限制
         vanilla_t.needFood = false;                 // 不需要食物
         vanilla_t.kingdom = Camps.Divine.id;        //神圣族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
@@ -262,6 +262,9 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_walk = "walk_1,walk_2"; //移动贴图设置
         vanilla_t.animation_swim = "swim_1,swim_2"; //游泳贴图设置
         vanilla_t.disableJumpAnimation = true;      //允许跳跃
+        vanilla_t.flying = true;                    //允许飞行
+        vanilla_t.dieOnBlocks = false;              //免疫高山伤害
+        vanilla_t.ignoreBlocks = true;              //寻路无视地形限制
         vanilla_t.needFood = false;                 // 不需要食物
         vanilla_t.kingdom = Camps.Divine.id;        //神圣族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
@@ -287,6 +290,9 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_walk = "walk_1,walk_2"; //移动贴图设置
         vanilla_t.animation_swim = "swim_1,swim_2"; //游泳贴图设置
         vanilla_t.disableJumpAnimation = true;      //允许跳跃
+        vanilla_t.flying = true;                    //允许飞行
+        vanilla_t.dieOnBlocks = false;              //免疫高山伤害
+        vanilla_t.ignoreBlocks = true;              //寻路无视地形限制
         vanilla_t.needFood = false;                 // 不需要食物
         vanilla_t.traits = new() { "fire_blood", "fire_proof", "burning_feet", nameof(Traits.huge_light) };
         vanilla_t.kingdom = Camps.Divine.id; //神圣族
@@ -561,6 +567,9 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_walk = "walk_1,walk_2";                                   //移动贴图设置
         vanilla_t.animation_swim = "swim_1,swim_2";                                   //游泳贴图设置
         vanilla_t.disableJumpAnimation = true;                                        //禁止跳跃
+        vanilla_t.flying = true;                    //允许飞行
+        vanilla_t.dieOnBlocks = false;              //免疫高山伤害
+        vanilla_t.ignoreBlocks = true;              //寻路无视地形限制
         vanilla_t.needFood = false;                                                   // 不需要食物
         vanilla_t.defaultWeapons = List.Of<string>(new string[] { "spear" });         //添加矛
         vanilla_t.defaultWeaponsMaterial = List.Of<string>(new string[] { "stone" }); //石头
@@ -652,6 +661,9 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4,walk_5,walk_6"; //移动贴图设置
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5"; //游泳贴图设置
         vanilla_t.disableJumpAnimation = true;                                  //允许跳跃
+        vanilla_t.flying = true;                    //允许飞行
+        vanilla_t.dieOnBlocks = false;              //免疫高山伤害
+        vanilla_t.ignoreBlocks = true;              //寻路无视地形限制
         vanilla_t.needFood = false;                                             // 不需要食物
         vanilla_t.kingdom = Camps.Undead.id;                                    //不死族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
@@ -752,6 +764,9 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_walk = "walk_1,walk_2,walk_3";        //移动贴图设置
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3"; //游泳贴图设置
         vanilla_t.disableJumpAnimation = false;                   //允许跳跃
+        vanilla_t.flying = true;                    //允许飞行
+        vanilla_t.dieOnBlocks = false;              //免疫高山伤害
+        vanilla_t.ignoreBlocks = true;              //寻路无视地形限制
         vanilla_t.needFood = false;                               // 不需要食物
         vanilla_t.kingdom = Camps.Vampire.id;                     //血族
         vanilla_t.defaultAttack = nameof(VanillaItems.bloodsucker_jaws);
@@ -892,6 +907,9 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_walk = "walk_1,walk_2"; //移动贴图设置
         vanilla_t.animation_swim = "swim_1,swim_2"; //游泳贴图设置
         vanilla_t.disableJumpAnimation = true;      //允许跳跃
+        vanilla_t.flying = true;                    //允许飞行
+        vanilla_t.dieOnBlocks = false;              //免疫高山伤害
+        vanilla_t.ignoreBlocks = true;              //寻路无视地形限制
         vanilla_t.needFood = false;                 // 不需要食物
         vanilla_t.kingdom = Camps.Divine.id;        //神圣
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
@@ -919,6 +937,9 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_walk = "walk_1,walk_2"; //移动贴图设置
         vanilla_t.animation_swim = "swim_1,swim_2"; //移动贴图设置
         vanilla_t.disableJumpAnimation = true;      //允许跳跃
+        vanilla_t.flying = true;                    //允许飞行
+        vanilla_t.dieOnBlocks = false;              //免疫高山伤害
+        vanilla_t.ignoreBlocks = true;              //寻路无视地形限制
         vanilla_t.needFood = false;                 // 不需要食物
         vanilla_t.kingdom = Camps.Divine.id;        //神圣
         vanilla_t.traits = new() { "fire_blood", "fire_proof", "burning_feet" };
@@ -1028,6 +1049,9 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4,walk_5,walk_6"; //移动贴图设置
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3,swim_4,swim_5"; //游泳贴图设置
         vanilla_t.disableJumpAnimation = true;                                  //允许跳跃
+        vanilla_t.flying = true;                    //允许飞行
+        vanilla_t.dieOnBlocks = false;              //免疫高山伤害
+        vanilla_t.ignoreBlocks = true;              //寻路无视地形限制
         vanilla_t.needFood = false;                                             // 不需要食物
         vanilla_t.kingdom = Camps.Divine.id;                                    //神圣
         vanilla_t.traits = new() { "wise", "attractive", "flower_prints", "healing_aura", "energized" };
@@ -1217,6 +1241,9 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4"; //移动贴图设置
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3"; //游泳贴图设置
         vanilla_t.disableJumpAnimation = true;                    //禁止跳跃
+        vanilla_t.flying = true;                    //允许飞行
+        vanilla_t.dieOnBlocks = false;              //免疫高山伤害
+        vanilla_t.ignoreBlocks = true;              //寻路无视地形限制
         vanilla_t.needFood = false;                               // 不需要食物
         vanilla_t.traits = new List<string> { "fire_blood", "fire_proof" };
         vanilla_t.defaultWeapons = List.Of("evil_staff"); //添加邪恶法杖
