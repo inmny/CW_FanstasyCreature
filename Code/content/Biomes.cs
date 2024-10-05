@@ -509,7 +509,6 @@ namespace CW_FantasyCreatures.content
             Candle_low.fireChance = 0.02f; //燃烧概率
             Candle_low.food_resource = SR.mushrooms;
             Candle_low.biome_asset = Candle;
-            Candle_low.stepAction = tempHighIntelligence; //智慧BUFF
             AssetManager.topTiles.add(Candle_low);
             AssetManager.topTiles.loadSpritesForTile(Candle_low);
 
@@ -571,7 +570,6 @@ namespace CW_FantasyCreatures.content
             Cemetery_low.fireChance = 0.02f; //燃烧概率
             Cemetery_low.food_resource = SR.mushrooms;
             Cemetery_low.biome_asset = Cemetery;
-            Cemetery_low.stepAction = tempHighIntelligence; //智慧BUFF
             AssetManager.topTiles.add(Cemetery_low);
             AssetManager.topTiles.loadSpritesForTile(Cemetery_low);
 
@@ -591,6 +589,65 @@ namespace CW_FantasyCreatures.content
             Cemetery_high.stepAction = tempHighIntelligence; //智慧BUFF
             AssetManager.topTiles.add(Cemetery_high);
             AssetManager.topTiles.loadSpritesForTile(Cemetery_high);
+            //------蕨类群系
+            BiomeAsset Fern = new BiomeAsset(); //新版本群系的代码独立了出来，不过总体功能没啥变化
+            Fern.id = "biome_Fern";
+            Fern.tile_low = "Fern_low"; //低块
+            Fern.tile_high = "Fern_high"; //高块
+            Fern.grow_strength = 2; //群系的扩张强度
+            Fern.spread_biome = true;
+            Fern.generator_pool_amount = 4; //对地图生成的影响，这个值越大该群系生成概率越高
+            Fern.force_unit_skin_set = "mushroom";
+            Fern.grow_vegetation_auto = true;
+            Fern.grow_type_selector_minerals = new GrowTypeSelector(
+                TileActionLibrary.getGrowTypeRandomMineral
+            );
+            Fern.grow_type_selector_trees = new GrowTypeSelector(
+                TileActionLibrary.getGrowTypeRandomTrees
+            );
+            Fern.grow_type_selector_plants = new GrowTypeSelector(
+                TileActionLibrary.getGrowTypeRandomPlants
+            );
+            //Fern.addUnit(SA.fox, 2); //加入生物,前面是生物id，后面是生成占比
+            Fern.addMineral(SB.mineral_stone, 5); //加入矿物,前面是建筑id，后面是生成占比
+            Fern.addMineral(SB.mineral_metals, 3);
+            Fern.addTree("Fern_tree", 1); //加入树,前面是建筑id，后面是生成占比
+            Fern.addPlant("Fern", 1); //加入植物,前面是建筑id，后面是生成占比
+            AssetManager.biome_library.add(Fern);
+            AssetManager.biome_library.addBiomeToPool(Fern);
+
+            TopTileType Fern_low = AssetManager.topTiles.clone(
+                "Fern_low",
+                ST.mushroom_low
+            ); //地块代码
+            Fern_low.color = Toolbox.makeColor("#fbda8e", -1f); //颜色代码
+            Fern_low.setBiome("biome_Fern");
+            Fern_low.force_unit_skin_set = "enchanted";
+            Fern_low.rank_type = TileRank.Low;
+            Fern_low.setDrawLayer(TileZIndexes.mushroom_low, null);
+            Fern_low.stepAction = new TileStepAction(Fern_1); //该群系的特殊事件
+            Fern_low.stepActionChance = 1437f; //事件发生概率， 这里是指概率143700%
+            Fern_low.fireChance = 0.02f; //燃烧概率
+            Fern_low.food_resource = SR.mushrooms;
+            Fern_low.biome_asset = Fern;
+            AssetManager.topTiles.add(Fern_low);
+            AssetManager.topTiles.loadSpritesForTile(Fern_low);
+
+            TopTileType Fern_high = AssetManager.topTiles.clone(
+                "Fern_high",
+                ST.mushroom_high
+            );
+            Fern_high.color = Toolbox.makeColor("#fac959", -1f); //颜色代码
+            Fern_high.setBiome("biome_Fern");
+            Fern_high.rank_type = TileRank.High;
+            Fern_high.force_unit_skin_set = "enchanted";
+            Fern_high.setDrawLayer(TileZIndexes.mushroom_high, null);
+            Fern_high.stepActionChance = 1437f;
+            Fern_high.fireChance = 0.02f;
+            Fern_high.food_resource = SR.mushrooms;
+            Fern_high.biome_asset = Fern;
+            AssetManager.topTiles.add(Fern_high);
+            AssetManager.topTiles.loadSpritesForTile(Fern_high);
             //------
         }
 
@@ -644,6 +701,11 @@ namespace CW_FantasyCreatures.content
         }
                 
         public static bool Cemetery_1(WorldTile pTile, ActorBase pActor) //事件代码,我这里全删了
+        {
+            return true;
+        }
+                        
+        public static bool Fern_1(WorldTile pTile, ActorBase pActor) //事件代码,我这里全删了
         {
             return true;
         }

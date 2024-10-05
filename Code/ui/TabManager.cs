@@ -162,6 +162,18 @@ namespace CW_FantasyCreatures.ui
                 null
             );
             index++;
+                                    
+                PowerButtons.CreateButton(
+                "spawnFern_drops",
+                Mod.EmbededResources.LoadSprite($"{Mod.Info.Name}.Resources.tile_10.png"),
+                "蕨类种子",
+                "高大的植物，茂盛的蕨类！原始！",
+                new Vector2(xPos + (index * gap), yPos),
+                ButtonType.GodPower,
+                tab.transform,
+                null
+            );
+            index++;
         }
     }
 }

@@ -217,6 +217,15 @@ namespace CW_FantasyCreatures.content
             AssetManager.buildings.loadSprites(GoblinTower);
             TabManager.AddBuildingDropButton(GoblinTower.id, GoblinTower.id, GoblinTower.id);
 
+            //------魔法学院
+            BuildingAsset MagicTower = AssetManager.buildings.clone(nameof(MagicTower), SB.flame_tower);
+            MagicTower.race = "Extraordinary"; // 自己改魔法相关的种族
+            MagicTower.kingdom = "Extraordinary"; // 自己改
+            MagicTower.tower = false; // 禁用原有的火球发射
+            MagicTower.spawnUnits_asset = "griffin_knight:3,sorcerer:1,guard_knight:2"; // 改生物id
+            AssetManager.buildings.loadSprites(MagicTower);
+            TabManager.AddBuildingDropButton(MagicTower.id, MagicTower.id, MagicTower.id);
+
             //------烛火群系Candle
             BuildingAsset Candle_tree = AssetManager.buildings.clone("Candle_tree", "tree");
             Candle_tree.limit_per_zone = 2;
@@ -268,6 +277,28 @@ namespace CW_FantasyCreatures.content
             Cemetery.spread_ids = List.Of<string>(new string[] { "Cemetery" });
             AssetManager.buildings.addResource("stone", 1, false); //添加石头
             AssetManager.buildings.loadSprites(Cemetery);
+            //------蕨类群系Fern
+            BuildingAsset Fern_tree = AssetManager.buildings.clone("Fern_tree", "tree");
+            Fern_tree.limit_per_zone = 7;
+            Fern_tree.canBePlacedOnlyOn = List.Of<string>(
+                new string[] { "Fern_high", "Fern_low" }
+            );
+            Fern_tree.spread_ids = List.Of<string>(new string[] { "Fern_tree" });
+            Fern_tree.setShadow(0.5f, 0.03f, 0.12f); //设置阴影
+            AssetManager.buildings.addResource("wood", 20, false); //添加木材
+            AssetManager.buildings.loadSprites(Fern_tree);
+
+            BuildingAsset Fern = AssetManager.buildings.clone("Fern", "mushroom");
+            Fern.limit_per_zone = 4;
+            Fern.wheat = true;
+            Fern.canBeHarvested = true;
+            Fern.setShadow(0.5f, 0.03f, 0.12f);
+            Fern.canBePlacedOnlyOn = List.Of<string>(
+                new string[] { "Fern_high", "Fern_low" }
+            );
+            Fern.spread_ids = List.Of<string>(new string[] { "Fern" });
+            AssetManager.buildings.addResource("stone", 1, false); //添加石头
+            AssetManager.buildings.loadSprites(Fern);
 
         }
     }
