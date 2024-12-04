@@ -593,7 +593,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.disableJumpAnimation = false;                                        //允许跳跃
         vanilla_t.needFood = false;                                                   // 不需要食物
         vanilla_t.defaultWeapons = List.Of<string>(new string[] { "spear" });         //添加矛
-        vanilla_t.defaultWeaponsMaterial = List.Of<string>(new string[] { "mythril" }); //秘银
+        vanilla_t.defaultWeaponsMaterial = List.Of<string>(new string[] { "adamantine" }); //秘银
         vanilla_t.kingdom = Camps.Extraordinary.id;                                   //非凡之族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
@@ -764,9 +764,6 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         vanilla_t.animation_walk = "walk_1,walk_2,walk_3";        //移动贴图设置
         vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3"; //游泳贴图设置
         vanilla_t.disableJumpAnimation = false;                   //允许跳跃
-        vanilla_t.flying = true;                    //允许飞行
-        vanilla_t.dieOnBlocks = false;              //免疫高山伤害
-        vanilla_t.ignoreBlocks = true;              //寻路无视地形限制
         vanilla_t.needFood = false;                               // 不需要食物
         vanilla_t.kingdom = Camps.Vampire.id;                     //血族
         vanilla_t.defaultAttack = nameof(VanillaItems.bloodsucker_jaws);
@@ -776,7 +773,7 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         };
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
         // 作用于0.14游戏版本，大体没有发生改变
-        stats[S.damage] = 50;                 // 伤害
+        stats[S.damage] = 30;                 // 伤害
         stats[CW_S.wakan] = 100;              // 灵气
         MarkNameTemplate("bloodsucker_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
@@ -1276,6 +1273,145 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("king_slime");
+
+        #endregion
+        
+        #region ------巨型章鱼
+
+        // 创建一个生物
+        CreateActor("giant_octopus", "Giant Octopus", "iconGiant_Octopus", out vanilla_t, out stats);
+        vanilla_t.animation_walk = "walk_0,walk_1";        //移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1";            //游泳贴图设置
+        vanilla_t.disableJumpAnimation = true;                   //禁止跳跃
+        vanilla_t.needFood = false;                               // 不需要食物
+        vanilla_t.kingdom = Camps.Herbivore.id;                   //食草族
+        vanilla_t.job = "random_swim";
+        vanilla_t.dieOnGround = true;
+        vanilla_t.landCreature = false;
+        vanilla_t.oceanCreature = true;
+        vanilla_t.swampCreature = true; // 在沼泽地
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 50;           // 伤害
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("giant_octopus");
+
+        #endregion
+
+        #region ------迅猛龙
+
+        // 创建一个生物
+        CreateActor("velociraptor", "Velociraptor", "iconVelociraptor", out vanilla_t, out stats);
+        vanilla_t.animation_walk = "walk_1,walk_2";        //移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1";        //游泳贴图设置
+        vanilla_t.disableJumpAnimation = false;                   //允许跳跃
+        vanilla_t.needFood = false;                               // 不需要食物
+        vanilla_t.kingdom = Camps.Carnivore.id;            //食肉族
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 30;           // 伤害
+        stats[S.speed] = 40;              // 速度
+        stats[S.health] = 100; // 血量
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("velociraptor");
+
+
+        #endregion
+        
+        #region ------三角龙
+
+        // 创建一个生物
+        CreateActor("triceratops", "Triceratops", "iconTriceratops", out vanilla_t, out stats);
+        vanilla_t.animation_walk = "walk_1,walk_2";        //移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2";        //游泳贴图设置
+        vanilla_t.disableJumpAnimation = false;                   //允许跳跃
+        vanilla_t.needFood = false;                               // 不需要食物
+        vanilla_t.kingdom = Camps.Herbivore.id;                   //食草族
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 20;           // 伤害
+        stats[S.speed] = 20;              // 速度
+        stats[S.health] = 400; // 血量
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("triceratops");
+
+
+        #endregion
+
+        #region ------翼手龙
+
+        // 创建一个生物
+        CreateActor("pterodactyl", "Pterodactyl", "iconPterodactyl", out vanilla_t, out stats);
+        vanilla_t.animation_walk = "walk_1,walk_2";        //移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1";        //游泳贴图设置
+        vanilla_t.disableJumpAnimation = true;                   //允许跳跃
+        vanilla_t.needFood = false;                               // 不需要食物
+        vanilla_t.kingdom = Camps.Herbivore.id;                   //食草族
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 10;           // 伤害
+        stats[S.speed] = 40;              // 速度
+        stats[S.health] = 50; // 血量
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("pterodactyl");
+
+
+        #endregion
+        
+        #region ------天命人
+
+        // 创建一个生物天命人
+        CreateActor("tian_ming_ren", "Tian Ming Ren", "iconTian_Ming_Ren", out vanilla_t, out stats);
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        t.force_cultisys_initial_level("cw_cultisys_immortal", 1); // 强制初始仙路等级为筑基
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4";                     //移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";                     //游泳贴图设置
+        vanilla_t.disableJumpAnimation = false;                                       //允许跳跃
+        vanilla_t.needFood = false;                                                   // 不需要食物
+        vanilla_t.kingdom = Camps.Subhumans.id;                                       //亚人族
+        vanilla_t.action_death += [Hotfixable](pTarget, pTile) =>
+        {
+           World.world.units.spawnNewUnit("qi_tian_da_sheng", pTile, true);
+            return true;
+        };
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 30;             // 伤害
+        stats[CW_S.wakan] = 100;          // 灵气
+        MarkNameTemplate("tian_ming_ren_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("tian_ming_ren");
+
+        #endregion
+                
+        #region ------齐天大圣
+
+        // 创建一个生物齐天大圣
+        CreateActor("qi_tian_da_sheng", "Qi Tian Da Sheng", "iconQi_Tian_Da_Sheng", out vanilla_t, out stats);
+        t.prefer_element = new[] { 30, 15, 10, 20, 25 };           // 倾向于岩灵根
+        t.prefer_element_scale = 1f;                               // 倾向程度
+        t.add_allowed_cultisys("cw_cultisys_immortal"); // 允许修仙
+        t.force_cultisys_initial_level("cw_cultisys_immortal", 15); // 强制初始仙路等级为筑基
+        // 武道: cw_cultisys_bushido
+        // 魂道: cw_cultisys_soul
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4";                     //移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";                     //游泳贴图设置
+        vanilla_t.disableJumpAnimation = false;                                       //允许跳跃
+        vanilla_t.needFood = false;                                                   // 不需要食物
+        vanilla_t.kingdom = Camps.Subhumans.id;                                       //亚人族
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 30;             // 伤害
+        stats[CW_S.wakan] = 10000;          // 灵气
+        MarkNameTemplate("qi_tian_da_sheng_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("qi_tian_da_sheng");
 
         #endregion
     }

@@ -214,6 +214,24 @@
             }
         ]
         
+    },
+    {
+        "id": "tian_ming_ren_name",
+        "templates": [
+            {
+                "format": "#天命人#"
+            }
+        ]
+        
+    },
+    {
+        "id": "qi_tian_da_sheng_name",
+        "templates": [
+            {
+                "format": "#齐天大圣#"
+            }
+        ]
+        
     }
 
 ]

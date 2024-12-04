@@ -620,7 +620,7 @@ namespace CW_FantasyCreatures.content
                 "Fern_low",
                 ST.mushroom_low
             ); //地块代码
-            Fern_low.color = Toolbox.makeColor("#fbda8e", -1f); //颜色代码
+            Fern_low.color = Toolbox.makeColor("#7fb34e", -1f); //颜色代码
             Fern_low.setBiome("biome_Fern");
             Fern_low.force_unit_skin_set = "enchanted";
             Fern_low.rank_type = TileRank.Low;
@@ -637,7 +637,7 @@ namespace CW_FantasyCreatures.content
                 "Fern_high",
                 ST.mushroom_high
             );
-            Fern_high.color = Toolbox.makeColor("#fac959", -1f); //颜色代码
+            Fern_high.color = Toolbox.makeColor("#44733f", -1f); //颜色代码
             Fern_high.setBiome("biome_Fern");
             Fern_high.rank_type = TileRank.High;
             Fern_high.force_unit_skin_set = "enchanted";
