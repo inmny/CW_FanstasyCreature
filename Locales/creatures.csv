@@ -1,120 +1,120 @@
-key,cz,en
-Deer,鹿,Deer
-Deer Description,呦呦鹿鸣，食野之苹,Yo yo deer chirping，eating wild apples
-Half Deer Man,半鹿人,Half deer man
-Half Deer Man Description,纯路人,Half deer man
-Anubis,阿努比斯,Anubis
-Anubis Description,冥界引路人,Anubis
-Bloodsucker,吸血鬼,Bloodsucker
-Bloodsucker Description,夜之子，黑暗君王。,Bloodsucker
-Centaur,半人马,Centaur
-Centaur Description,优秀的骑兵。,Centaur
-Griffin Knight,狮鹫骑士,Griffin Knight
-Griffin Knight Description,皇家骑兵，冲锋！,Griffin Knight
+key,cz,en,ru
+Deer,鹿,Deer,Олень
+Deer Description,呦呦鹿鸣，食野之苹,Yo yo deer chirping，eating wild apples,Йо-йо， олень кричит， поедая дикие яблоки
+Half Deer Man,半鹿人,Half deer man,Полуолень
+Half Deer Man Description,纯路人,Half deer man,Полуолень
+Anubis,阿努比斯,Anubis,Анубис
+Anubis Description,冥界引路人,Anubis,Проводник подземного мира
+Bloodsucker,吸血鬼,Bloodsucker,Вампир
+Bloodsucker Description,夜之子，黑暗君王。,Bloodsucker,Дитя ночи， владыка тьмы.
+Centaur,半人马,Centaur,Кентавр
+Centaur Description,优秀的骑兵。,Centaur,Отличная кавалерия.
+Griffin Knight,狮鹫骑士,Griffin Knight,Рыцарь грифона
+Griffin Knight Description,皇家骑兵，冲锋！,Griffin Knight,Королевская кавалерия， в атаку!
 Guard Knight,守护骑士,Guard Knight
 Guard Knight Description,为了湖中女神的誓言！！,Guard Knight
 Sorcerer,魔法师,Sorcerer
 Sorcerer Description,魔法是打开真理之门的钥匙。,Sorcerer
-Horse,马,Horse
-Horse Description,草原上的精灵。,Horse
-Fairy Fox,九尾狐,Fairy Fox
-Fairy Fox Description,青丘之山，有兽焉，九尾。,Fairy Fox
-Sycamore Treants,巨梧桐树人,Sycamore Treants
-Sycamore Treants Description,古老的梧桐树，自然之灵。,Sycamore Treants
-Banyan Treants,巨榕树人,Banyan Treants
-Banyan Treants Description,古老的榕树，自然之灵。,Banyan Treants
-Coconut Treants,巨椰树人,Coconut Treants
-Coconut Treants Description,古老的椰树，自然之灵。,Coconut Treants
-Acacia Treants,巨金合欢树人,Acacia Treants
-Acacia Treants Description,古老的金合欢树，自然之灵。,Acacia Treants
-Oak Treants,巨橡树人,Oak Treants
-Oak Treants Description,古老的金合欢树，自然之灵。,Oak Treants
-Fire Treants,燃火树人,Fire Treants
-Fire Treants Description,燃烧着火焰的古树，火焰之灵。,Fire Treants
-Death Treants,腐朽树人,Death Treants
-Death Treants Description,散发着死亡的枯树，死亡之灵。,Death Treants
-Nine Colored Deer,九色鹿,Nine Colored Deer
-Nine Colored Deer Description,西山之林，有兽焉，身九彩。,Nine Colored Deer
-Knowledge Genie,知识之灵,Knowledge Genie
-Knowledge Genie Description,知识渊博的精灵。,Knowledge Genie
-Candle Genie,烛火之灵,Candle Genie
-Candle Genie Description,骚年，传火吗？,Candle Genie
-Ghost Fire,鬼火之灵,Ghost Fire
-Ghost Fire Description,墓地上漂浮的火焰，亡魂之火。,Ghost Fire
-Lion,狮子,Lion
-Lion Description,草原上的王者。,Lion
-Pig,家猪,Pig
-Pig Description,哼~哼~~。,Pig
-Wild Boar,野猪,Wild Boar
-Wild Boar Description,猪刚鬣？,Wild Boar
-Tiger,老虎,Tiger
-Tiger Description,森林里的王者。,Tiger
-Rooster,公鸡,Rooster
-Rooster Description,唱，跳，rap，打篮球。,Rooster
-Panda,熊猫,Panda
-Panda Description,黑白的熊？,Panda
-Loong,青龙,Loong
-Loong Description,司掌生命，青木之主，木之属也,Loong
-Ossaurus,骨龙,Ossaurus
-Ossaurus Description,龙骸而化，不死之躯。,Ossaurus
-Pharaoh,法老,Pharaoh
-Pharaoh Description,太阳之子，死而复生，亡灵之主,Pharaoh
-Skeleton Knight,骷髅骑士,Skeleton Knight
-Skeleton Knight Description,勇猛的骑士，死亡的荣光！,Skeleton Knight
-Wyvern Knight,飞龙骑士,Wyvern Knight
-Wyvern Knight Description,强大的飞龙，冠军骑士！,Wyvern Knight
-Sphinx,斯芬克斯,Sphinx
-Sphinx Description,守护者，迷语大师。,Sphinx
-Feng Huang,凤凰,Feng Huang
-Feng Huang Description,百鸟之王，羽虫之长。,Feng Huang
-Yu Tu,玉兔,Yu Tu
-Yu Tu Description,月中何有，玉兔捣药。,Yu Tu
-Yu Chan,玉蟾,Yu Chan
-Yu Chan Description,月中蟾蜍，月之精也。,Yu Chan
-Jin Wu,金乌,Jin Wu
-Jin Wu Description,日中踆乌，日之精也。,Jin Wu
-Suzaku,朱雀,Suzaku
-Suzaku Description,司掌毁灭，离火之主，火之属也。,Suzaku
-Qilin,麒麟,Qilin
-Qilin Description,司掌创生，中土之主，土之属也。,Qilin
-Vampire Hunter,吸血鬼猎人,Vampire Hunter
-Vampire Hunter Description,猎魔人，黑夜幽灵。,Vampire Hunter
-Werewolf,狼人,Werewolf
-Werewolf Description,月之子，嗜血野兽。,Werewolf
-White Tiger,白虎,White Tiger
-White Tiger Description,司掌杀伐，白金之主，金之属也，,White Tiger
-Xuanwu,玄武,Xuanwu
-Xuanwu Description,司掌死亡，冥水之主，水之属也。,Ruler of death， master of the River Styx，representative of the water element。
-Goblin Warrior,哥布林士兵,Goblin Warrior
-Goblin Warrior Description,哆噜哒~~哆噜哒~~,Goblin Warrior
-Goblin Shaman,哥布林萨满,Goblin Shaman
-Goblin Shaman Description,咕噜哒~~咕噜哒~~,Goblin Shaman
-Goblin Knight,哥布林骑士,Goblin Knight
-Goblin Knight Description,呜咕哒~~呜咕哒~~,Goblin Knight
-Rock Giant,岩石巨人,Rock Giant
-Rock Giant Description,远古神灵，坚固如磐石。,Rock Giant
-Volcanic Giant,火山巨人,Volcanic Giant
-Volcanic Giant Description,愤怒的火山，涌动的怒火。,Volcanic Giant
-Lava Giant,熔岩巨人,Lava Giant
-Lava Giant Description,大地之血，燃烧之海。,Lava Giant
-Ice Giant,寒冰巨人,Ice Giant
-Ice Giant Description,凛冽寒风，坚冰如灵。,Ice Giant
-Relic Giant,遗迹巨人,Relic Giant
-Relic Giant Description,破碎的巨人，被神秘的藤曼重新拼接起来。,Relic Giant
-Magic Giant,魔法巨人,Magic Giant
-Magic Giant Description,魔法造物，身上有神秘的符文。,Magic Giant
-Ore Giant,矿石巨人,Ore Giant
-Ore Giant Description,由各种矿物聚合成的巨人。,Ore Giant
-Silver Giant,银矿巨人,Silver Giant
-Silver Giant Description,矿石巨人的亚种，由稀有的银矿聚合成的。,Silver Giant
-Mithril Giant,秘银巨人,Mithril Giant
-Mithril Giant Description,银矿巨人的亚种，由罕见的秘银矿聚合成的。,Mithril Giant
-gold Giant,金矿巨人,gold Giant
-gold Giant Description,矿石巨人的亚种，由稀有的金矿聚合成的。,gold Giant
-Adamantite Giant,金精巨人,Adamantite Giant
-Adamantite Giant Description,金矿巨人的亚种，由罕见的精金矿聚合成的,Adamantite Giant
-King Slime,史莱姆王,King Slime
-King Slime Description,史莱姆王,King Slime
+Horse,马,Horse,Лошадь
+Horse Description,草原上的精灵。,Horse,Эльф степей.
+Fairy Fox,九尾狐,Fairy Fox,Девятихвостая лиса
+Fairy Fox Description,青丘之山，有兽焉，九尾。,Fairy Fox,На горе Цинцю живет зверь с девятью хвостами.
+Sycamore Treants,巨梧桐树人,Sycamore Treants,Сикаморские древни
+Sycamore Treants Description,古老的梧桐树，自然之灵。,Sycamore Treants,Древние платаны， духи природы.
+Banyan Treants,巨榕树人,Banyan Treants,Баньянские древни
+Banyan Treants Description,古老的榕树，自然之灵。,Banyan Treants,Древние баньяны， духи природы.
+Coconut Treants,巨椰树人,Coconut Treants,Кокосовые древни
+Coconut Treants Description,古老的椰树，自然之灵。,Coconut Treants,Древние кокосовые пальмы， духи природы.
+Acacia Treants,巨金合欢树人,Acacia Treants,Акациевые древни
+Acacia Treants Description,古老的金合欢树，自然之灵。,Acacia Treants,Древние акации， духи природы.
+Oak Treants,巨橡树人,Oak Treants,Дубовые древни
+Oak Treants Description,古老的橡树，自然之灵。,Oak Treants,Древние дубы， духи природы.
+Fire Treants,燃火树人,Fire Treants,Огненные древни
+Fire Treants Description,燃烧着火焰的古树，火焰之灵。,Fire Treants,Пылающие древние деревья， духи огня.
+Death Treants,腐朽树人,Death Treants,Древни смерти
+Death Treants Description,散发着死亡的枯树，死亡之灵。,Death Treants,Излучающие смерть засохшие деревья， духи смерти.
+Nine Colored Deer,九色鹿,Nine Colored Deer,Девятицветный олень
+Nine Colored Deer Description,西山之林，有兽焉，身九彩。,Nine Colored Deer,В лесу на западной горе живет зверь с девятью цветами на теле.
+Knowledge Genie,知识之灵,Knowledge Genie,Джинн знаний
+Knowledge Genie Description,知识渊博的精灵。,Knowledge Genie,Эрудированный дух.
+Candle Genie,烛火之灵,Candle Genie,Джинн свечи
+Candle Genie Description,骚年，传火吗？,Candle Genie,Юноша， хочешь передать огонь?
+Ghost Fire,鬼火之灵,Ghost Fire,Дух блуждающего огонька
+Ghost Fire Description,墓地上漂浮的火焰，亡魂之火。,Ghost Fire,Плавающий над кладбищем огонь， пламя душ.
+Lion,狮子,Lion,Лев
+Lion Description,草原上的王者。,Lion,Король саванны.
+Pig,家猪,Pig,Свинья
+Pig Description,哼~哼~~。,Pig,Хрю~хрю~~.
+Wild Boar,野猪,Wild Boar,Дикий кабан
+Wild Boar Description,猪刚鬣？,Wild Boar,Чжу Ган Лэ?
+Tiger,老虎,Tiger,Тигр
+Tiger Description,森林里的王者。,Tiger,Король лесов.
+Rooster,公鸡,Rooster,Петух
+Rooster Description,唱，跳，rap，打篮球。,Rooster,Петь， танцевать， читать рэп， играть в баскетбол.
+Panda,熊猫,Panda,Панда
+Panda Description,黑白的熊？,Panda,Черно-белый медведь?
+Loong,青龙,Loong,Синий дракон
+Loong Description,司掌生命，青木之主，木之属也,Loong,Повелитель жизни， владыка зеленого дерева， принадлежит элементу дерева.
+Ossaurus,骨龙,Ossaurus,Костяной дракон
+Ossaurus Description,龙骸而化，不死之躯。,Ossaurus,Из драконьих останков， бессмертное тело.
+Pharaoh,法老,Pharaoh,Фараон
+Pharaoh Description,太阳之子，死而复生，亡灵之主,Pharaoh,Сын солнца， восставший из мертвых， повелитель нежити.
+Skeleton Knight,骷髅骑士,Skeleton Knight,Рыцарь-скелет
+Skeleton Knight Description,勇猛的骑士，死亡的荣光！,Skeleton Knight,Храбрый рыцарь， слава смерти!
+Wyvern Knight,飞龙骑士,Wyvern Knight,Рыцарь виверны
+Wyvern Knight Description,强大的飞龙，冠军骑士！,Wyvern Knight,Могущественный дракон， рыцарь-чемпион!
+Sphinx,斯芬克斯,Sphinx,Сфинкс
+Sphinx Description,守护者，迷语大师。,Sphinx,Хранитель， мастер загадок.
+Feng Huang,凤凰,Feng Huang,Феникс
+Feng Huang Description,百鸟之王，羽虫之长。,Feng Huang,Король всех птиц， владыка пернатых.
+Yu Tu,玉兔,Yu Tu,Нефритовый заяц
+Yu Tu Description,月中何有，玉兔捣药。,Yu Tu,Что есть на луне? Нефритовый заяц толчет эликсир.
+Yu Chan,玉蟾,Yu Chan,Нефритовая жаба
+Yu Chan Description,月中蟾蜍，月之精也。,Yu Chan,Жаба на луне， дух луны.
+Jin Wu,金乌,Jin Wu,Золотая ворона
+Jin Wu Description,日中踆乌，日之精也。,Jin Wu,Трехногая ворона в солнце， дух солнца.
+Suzaku,朱雀,Suzaku,Судзаку
+Suzaku Description,司掌毁灭，离火之主，火之属也。,Suzaku,Повелитель разрушения， владыка пламени, принадлежит элементу огня.
+Qilin,麒麟,Qilin,Цилинь
+Qilin Description,司掌创生，中土之主，土之属也。,Qilin,Повелитель творения， владыка центральной земли， принадлежит элементу земли.
+Vampire Hunter,吸血鬼猎人,Vampire Hunter,Охотник на вампиров
+Vampire Hunter Description,猎魔人，黑夜幽灵。,Vampire Hunter,Ведьмак， призрак ночи.
+Werewolf,狼人,Werewolf,Оборотень
+Werewolf Description,月之子，嗜血野兽。,Werewolf,Дитя луны， кровожадный зверь.
+White Tiger,白虎,White Tiger,Белый тигр
+White Tiger Description,司掌杀伐，白金之主，金之属也，,White Tiger,Повелитель битв， владыка белого металла， принадлежит элементу металла.
+Xuanwu,玄武,Xuanwu,Сюаньу
+Xuanwu Description,司掌死亡，冥水之主，水之属也。,Xuanwu,Повелитель смерти， владыка темных вод， принадлежит элементу воды.
+Goblin Warrior,哥布林士兵,Goblin Warrior,Гоблин-воин
+Goblin Warrior Description,哆噜哒~~哆噜哒~~,Goblin Warrior,Доруда~~доруда~~
+Goblin Shaman,哥布林萨满,Goblin Shaman,Гоблин-шаман
+Goblin Shaman Description,咕噜哒~~咕噜哒~~,Goblin Shaman,Гуруда~~гуруда~~
+Goblin Knight,哥布林骑士,Goblin Knight,Гоблин-рыцарь
+Goblin Knight Description,呜咕哒~~呜咕哒~~,Goblin Knight,Угуда~~угуда~~
+Rock Giant,岩石巨人,Rock Giant,Каменный великан
+Rock Giant Description,远古神灵，坚固如磐石。,Rock Giant,Древний дух， твердый как скала.
+Volcanic Giant,火山巨人,Volcanic Giant,Вулканический великан
+Volcanic Giant Description,愤怒的火山，涌动的怒火。,Volcanic Giant,Разъяренный вулкан， кипящая ярость.
+Lava Giant,熔岩巨人,Lava Giant,Лавовый великан
+Lava Giant Description,大地之血，燃烧之海。,Lava Giant,Кровь земли， пылающее море.
+Ice Giant,寒冰巨人,Ice Giant,Ледяной великан
+Ice Giant Description,凛冽寒风，坚冰如灵。,Ice Giant,Леденящий ветер， ледяной дух.
+Relic Giant,遗迹巨人,Relic Giant,Реликтовый великан
+Relic Giant Description,破碎的巨人，被神秘的藤曼重新拼接起来。,Relic Giant,Разбитый великан， заново собранный таинственными лианами.
+Magic Giant,魔法巨人,Magic Giant,Магический великан
+Magic Giant Description,魔法造物，身上有神秘的符文。,Magic Giant,Магическое создание， покрытое таинственными рунами.
+Ore Giant,矿石巨人,Ore Giant,Рудный великан
+Ore Giant Description,由各种矿物聚合成的巨人。,Ore Giant,Великан， составленный из различных минералов.
+Silver Giant,银矿巨人,Silver Giant,Серебряный великан
+Silver Giant Description,矿石巨人的亚种，由稀有的银矿聚合成的。,Silver Giant,Разновидность рудного великана， составленного из редких серебряных руд.
+Mithril Giant,秘银巨人,Mithril Giant,Мифриловый великан
+Mithril Giant Description,银矿巨人的亚种，由罕见的秘银矿聚合成的。,Mithril Giant,Разновидность серебряного великана， составленного из редких мифриловых руд.
+gold Giant,金矿巨人,gold Giant,Золотой великан
+gold Giant Description,矿石巨人的亚种，由稀有的金矿聚合成的。,gold Giant,Разновидность рудного великана， составленного из редких золотых руд.
+Adamantite Giant,金精巨人,Adamantite Giant,Адамантитовый великан
+Adamantite Giant Description,金矿巨人的亚种，由罕见的精金矿聚合成的,Adamantite Giant,Разновидность золотого великана， составленного из редких адамантитовых руд.
+King Slime,史莱姆王,King Slime,Король слизней
+King Slime Description,史莱姆王,King Slime,Король слизней
 Giant Octopus,巨型章鱼,Giant Octopus
 Giant Octopus Description,粉嫩鱿鱼须,Giant Octopus
 Velociraptor,迅猛龙,Velociraptor

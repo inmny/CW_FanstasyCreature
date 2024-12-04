@@ -1,44 +1,44 @@
-key,cz,en
-cw_lightning,雷灵根,Lightning Element Root
-cw_wind,风灵根,Wind Element Root
-cw_dark,暗灵根,Dark Element Root
-cw_light,光灵根,Light Element Root
-cw_sun,日灵根,Sun Element Root
-cw_month,月灵根,Month Element Root
-cw_star,星灵根,Star Element Root
-cw_ice,冰灵根,Ice Element Root
-cw_blood,血灵根,Blood Element Root
-cw_space,空间灵根,Space Element Root
-cw_time,时间灵根,Time Element Root
-cw_rain,雨灵根,Rain Element Root
-cw_sky,天灵根,Sky Element Root
-cw_earth,地灵根,Earth Element Root
-cw_rock,岩灵根,Rock Element Root
-cw_sand,沙灵根,Sand Element Root
-cw_grass,草灵根,Grass Element Root
-cw_pills,丹灵根,Pills Element Root
-cw_water,水灵根,Water Element Root
-cw_fire,火灵根,Fire Element Root
-cw_wood,木灵根,Wood Element Root
-cw_metal,金灵根,Metal Element Root
-cw_soil,土灵根,Soil Element Root
-cw_water_fire,水火灵根,Water Fire Element Root
-cw_water_wood,水木灵根,Water Wood Element Root
-cw_water_metal,水金灵根,Water Metal Element Root
-cw_water_soil,水土灵根,Water Soil Element Root
-cw_fire_wood,火木灵根,Fire Wood Element Root
-cw_fire_metal,火金灵根,Fire Metal Element Root
-cw_fire_soil,火土灵根,Fire Soil Element Root
-cw_wood_metal,木金灵根,Wood Metal Element Root
-cw_wood_soil,木土灵根,Wood Soil Element Root
-cw_metal_soil,金土灵根,Metal Soil Element Root
-cw_water_fire_wood,水火木灵根,Water Fire Wood Element Root
-cw_water_fire_metal,水火金灵根,Water Fire Metal Element Root
-cw_water_fire_soil,水火土灵根,Water Fire Soil Element Root
-cw_water_wood_metal,水木金灵根,Water Wood Metal Element Root
-cw_water_wood_soil,水木土灵根,Water Wood Soil Element Root
-cw_water_metal_soil,水金土灵根,Water Metal Soil Element Root
-cw_fire_wood_metal,火木金灵根,Fire Wood Metal Element Root
-cw_fire_wood_soil,火木土灵根,Fire Wood Soil Element Root
-cw_fire_metal_soil,火金土灵根,Fire Metal Soil Element Root
-cw_wood_metal_soil,木金土灵根,Wood Metal Soil Element Root
+key,cz,en,ru
+cw_lightning,雷灵根,Lightning Element Root,Корень Элемента Молнии
+cw_wind,风灵根,Wind Element Root,Корень Элемента Ветра
+cw_dark,暗灵根,Dark Element Root,Корень Элемента Тьмы
+cw_light,光灵根,Light Element Root,Корень Элемента Света
+cw_sun,日灵根,Sun Element Root,Корень Элемента Солнца
+cw_month,月灵根,Month Element Root,Корень Элемента Луны
+cw_star,星灵根,Star Element Root,Корень Элемента Звезды
+cw_ice,冰灵根,Ice Element Root,Корень Элемента Льда
+cw_blood,血灵根,Blood Element Root,Корень Элемента Крови
+cw_space,空间灵根,Space Element Root,Корень Элемента Пространства
+cw_time,时间灵根,Time Element Root,Корень Элемента Времени
+cw_rain,雨灵根,Rain Element Root,Корень Элемента Дождя
+cw_sky,天灵根,Sky Element Root,Корень Элемента Неба
+cw_earth,地灵根,Earth Element Root,Корень Элемента Земли
+cw_rock,岩灵根,Rock Element Root,Корень Элемента Скалы
+cw_sand,沙灵根,Sand Element Root,Корень Элемента Песка
+cw_grass,草灵根,Grass Element Root,Корень Элемента Травы
+cw_pills,丹灵根,Pills Element Root,Корень Элемента Таблеток
+cw_water,水灵根,Water Element Root,Корень Элемента Воды
+cw_fire,火灵根,Fire Element Root,Корень Элемента Огня
+cw_wood,木灵根,Wood Element Root,Корень Элемента Дерева
+cw_metal,金灵根,Metal Element Root,Корень Элемента Металла
+cw_soil,土灵根,Soil Element Root,Корень Элемента Почвы
+cw_water_fire,水火灵根,Water Fire Element Root,Корень Элементов Воды и Огня
+cw_water_wood,水木灵根,Water Wood Element Root,Корень Элементов Воды и Дерева
+cw_water_metal,水金灵根,Water Metal Element Root,Корень Элементов Воды и Металла
+cw_water_soil,水土灵根,Water Soil Element Root,Корень Элементов Воды и Почвы
+cw_fire_wood,火木灵根,Fire Wood Element Root,Корень Элементов Огня и Дерева
+cw_fire_metal,火金灵根,Fire Metal Element Root,Корень Элементов Огня и Металла
+cw_fire_soil,火土灵根,Fire Soil Element Root,Корень Элементов Огня и Почвы
+cw_wood_metal,木金灵根,Wood Metal Element Root,Корень Элементов Дерева и Металла
+cw_wood_soil,木土灵根,Wood Soil Element Root,Корень Элементов Дерева и Почвы
+cw_metal_soil,金土灵根,Metal Soil Element Root,Корень Элементов Металла и Почвы
+cw_water_fire_wood,水火木灵根,Water Fire Wood Element Root,"Корень Элементов Воды， Огня и Дерева"
+cw_water_fire_metal,水火金灵根,Water Fire Metal Element Root,"Корень Элементов Воды， Огня и Металла"
+cw_water_fire_soil,水火土灵根,Water Fire Soil Element Root,"Корень Элементов Воды， Огня и Почвы"
+cw_water_wood_metal,水木金灵根,Water Wood Metal Element Root,"Корень Элементов Воды， Дерева и Металла"
+cw_water_wood_soil,水木土灵根,Water Wood Soil Element Root,"Корень Элементов Воды， Дерева и Почвы"
+cw_water_metal_soil,水金土灵根,Water Metal Soil Element Root,"Корень Элементов Воды， Металла и Почвы"
+cw_fire_wood_metal,火木金灵根,Fire Wood Metal Element Root,"Корень Элементов Огня， Дерева и Металла"
+cw_fire_wood_soil,火木土灵根,Fire Wood Soil Element Root,"Корень Элементов Огня， Дерева и Почвы"
+cw_fire_metal_soil,火金土灵根,Fire Metal Soil Element Root,"Корень Элементов Огня， Металла и Почвы"
+cw_wood_metal_soil,木金土灵根,Wood Metal Soil Element Root,"Корень Элементов Дерева， Металла и Почвы"
