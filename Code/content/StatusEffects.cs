@@ -36,15 +36,17 @@ namespace CW_FantasyCreatures.content
             t.draw_light_size = 20; // 光照区域大小
 
             blood_mark = FormatStatusEffect.create_simple_status_effect(nameof(blood_mark), new BaseStats(),
-                                                                        15f,
-                                                                        path_icon: "ui/icons/iconBlood_Mars");
-            blood_mark.action_on_end += [Hotfixable](pEffect, pSource, pTarget) =>
+                15f,
+                path_icon: "ui/icons/iconBlood_Mars");
+            blood_mark.action_interval = 1;
+            blood_mark.action_on_update += [Hotfixable](pEffect, pSource, pTarget) =>
             {
+                if (Toolbox.randomChance(0.99f)) return;
                 var a = pTarget as CW_Actor;
                 if (a == null || !a.isAlive() || !a.inMapBorder()) return;
 
                 CW_Actor transformed = World.world.units.createNewUnit(nameof(Creatures.bloodsucker), a.currentTile)
-                                            .CW();
+                    .CW();
                 if (transformed == null) return;
                 EffectsLibrary.spawn(nameof(VanillaEffects.fx_spawn_red), transformed.currentTile);
 
