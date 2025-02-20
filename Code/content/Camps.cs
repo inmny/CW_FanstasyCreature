@@ -71,6 +71,16 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
     /// 哥布林族
     /// </summary>
     public static readonly KingdomAsset Goblin;
+    
+    /// <summary>
+    /// 妖精族
+    /// </summary>
+    public static readonly KingdomAsset Sprite;
+    
+    /// <summary>
+    /// 傀儡族
+    /// </summary>
+    public static readonly KingdomAsset Robot;
 
     /// <summary>
     /// 善巨人族
@@ -198,9 +208,29 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
         t.addFriendlyTag(nameof(Goblin));//对哥布林族标签友好
         t.addFriendlyTag(SK.orc);//对兽人标签友好
         t.addEnemyTag("human");//对人类标签敌对
-        t.addEnemyTag("elf");//对兽人标签敌对
+        t.addEnemyTag("elf");//对精灵标签敌对
         t.addEnemyTag("dwarf");//对矮人标签敌对
         AllFriendWith(nameof(Goblin), SK.orc);
+                                                                        
+        CreateCamp(nameof(Sprite));//妖精族阵营
+        t.addTag(SK.neutral);//中立
+        t.addTag(nameof(Sprite));//妖精标签
+        t.addFriendlyTag(nameof(Sprite));//对妖精族标签友好
+        t.addFriendlyTag(SK.elf);//对精灵标签友好
+        t.addEnemyTag("human");//对人类标签敌对
+        t.addEnemyTag("orc");//对兽人标签敌对
+        t.addEnemyTag("dwarf");//对矮人标签敌对
+        AllFriendWith(nameof(Sprite), SK.elf);
+                                                                                
+        CreateCamp(nameof(Robot));//机器人族阵营
+        t.addTag(SK.neutral);//中立
+        t.addTag(nameof(Robot));//机器人标签
+        t.addFriendlyTag(nameof(Robot));//对机器人族标签友好
+        t.addFriendlyTag(SK.dwarf);//对矮人标签友好
+        t.addEnemyTag("human");//对人类标签敌对
+        t.addEnemyTag("orc");//对兽人标签敌对
+        t.addEnemyTag("elf");//对精灵标签敌对
+        AllFriendWith(nameof(Robot), SK.dwarf);
     }
 
     internal void CreateCamp(string pID)

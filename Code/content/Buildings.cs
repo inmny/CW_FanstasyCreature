@@ -225,6 +225,27 @@ namespace CW_FantasyCreatures.content
             MagicTower.spawnUnits_asset = "griffin_knight:3,sorcerer:1,guard_knight:2"; // 改生物id
             AssetManager.buildings.loadSprites(MagicTower);
             TabManager.AddBuildingDropButton(MagicTower.id, MagicTower.id, MagicTower.id);
+            
+            //------妖精树屋
+            BuildingAsset SpriteTower = AssetManager.buildings.clone(nameof(SpriteTower), SB.flame_tower);
+            SpriteTower.race = "Sprite"; // 自己改魔法相关的种族
+            SpriteTower.kingdom = "Sprite"; // 自己改
+            SpriteTower.tower = false; // 禁用原有的火球发射
+            SpriteTower.spawnUnits_asset = "sprite_ranger:8,sprite_druid:1,sprite_warrior:4"; // 改生物id
+            AssetManager.buildings.loadSprites(SpriteTower);
+            TabManager.AddBuildingDropButton(SpriteTower.id, SpriteTower.id, SpriteTower.id);
+
+            //------傀儡工坊
+            BuildingAsset RobotTower = AssetManager.buildings.clone(nameof(RobotTower), SB.flame_tower);
+            RobotTower.race = "Robot"; // 自己改魔法相关的种族
+            RobotTower.kingdom = "Robot"; // 自己改
+            RobotTower.tower = true; // 火球发射
+            RobotTower.smoke = true; // 烟雾开关
+            RobotTower.smokeInterval = 0.5f; // 烟雾产生时间间隔
+            RobotTower.smokeOffset = new Vector2Int(6, 3); // 烟雾产生位置
+            RobotTower.spawnUnits_asset = "fort_robot:4,destroy_robot:1,tank_robot:2"; // 改生物id
+            AssetManager.buildings.loadSprites(RobotTower);
+            TabManager.AddBuildingDropButton(RobotTower.id, RobotTower.id, RobotTower.id);
 
             //------烛火群系Candle
             BuildingAsset Candle_tree = AssetManager.buildings.clone("Candle_tree", "tree");
