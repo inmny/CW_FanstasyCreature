@@ -91,6 +91,11 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
     /// 恶巨人族
     /// </summary>
     public static readonly KingdomAsset Evil_giant;
+    
+    /// <summary>
+    /// 鱼人族
+    /// </summary>
+    public static readonly KingdomAsset Fish_people;
 
     internal Camps()
     {
@@ -231,6 +236,15 @@ public class Camps : ExtendedLibrary<KingdomAsset, Camps>
         t.addEnemyTag("orc");//对兽人标签敌对
         t.addEnemyTag("elf");//对精灵标签敌对
         AllFriendWith(nameof(Robot), SK.dwarf);
+                                                                                        
+        CreateCamp(nameof(Fish_people));//鱼人族阵营
+        t.addTag(SK.neutral);//中立
+        t.addTag(nameof(Fish_people));//鱼人族阵营
+        t.addFriendlyTag(nameof(Fish_people));//对鱼人族阵营友好
+        t.addEnemyTag("human");//对人类标签敌对
+        t.addEnemyTag("orc");//对兽人标签敌对
+        t.addEnemyTag("elf");//对精灵标签敌对
+        t.addEnemyTag("dwarf");//对矮人标签敌对
     }
 
     internal void CreateCamp(string pID)

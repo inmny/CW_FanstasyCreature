@@ -7,6 +7,10 @@ Anubis,阿努比斯,Anubis,Анубис
 Anubis Description,冥界引路人,Anubis,Проводник подземного мира
 Bloodsucker,吸血鬼,Bloodsucker,Вампир
 Bloodsucker Description,夜之子，黑暗君王。,Bloodsucker,Дитя ночи， владыка тьмы.
+Bloodthirsty,渴血者,Bloodthirsty,~~~
+Bloodthirsty Description,极度渴望鲜血的虚弱血族。,Bloodthirsty,~~~
+Blood Beast,鲜血野兽,Blood Beast,~~~
+Blood Beast Description,沉迷于嗜血的疯狂血族,Blood Beast,~~~
 Centaur,半人马,Centaur,Кентавр
 Centaur Description,优秀的骑兵。,Centaur,Отличная кавалерия.
 Griffin Knight,狮鹫骑士,Griffin Knight,Рыцарь грифона
@@ -59,6 +63,8 @@ Ossaurus,骨龙,Ossaurus,Костяной дракон
 Ossaurus Description,龙骸而化，不死之躯。,Ossaurus,Из драконьих останков， бессмертное тело.
 Pharaoh,法老,Pharaoh,Фараон
 Pharaoh Description,太阳之子，死而复生，亡灵之主,Pharaoh,Сын солнца， восставший из мертвых， повелитель нежити.
+Mummy,木乃伊,~~~
+Mummy Description,远古腊肉,~~~
 Skeleton Knight,骷髅骑士,Skeleton Knight,Рыцарь-скелет
 Skeleton Knight Description,勇猛的骑士，死亡的荣光！,Skeleton Knight,Храбрый рыцарь， слава смерти!
 Wyvern Knight,飞龙骑士,Wyvern Knight,Рыцарь виверны
@@ -117,6 +123,14 @@ King Slime,史莱姆王,King Slime,Король слизней
 King Slime Description,史莱姆王,King Slime,Король слизней
 Giant Octopus,巨型章鱼,Giant Octopus
 Giant Octopus Description,粉嫩鱿鱼须,Giant Octopus
+Mermaid,美人鱼,Mermaid
+Mermaid Description,海洋尤物,Mermaid
+Fish People Soldiers,鱼人士兵,Fish People Soldiers
+Fish People Soldiers Description,咕噜~咕噜~,Fish People Soldiers
+Fish People Warrior,鱼人战士,Fish People Warrior
+Fish People Warrior Description,咕噜~咕噜~,Fish People Warrior
+Fish People Shaman,鱼人萨满,Fish People Shaman
+Fish People Shaman Description,咕噜~咕噜~,Fish People Shaman
 Velociraptor,迅猛龙,Velociraptor
 Velociraptor Description,迅哥儿,Velociraptor
 Triceratops,三角龙,Triceratops

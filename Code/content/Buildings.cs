@@ -247,6 +247,36 @@ namespace CW_FantasyCreatures.content
             AssetManager.buildings.loadSprites(RobotTower);
             TabManager.AddBuildingDropButton(RobotTower.id, RobotTower.id, RobotTower.id);
 
+            //------金字塔
+            BuildingAsset Pyramid = AssetManager.buildings.clone(nameof(Pyramid), SB.flame_tower);
+            Pyramid.race = "Undead"; // 自己改魔法相关的种族
+            Pyramid.kingdom = "Undead"; // 自己改
+            Pyramid.tower = false; // 火球发射
+            Pyramid.spawnUnits_asset = "mummy:4,pharaoh:1,skeleton_knight:2"; // 改生物id
+            AssetManager.buildings.loadSprites(Pyramid);
+            TabManager.AddBuildingDropButton(Pyramid.id, Pyramid.id, Pyramid.id);
+            
+            //------鲜血城堡
+            BuildingAsset BloodCastle = AssetManager.buildings.clone(nameof(BloodCastle), SB.flame_tower);
+            BloodCastle.race = "Vampire"; // 自己改魔法相关的种族
+            BloodCastle.kingdom = "Vampire"; // 自己改
+            BloodCastle.tower = false; // 火球发射
+            BloodCastle.spawnUnits_asset = "bloodthirsty:4,bloodsucker:1,blood_beast:2"; // 改生物id
+            AssetManager.buildings.loadSprites(BloodCastle);
+            TabManager.AddBuildingDropButton(BloodCastle.id, BloodCastle.id, BloodCastle.id);
+                        
+            //------鱼人巢穴
+            BuildingAsset FishPeopleTower = AssetManager.buildings.clone(nameof(FishPeopleTower), SB.flame_tower);
+            FishPeopleTower.race = "Fish_people"; // 自己改魔法相关的种族
+            FishPeopleTower.kingdom = "Fish_people"; // 自己改
+            FishPeopleTower.tower = false; // 火球发射
+            FishPeopleTower.canBePlacedOnLiquid = true;
+            FishPeopleTower.destroyOnLiquid = false;
+            FishPeopleTower.spawnUnits_asset = "fish_people_soldiers:4,fish_people_shaman:1,fish_people_warrior:2"; // 改生物id
+            AssetManager.buildings.loadSprites(FishPeopleTower);
+            TabManager.AddBuildingDropButton(FishPeopleTower.id, FishPeopleTower.id, FishPeopleTower.id);
+
+
             //------烛火群系Candle
             BuildingAsset Candle_tree = AssetManager.buildings.clone("Candle_tree", "tree");
             Candle_tree.limit_per_zone = 2;
