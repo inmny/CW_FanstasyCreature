@@ -608,9 +608,12 @@ namespace CW_FantasyCreatures.content
             Fern.grow_type_selector_plants = new GrowTypeSelector(
                 TileActionLibrary.getGrowTypeRandomPlants
             );
-            Fern.addUnit("velociraptor", 4); //加入迅猛龙,前面是生物id，后面是生成占比
-            Fern.addUnit("triceratops", 2); //加入三角龙,前面是生物id，后面是生成占比
-            Fern.addUnit("pterodactyl", 2); //加入翼手龙,前面是生物id，后面是生成占比
+            Fern.addUnit("velociraptor", 8); //加入迅猛龙,前面是生物id，后面是生成占比
+            Fern.addUnit("triceratops", 4); //加入三角龙,前面是生物id，后面是生成占比
+            Fern.addUnit("pterodactyl", 6); //加入翼手龙,前面是生物id，后面是生成占比
+            Fern.addUnit("tyrannosaurus_rex", 2); //加入霸王龙,前面是生物id，后面是生成占比
+            Fern.addUnit("diplodocus", 4); //加入梁龙,前面是生物id，后面是生成占比
+            Fern.addUnit("dreadnoughtus", 1); //加入无畏龙,前面是生物id，后面是生成占比
             Fern.addMineral(SB.mineral_stone, 5); //加入矿物,前面是建筑id，后面是生成占比
             Fern.addMineral(SB.mineral_metals, 3);
             Fern.addTree("Fern_tree", 1); //加入树,前面是建筑id，后面是生成占比

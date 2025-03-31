@@ -1,7 +1,7 @@
 {
     "name": "奇幻生物",
     "author": "一米&吃鱼",
-    "version": "1.1.5",
+    "version": "1.2.0",
     "description": "包含各种神话生物和幻想生物",
     "Dependencies": [
         "启源_启源核心"

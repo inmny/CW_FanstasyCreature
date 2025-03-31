@@ -580,6 +580,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.speed] = 50;              // 速度
         stats[S.health] = 30; // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("griffin_knight");
 
 
         #endregion
@@ -601,6 +603,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.speed] = 40;              // 速度
         stats[S.health] = 50; // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("guard_knight");
 
 
         #endregion
@@ -621,6 +625,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.speed] = 20;              // 速度
         stats[S.health] = 20; // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("sorcerer");
 
 
         #endregion
@@ -772,6 +778,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.health] = 30;             // 血量
         //stats[CW_S.wakan] = 100;              // 灵气
         MarkNameTemplate("bloodsucker_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("bloodsucker");
 
         #endregion
         
@@ -790,6 +798,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.speed] = 30;              // 速度
         stats[S.health] = 10;             // 血量
         MarkNameTemplate("bloodsucker_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("bloodthirsty");
 
         #endregion
                 
@@ -809,6 +819,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.speed] = 10;              // 速度
         stats[S.health] = 70;             // 血量
         MarkNameTemplate("bloodsucker_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("blood_beast");
 
         #endregion
 
@@ -1105,6 +1117,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.speed] = 40;              // 速度
         stats[S.health] = 30;             // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("goblin_warrior");
 
         #endregion
 
@@ -1125,6 +1139,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.speed] = 30;              // 速度
         stats[S.health] = 30;             // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("goblin_shaman");
 
         #endregion
 
@@ -1146,6 +1162,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.speed] = 60;              // 速度
         stats[S.health] = 30;             // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("goblin_knight");
 
         #endregion
         
@@ -1168,6 +1186,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.speed] = 60;              // 速度
         stats[S.health] = 20;             // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("sprite_warrior");
 
         #endregion
                 
@@ -1190,6 +1210,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.speed] = 80;              // 速度
         stats[S.health] = 10;             // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("sprite_ranger");
 
         #endregion
                         
@@ -1211,6 +1233,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.speed] = 70;              // 速度
         stats[S.health] = 5;             // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("sprite_druid");
 
         #endregion
 
@@ -1232,6 +1256,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.speed] = 20;              // 速度
         stats[S.health] = 40;             // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("fort_robot");
 
         #endregion
         
@@ -1253,6 +1279,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.speed] = 10;              // 速度
         stats[S.health] = 80;             // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("tank_robot");
 
         #endregion
         
@@ -1274,6 +1302,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.speed] = 5;              // 速度
         stats[S.health] = 100;             // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("destroy_robot");
 
         #endregion
 
@@ -1491,6 +1521,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.speed] = 40;              // 速度
         stats[S.health] = 10;             // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("fish_people_soldiers");
 
         #endregion
         
@@ -1511,6 +1543,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.speed] = 20;              // 速度
         stats[S.health] = 30;             // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("fish_people_warrior");
 
         #endregion
         
@@ -1530,6 +1564,8 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         stats[S.speed] = 20;              // 速度
         stats[S.health] = 20;             // 血量
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("fish_people_shaman");
 
         #endregion
         #region ------迅猛龙
@@ -1552,14 +1588,34 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
 
 
         #endregion
+        #region ------霸王龙
+
+        // 创建一个生物
+        CreateActor("tyrannosaurus_rex", "Tyrannosaurus Rex", "iconTyrannosaurus_Rex", out vanilla_t, out stats);
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4,walk_5,walk_6";        //移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2";        //游泳贴图设置
+        vanilla_t.disableJumpAnimation = true;                   //禁止跳跃
+        vanilla_t.needFood = false;                               // 不需要食物
+        vanilla_t.kingdom = Camps.Carnivore.id;            //食肉族
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 50;           // 伤害
+        stats[S.speed] = 30;              // 速度
+        stats[S.health] = 200; // 血量
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("tyrannosaurus_rex");
+
+
+        #endregion
         
         #region ------三角龙
 
         // 创建一个生物
         CreateActor("triceratops", "Triceratops", "iconTriceratops", out vanilla_t, out stats);
-        vanilla_t.animation_walk = "walk_1,walk_2";        //移动贴图设置
-        vanilla_t.animation_swim = "swim_0,swim_1,swim_2";        //游泳贴图设置
-        vanilla_t.disableJumpAnimation = false;                   //允许跳跃
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4";        //移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";        //游泳贴图设置
+        vanilla_t.disableJumpAnimation = true;                   //禁止跳跃
         vanilla_t.needFood = false;                               // 不需要食物
         vanilla_t.kingdom = Camps.Herbivore.id;                   //食草族
         // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
@@ -1570,6 +1626,48 @@ internal class Creatures : ExtendedLibrary<CW_ActorAsset>
         MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
         // 创建这个生物的放置按钮
         CreateButton("triceratops");
+
+
+        #endregion
+                
+        #region ------梁龙
+
+        // 创建一个生物
+        CreateActor("diplodocus", "Diplodocus", "iconDiplodocus", out vanilla_t, out stats);
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4";        //移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";        //游泳贴图设置
+        vanilla_t.disableJumpAnimation = true;                   //禁止跳跃
+        vanilla_t.needFood = false;                               // 不需要食物
+        vanilla_t.kingdom = Camps.Herbivore.id;                   //食草族
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 60;           // 伤害
+        stats[S.speed] = 10;              // 速度
+        stats[S.health] = 1000; // 血量
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("diplodocus");
+
+
+        #endregion
+                        
+        #region ------无畏龙
+
+        // 创建一个生物
+        CreateActor("dreadnoughtus", "Dreadnoughtus", "iconDreadnoughtus", out vanilla_t, out stats);
+        vanilla_t.animation_walk = "walk_1,walk_2,walk_3,walk_4";        //移动贴图设置
+        vanilla_t.animation_swim = "swim_0,swim_1,swim_2,swim_3";        //游泳贴图设置
+        vanilla_t.disableJumpAnimation = true;                   //禁止跳跃
+        vanilla_t.needFood = false;                               // 不需要食物
+        vanilla_t.kingdom = Camps.Herbivore.id;                   //食草族
+        // 其他原版设置见 https://github.com/inmny/Cultivation-Way-Core/blob/base_14/Code/W_Content_Actor.cs 第200行开始，
+        // 作用于0.14游戏版本，大体没有发生改变
+        stats[S.damage] = 100;           // 伤害
+        stats[S.speed] = 10;              // 速度
+        stats[S.health] = 10000; // 血量
+        MarkNameTemplate("western_name"); // 设置命名模板，只在中文名存在时生效
+        // 创建这个生物的放置按钮
+        CreateButton("dreadnoughtus");
 
 
         #endregion
